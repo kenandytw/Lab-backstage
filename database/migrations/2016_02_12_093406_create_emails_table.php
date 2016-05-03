@@ -12,15 +12,18 @@ class CreateEmailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('emails', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('slug');
-            $table->string('email');
-            $table->string('name');
-            $table->enum('sex', array('boy', 'girl'));
-            $table->string('marketing');
-            $table->timestamps();
-        });
+        //!Schema 是指不等於 ！！！
+        if (!Schema::hasTable('emails')) {
+            Schema::create('emails', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('slug');
+                $table->string('email');
+                $table->string('name');
+                $table->enum('sex', array('boy', 'girl'));
+                $table->string('marketing');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

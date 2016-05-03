@@ -10,6 +10,16 @@ use App\Http\Controllers\Controller;
 
 class NewsController extends Controller
 {
+    protected $user; //protected 是保護的變數,意思是這變數只能在這個 class使用
+    public function __construct(Request $request)
+    {
+        //驚嘆號是否定判斷的意思
+        if(!$request->session()->has('key')){
+            return redirect('login')->send();
+        } else {
+            $this->user = $request->session()->get('key');
+        }
+    }
     /**
      * Display a listing of the resource.
      *

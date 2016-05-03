@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use MC;
 use App\Http\Requests;
+use App\model\email;
 use App\Http\Controllers\Controller;
 
 class SurpriseController extends Controller
@@ -19,6 +21,20 @@ class SurpriseController extends Controller
         return view('surprise.index');
     }
 
+    public function about()
+    {
+        return view('surprise.about');
+    }
+
+    public function complete()
+    {
+        return view('surprise.complete');
+    }
+
+    public function fail()
+    {
+        return view('surprise.fail');
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -37,7 +53,35 @@ class SurpriseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        $email = new email;
+        $email->name = $input['name'];
+        $email->email = $input['email'];
+
+        //傳送資料給mailchimp
+        $data = array(
+            'email_address' => $input['email']
+        );
+        $result = MC::checksub('5ac409d48f',$data);
+        $json = json_decode($result,true);
+        if($json['status']==404){
+            $data = array(
+                'email_address' => $input['email'],
+                'status'        => 'subscribed',
+                'merge_fields'  => array(
+                    'FNAME' => $input['name']
+                )
+            );
+            //訂閱的動作
+            $rr = MC::subscribe('5ac409d48f',$data);
+            $email->save();
+        }else{
+            return redirect('/fail');
+        }
+
+        //dd($result); 印出結果
+
+        return redirect('/complete');
     }
 
     /**

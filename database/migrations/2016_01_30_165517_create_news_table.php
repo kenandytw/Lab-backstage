@@ -12,15 +12,18 @@ class CreateNewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('news', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('slug');
-            $table->string('title');
-            $table->text('content');
-            $table->string('img');
-            $table->timestamp('publish');
-            $table->timestamps();
-        });
+        //!Schema 是指不等於 ！！！
+        if (!Schema::hasTable('news')) {
+            Schema::create('news', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('slug');
+                $table->string('title');
+                $table->text('content');
+                $table->string('img');
+                $table->timestamp('publish');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

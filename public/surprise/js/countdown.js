@@ -1,5 +1,5 @@
 // declare weddingdate and data variables
-var weddingDate = new Date("3 28 2016 00:00:00"),
+var weddingDate = new Date("2016-05-14"),
     years, months, days, minutes, seconds,
     //declare Dom position
     countdown = document.getElementsByClassName("integer");
@@ -33,4 +33,8 @@ setInterval(function() {
   countdown[3].innerHTML = hours;
   countdown[4].innerHTML = minutes;
   countdown[5].innerHTML = seconds;
+  countdown[8].innerHTML = days;
+  countdown[9].innerHTML = hours;
+  countdown[10].innerHTML = minutes;
+  countdown[11].innerHTML = seconds;
 }, 1000)

@@ -27,7 +27,19 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
+
+    /*surprise*/
+    Route::resource('/','SurpriseController');
+    Route::get('/about','SurpriseController@about');
+    Route::get('/complete','SurpriseController@complete');
+    Route::get('/fail','SurpriseController@fail');
+    /*backstage login*/
+    Route::get('login','LoginController@index'); //連結資料，基本的連結 response
+    Route::post('login','LoginController@session'); //接收post資料
+    Route::get('logout','LoginController@logout'); //登出
+
+    /*backstage*/
     Route::resource('news','NewsController'); //resource 是指依照原始規則走
     Route::resource('email','EmailController');
-    Route::resource('/','SurpriseController');
+    Route::resource('admin','AdminController');
 });

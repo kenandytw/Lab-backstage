@@ -4,12 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use MC;
 use App\Http\Requests;
 use App\model\email;
 use App\Http\Controllers\Controller;
 
 class EmailController extends Controller
 {
+    protected $user; //protected 是保護的變數,意思是這變數只能在這個 class使用
+    public function __construct(Request $request)
+    {
+        //驚嘆號是否定判斷的意思
+        if(!$request->session()->has('key')){
+            return redirect('login')->send();
+        } else {
+            $this->user = $request->session()->get('key');
+        }
+    }
     /**
      * Display a listing of the resource.
      *
@@ -45,6 +56,26 @@ class EmailController extends Controller
         $email->name = $input['name'];
         $email->email = $input['email'];
         $email->save();
+
+        //傳送資料給mailchimp
+        $data = array(
+            'email_address' => $input['email']
+        );
+        $result = MC::checksub('5ac409d48f',$data);
+        $json = json_decode($result,true);
+        if($json['status']==404){
+            $data = array(
+                'email_address' => $input['email'],
+                'status'        => 'subscribed',
+                'merge_fields'  => array(
+                    'FNAME' => $input['name']
+                )
+            );
+            //訂閱的動作
+            $rr = MC::subscribe('5ac409d48f',$data);
+        }
+        //dd($result); 印出結果
+
         return redirect('/email');
     }
 
