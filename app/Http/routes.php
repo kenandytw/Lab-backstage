@@ -50,5 +50,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('rules.html',function(){ return view('frontend.rules'); });
     Route::get('reservation.html',function(){ return view('frontend.reservation'); });
     Route::get('contact.html',function(){ return view('frontend.contact'); });
+
+    // 存入資料
+    Route::post('contact','HomeController@contact');
+    Route::post('storeres','HomeController@storeres');
+    Route::post('checkres','HomeController@checkres');
     */
 });
