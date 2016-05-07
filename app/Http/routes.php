@@ -42,4 +42,13 @@ Route::group(['middleware' => ['web']], function () {
     Route::resource('news','NewsController'); //resource 是指依照原始規則走
     Route::resource('email','EmailController');
     Route::resource('admin','AdminController');
+
+    /* frontend */
+    /*
+    Route::get('about.html',function(){ return view('frontend.about'); });
+    Route::get('chef.html',function(){ return view('frontend.chef'); });
+    Route::get('rules.html',function(){ return view('frontend.rules'); });
+    Route::get('reservation.html',function(){ return view('frontend.reservation'); });
+    Route::get('contact.html',function(){ return view('frontend.contact'); });
+    */
 });

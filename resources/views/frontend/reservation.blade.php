@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<head>
-    <title>Dinner In The Dark</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-    <link rel="stylesheet" href="stylesheets/screen.css">
-    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="stylesheets/print.css">
-    <link rel="stylesheet" href="stylesheets/media.css">
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/main.js"></script>
-</head>
-<body>
-    <div class="wrap">
-        <!-- lightbox -->
+@extends('frontend.layout')
 
-        <!-- privacy lightbox -->
+
+@section('content')
+<!-- privacy lightbox -->
         <div class="lightbox">
 
             <div class="lightbox-container">
@@ -87,155 +74,17 @@
                 </div>
             </div>
         </div>
-
-        <!-- mobile menu -->
-
-        <div class="mobile-menu">
-            <ul class="language-list">
-                <a href="#"><li class="first-child active">中文</li></a>
-                <a href="#"><li>EN</li></a>
-            </ul>
-            <ul class="page-list">
-                <a href="about.html">
-                    <li>
-                        About
-                    </li>
-                </a>
-                <a href="chef.html">
-                    <li>
-                        Chef
-                    </li>
-                </a>
-                <a href="rules.html">
-                    <li>
-                        Rules
-                    </li>
-                </a>
-                <a href="reservation.html">
-                    <li class="active">
-                        Reservation
-                    </li>
-                </a>
-                <a href="#">
-                    <li class="dropdown">
-                        Story
-                        <i class="fa fa-angle-down"></i>
-                        <ul>
-                            <a href="people.html">
-                                <li>
-                                    People
-                                </li>   
-                            </a>
-                            <a href="press.html">
-                                <li class="last-child">
-                                    Press
-                                </li>    
-                            </a>
-                        </ul>
-                    </li>
-                </a>
-                <a href="events.html">
-                    <li>
-                        Events
-                    </li>
-                </a>
-                <a href="contact.html">
-                    <li class="last-child">
-                        Contact
-                    </li>
-                </a>
-            </ul>
-        </div>      
-      
-        <!-- header -->
-        
-        <div class="header-contaier clearfix">
-            <!-- mobile header -->
-            <div class="visible-xs mobile-header clearfix">
-                <a href="index.html"><img src="images/logo2.png" alt=""></a>
-                <a class="mobile-menu-btn" href="#"><i class="fa fa-bars"></i></a>
-            </div>
-            
-           
-            
-            <!-- desktop header -->
-            <div class="nav-logo hidden-xs">
-               <a href="index.html">
-                   <img src="images/cut1-intro/logo.png" alt="">       
-               </a>
-            </div>
-            <div class="nav-bar hidden-xs">
-               
-                <ul class="language-list">
-                    <a href="#"><li class="first-child">中文</li></a>
-                    <a href="#"><li>English</li></a>
-                </ul>
-                <ul class="page-list">
-                    <a href="about.html">
-                        <li>
-                            About
-                        </li>
-                    </a>
-                    <a href="chef.html">
-                        <li>
-                            Chef
-                        </li>
-                    </a>
-                    <a href="rules.html">
-                        <li>
-                            Rules
-                        </li>
-                    </a>
-                    <a href="reservation.html">
-                        <li class="active">
-                            Reservation
-                        </li>
-                    </a>
-                    <a href="#">
-                        <li class="dropdown">
-                            Story
-                            <i style="margin-left:5px;" class="fa fa-angle-down"></i>
-                            <ul>
-                                <a href="people.html">
-                                    <li>
-                                        People
-                                    </li>   
-                                </a>
-                                <a href="press.html">
-                                    <li>
-                                        Press
-                                    </li>    
-                                </a>
-                            </ul>
-                        </li>
-                    </a>
-                    <a href="events.html">
-                        <li>
-                            Events
-                        </li>
-                    </a>
-                    <a href="contact.html">
-                        <li>
-                            Contact
-                        </li>
-                    </a>
-                </ul>
-            </div>
-        </div>
-       
-        <!-- first cut -->
-         
-        <div class="section-02 reservation-section">
+		<div class="section-02 reservation-section">
            
             <div class="reservation-nav">
                 <ul>
-                    <li>
+                    <li class="active">
                         1
                     </li>
                     <li>
                         2
                     </li>
-                    <li class="active">
+                    <li>
                         3
                     </li>
                     <li>
@@ -247,7 +96,129 @@
                 </ul>
             </div>
            
-            <div style="max-width:300px" class="main-container">
+            <div class="main-container" id="first-section">
+                <p>
+                    無光晚餐是一場全新的冒險,請花些時間詳讀規則,讓您的體驗做足準備。
+                </p>    
+                <table>
+                    <tr>
+                        <td width="100px"> 每位單價：</td>
+                        <td>1800+10% 線上預付</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>2500+10% 現場付現</td>
+                    </tr>
+                    <tr>
+                        <td> 特別場次：</td>
+                        <td>2200+10% 線上預付(未定)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>3000+10% 現場付現(未定)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="color:#777">將收一成服務費用<br>特別場次資訊請至EVENT頁面</td>
+                    </tr>
+                </table>
+                <p style="margin-top:25px;">
+                    <input id="agree" type="checkbox">
+                    <label class="agree-check" for="agree"><span></span></label>
+                    我已詳讀並遵守<a href="rules.html" target="_blank">無光晚餐訂位與用餐規則</a>。
+                </p>
+                <a href="reservation-2.html">
+                    <div class="btn btn-standard">
+                        立即訂位
+                    </div>
+                </a>
+            </div>
+            
+
+            <div style="max-width:300px;" class="main-container" id="second-section">
+                <table>
+                    <tr>
+                        <td>選擇人數</td>
+                    </tr>
+                    <tr>
+                        <td class="select-wrap">
+                            <select name="" id="">
+                                <option value="2">2</option>
+                                <option value="4">4</option>
+                                <option value="6">6</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="alert-wrap alert-show">
+
+                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                請選擇您的用餐人數
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>選擇日期</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                    <input class="form-control" size="14" type="text" value="">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                </div>
+                                <input type="hidden" id="dtp_input2" value="" /><br/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="alert-wrap alert-show">
+
+                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                您選擇的日期訂位已滿
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>選擇時間</td>
+                    </tr>
+                    <tr>
+                        <td class="select-wrap">
+                            <select name="" id="">
+                                <option value="">11:30-13:30</option>
+                                <option value="">14:00-16:00</option>
+                                <option value="">18:30-20:30</option>
+                                <option value="">21:00-23:00</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="alert-wrap">
+
+                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                您選擇的時間訂位已滿
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+
+                <a href="reservation.html">
+                    <div class="btn btn-standard">
+                        上一步
+                    </div>
+                </a>
+                <a href="reservation-3.html">
+                    <div class="btn btn-standard">
+                        下一步
+                    </div>
+                </a>
+            </div>
+            
+
+            <div style="max-width:300px;" class="main-container" id="third-section">
                 <table>
                     <tr>
                         <td>＊姓名</td>
@@ -405,98 +376,103 @@
             </div>
             
             
-        </div>
-        
-        <!-- footer -->
-        <footer class="footer-section" style="">
-            <div class="footer-zone">
-                <div class="flex-row">
-                    <div class="footer-container-md">
-                        <h1>
-                            營業時間｜Opening hour
-                        </h1>
-                       <table>
-                           <tr>
-                               <td>
-                                   Tue-Fri 
-                               </td>
-                               <td>
-                                   18:30-20:30 / 21:00-23:00
-                               </td>
-                           </tr>
-                           <tr>
-                               <td>
-                                   Sat-Sun
-                               </td>
-                               <td>
-                                   11:30-13:30 / 14:00-16:00
-                               </td>
-                           </tr>
-                           <tr>
-                               <td>
-                                   
-                               </td>
-                               <td>
-                                   18:30-20:30 / 21:00-23:00
-                               </td>
-                           </tr>
-                           <tr>
-                               <td>
-                                   Monday
-                               </td>
-                               <td>
-                                   Close
-                               </td>
-                           </tr>
-                       </table>
+            <div class="main-container" id="fourth-section">
+                <p style="max-width:350px;margin:0 auto;">
+                    請確認您的訂位資料
+                </p>
+                <table class="confirm-table">
+                    <tr>
+                        <td>人數：</td>
+                        <th>
+                            4
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>日期：</td>
+                        <th>
+                            2016-03-17 Wed
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>時間：</td>
+                        <th>
+                            14:00-16:00
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>姓名：</td>
+                        <th>
+                            鍾孟儒
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>電話：</td>
+                        <th>
+                            0918888888
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Email：</td>
+                        <th>
+                            norika30379@gmail.com
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>主餐選擇：</td>
+                        <th>
+                            豬/豬/豬/豬
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>備註：</td>
+                        <th>
+                            豬心豬耳朵我不吃!
+                        </th>
+                    </tr>
+                </table>
+
+                <a href="reservation-3.html">
+                    <div style="height:54px;line-height:39px" class="btn btn-standard btn-pay btn-negative">
+                        上一步
                     </div>
-                    <div class="footer-container-md">
-                        <h1>
-                            地址｜Address
-                        </h1>
-                        <table>
-                            <tr>
-                                <td>
-                                    台北市忠誠路一段171巷2號1樓
-                                </td>
-                            </tr>
-                        </table>
+                </a>
+                <a href="reservation-5.html">
+                    <div class="btn btn-standard btn-pay btn-negative">
+                        現場付費<br>NT 2500
                     </div>
-                    <div class="footer-container-md">
-                        <h1>
-                            聯絡電話｜Tel
-                        </h1>
-                        <table>
-                            <tr>
-                                <td>
-                                    +886 (0)2 2831 0023
-                                </td>
-                            </tr>
-                        </table>
+                </a>
+                <a href="reservation-5.html">
+                    <div class="btn btn-standard btn-pay">
+                        線上付費<br>NT 1800
                     </div>
-                    <div class="footer-container-xs">
-                        <div>
-                            <ul>
-                                <li>
-                                    <a target="_blank" href="https://www.facebook.com/surpriselabtw/">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://www.instagram.com/surpriselabtw/">
-                                       <i class="fa fa-instagram"></i>   
-                                   </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="copyright">
-                            Copyright © 2016 驚喜製造
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
-        </footer>
-    </div>
- 
-</body>
-</html>
+        
+
+        	<div style="padding: 60px 15px 140px;" class="main-container" id="done-section">
+               <h1>
+                   恭喜您已完成訂位! 
+                   <br>請至您的信箱確認訂位完成信件<div class="visible-xs"></div>及詳細的用餐規則
+               </h1>
+               <a href="about.html">
+                   <div class="btn btn-standard">關於無光晚餐</div>    
+               </a>
+            </div>
+        </div>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="/js/locales/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+     
+        $('.form_date').datetimepicker({
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+    
+    </script>
+@endsection

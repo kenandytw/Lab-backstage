@@ -104,5 +104,10 @@ $(document).ready(function(){
         
         return false;
     });
-})
+});
+
+// mene event
+$(function(){
+    $('a[href="'+location.pathname+'"] li').addClass('active');
+});
 
