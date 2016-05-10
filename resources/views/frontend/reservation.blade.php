@@ -126,8 +126,9 @@
                     <input id="agree" type="checkbox">
                     <label class="agree-check" for="agree"><span></span></label>
                     我已詳讀並遵守<a href="rules.html" target="_blank">無光晚餐訂位與用餐規則</a>。
+<span class="alert-wrap alert-show" id="agree-error" style="display: none;"><br /><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>請先閱讀並同意我們的定位與用餐規則</span>
                 </p>
-                <a href="reservation-2.html">
+                <a href="javascript:;" id="first-btn">
                     <div class="btn btn-standard">
                         立即訂位
                     </div>
@@ -135,7 +136,7 @@
             </div>
             
 
-            <div style="max-width:300px;" class="main-container" id="second-section">
+            <div style="max-width:300px;display: none;" class="main-container" id="second-section">
                 <table>
                     <tr>
                         <td>選擇人數</td>
@@ -205,20 +206,12 @@
                     </tr>
                 </table>
 
-                <a href="reservation.html">
-                    <div class="btn btn-standard">
-                        上一步
-                    </div>
-                </a>
-                <a href="reservation-3.html">
-                    <div class="btn btn-standard">
-                        下一步
-                    </div>
-                </a>
+                <a href="javascript:;" id="second-btn-back"><div class="btn btn-standard">上一步</div></a>
+                <a href="javascript:;" id="second-btn"><div class="btn btn-standard">下一步</div></a>
             </div>
             
 
-            <div style="max-width:300px;" class="main-container" id="third-section">
+            <div style="max-width:300px;display: none;" class="main-container" id="third-section">
                 <table>
                     <tr>
                         <td>＊姓名</td>
@@ -363,20 +356,12 @@
                     </tr>
                 </table>
 
-                <a href="reservation-2.html">
-                    <div class="btn btn-standard">
-                        上一步
-                    </div>
-                </a>
-                <a href="reservation-4.html">
-                    <div class="btn btn-standard">
-                        下一步
-                    </div>
-                </a>
+                <a href="javascript:;" id="third-btn-back"><div class="btn btn-standard">上一步</div></a>
+                <a href="javascript:;" id="third-btn"><div class="btn btn-standard">下一步</div></a>
             </div>
             
             
-            <div class="main-container" id="fourth-section">
+            <div class="main-container" id="fourth-section" style="display: none;">
                 <p style="max-width:350px;margin:0 auto;">
                     請確認您的訂位資料
                 </p>
@@ -431,17 +416,17 @@
                     </tr>
                 </table>
 
-                <a href="reservation-3.html">
+                <a href="javascript:;" id="fourth-btn-back">
                     <div style="height:54px;line-height:39px" class="btn btn-standard btn-pay btn-negative">
                         上一步
                     </div>
                 </a>
-                <a href="reservation-5.html">
+                <a href="javascript:;" id="fourth-btn-onsite">
                     <div class="btn btn-standard btn-pay btn-negative">
                         現場付費<br>NT 2500
                     </div>
                 </a>
-                <a href="reservation-5.html">
+                <a href="javascript:;" id="fourth-btn-online">
                     <div class="btn btn-standard btn-pay">
                         線上付費<br>NT 1800
                     </div>
@@ -449,7 +434,7 @@
             </div>
         
 
-        	<div style="padding: 60px 15px 140px;" class="main-container" id="done-section">
+        	<div style="padding: 60px 15px 140px;display: none;" class="main-container" id="done-section">
                <h1>
                    恭喜您已完成訂位! 
                    <br>請至您的信箱確認訂位完成信件<div class="visible-xs"></div>及詳細的用餐規則
@@ -473,6 +458,55 @@
             minView: 2,
             forceParse: 0
         });
+$(function(){
+    // 第一步
+    $('#first-btn').bind('click',function(){
+        if($('#agree').prop('checked')){
+            $('#agree-error').hide();
+            ChangeSectionNav('second','first',1);
+        } else {
+            $('#agree-error').show();
+        }
+    });
+    // 第二步
+    $('#second-btn-back').bind('click',function(){
+        ChangeSectionNav('first','second',0);
+    });
+    $('#second-btn').bind('click',function(){
+        // 驗證選項
+    });
+
+    // 第三步
+    $('#third-btn-back').bind('click',function(){
+        ChangeSectionNav('second','third',0);
+    });
+    $('#third-btn').bind('click',function(){
+        // 驗證資料
+    });
+
+    // 第四步
+    $('#fourth-btn-back').bind('click',function(){
+        ChangeSectionNav('third','fourth',0);
+    });
+    $('#fourth-btn-onsite').bind('click',function(){
+        // 送出資料
+
+    });
+    $('#fourth-btn-online').bind('click',function(){
+        // 轉到金流
+
+    });
+    //$('#first-section').val();
+
     
+    //$('#second-section,#third-section,#fourth-section,#done-section').hide();
+});
+function ChangeSectionNav(show,hide,nav){
+    $('.reservation-nav ul li').removeClass('active');
+    $('.reservation-nav ul li:eq('+nav+')').addClass('active');
+    $('#'+hide+'-section').hide();
+    $('#'+show+'-section').show();
+}
     </script>
+
 @endsection

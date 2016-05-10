@@ -44,7 +44,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::resource('admin','AdminController');
 
     /* frontend */
-    /*
+    
     Route::get('about.html',function(){ return view('frontend.about'); });
     Route::get('chef.html',function(){ return view('frontend.chef'); });
     Route::get('rules.html',function(){ return view('frontend.rules'); });
@@ -55,5 +55,5 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('contact','HomeController@contact');
     Route::post('storeres','HomeController@storeres');
     Route::post('checkres','HomeController@checkres');
-    */
+    
 });
