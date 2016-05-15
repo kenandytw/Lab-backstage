@@ -1,0 +1,134 @@
+@include('backstage.header')
+<!-- =======================
+             ===== START PAGE ======
+             ======================= -->
+
+        <div class="wrapper">
+            <div class="container">
+
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="page-title">活動列表</h4>
+                    </div>
+                </div>
+                <!-- Page-Title -->
+                
+                
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="m-b-30">
+                                    <a href="/act" class="btn btn-primary waves-effect waves-light">新增活動 <i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="panel">
+                            <!-- tabs -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <ul class="nav nav-tabs navtab-custom">
+                                        <li class="@if(!$request->has('filter'))active @endif">
+                                            <a href="/acts">
+                                                <span class="visible-xs"><i class="fa fa-home"></i></span>
+                                                <span class="hidden-xs">全部</span>
+                                            </a>
+                                        </li>
+                                        <li class="@if($request->has('filter') && $request->filter=='feature')active @endif">
+                                            <a href="/acts?filter=feature">
+                                                <span class="visible-xs"><i class="fa fa-user"></i></span>
+                                                <span class="hidden-xs">即將到來</span>
+                                            </a>
+                                        </li>
+                                        <li class="@if($request->has('filter') && $request->filter=='old')active @endif">
+                                            <a href="/acts?filter=old">
+                                                <span class="visible-xs"><i class="fa fa-user"></i></span>
+                                                <span class="hidden-xs">已結束</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- table-->
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="home">
+                                            <div class="">
+                                                <table class="table table-striped" id="datatable-editable">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>活動日期</th>
+                                                            <th>活動場次</th>
+                                                            <th>參加人數</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+@forelse ($acts as $row)
+                                                        <tr class="gradeC"><!--  gradeU  -->
+                                                            <td>{{ $row->ADay->format('m/d') }}</td>
+                                                            <td>{{ substr($row->STime,0,5) }}-{{ substr($row->ETime,0,5) }}</td>
+                                                            <td>{{ $row->order->sum('Pople') }}/{{ $row->Pop }}</td>
+                                                            <td class="actions">
+                                                                <a href="#"><i class="fa fa-list-alt"></i></a>
+                                                                <a href="/act?AID={{ $row->AID }}"><i class="fa fa-pencil"></i></a>
+                                                                <a href="#"><i class="fa fa-trash-o"></i></a>
+                                                            </td>
+                                                        </tr>
+@empty
+<tr><td colspan="4" align="center">尚無資料</td></tr>
+@endforelse
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end-table -->
+                                </div>
+                            </div>
+                            <!-- end tabs -->
+                    </div>
+                    <!-- end: page -->
+
+                </div> 
+                <!-- end Panel -->
+
+
+
+                <!-- Footer -->
+                <footer class="footer text-right">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                2016 © Minton.
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End Footer -->
+
+            </div> <!-- end container -->
+        </div>
+        <!-- End wrapper -->
+
+@include('backstage.jquery')
+
+<!-- Examples -->
+	    <script src="/backstage/plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+	    <script src="/backstage/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
+	    <script src="/backstage/plugins/datatables/dataTables.bootstrap.js"></script>
+	    <script src="/backstage/plugins/tiny-editable/mindmup-editabletable.js"></script>
+	    <script src="/backstage/plugins/tiny-editable/numeric-input-example.js"></script>
+
+	    <script src="/backstage/pages/datatables.editable.init.js"></script>
+
+        <script src="/backstage/js/jquery.core.js"></script>
+        <script src="/backstage/js/jquery.app.js"></script>
+
+        <script>
+			$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
+		</script>
+
+
+    </body>
+</html>
+

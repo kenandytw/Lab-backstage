@@ -143,17 +143,20 @@
                     </tr>
                     <tr>
                         <td class="select-wrap">
-                            <select name="" id="">
+                            <select name="Pople" id="Pople">
+                                <option value="0">0</option>
                                 <option value="2">2</option>
                                 <option value="4">4</option>
                                 <option value="6">6</option>
+                                <option value="8">8</option>
+                                <option value="10">10</option>
+                                <option value="12">12</option>
                             </select>
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="display: none;" id="PopleAlert">
                         <td>
                             <span class="alert-wrap alert-show">
-
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
                                 請選擇您的用餐人數
                             </span>
@@ -165,15 +168,14 @@
                     <tr>
                         <td>
                             <div class="form-group">
-                                <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                    <input class="form-control" size="14" type="text" value="">
+                                <div class="input-group date form_date" id="form_date">
+                                    <input class="form-control" size="14" type="text" value="" name="ADay" id="ADay" readonly>
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                                 </div>
-                                <input type="hidden" id="dtp_input2" value="" /><br/>
                             </div>
                         </td>
                     </tr>
-                    <tr>
+                    <!--tr>
                         <td>
                             <span class="alert-wrap alert-show">
 
@@ -181,36 +183,28 @@
                                 您選擇的日期訂位已滿
                             </span>
                         </td>
-                    </tr>
+                    </tr-->
                     <tr>
                         <td>選擇時間</td>
                     </tr>
                     <tr>
                         <td class="select-wrap">
-                            <select name="" id="">
-                                <option value="">11:30-13:30</option>
-                                <option value="">14:00-16:00</option>
-                                <option value="">18:30-20:30</option>
-                                <option value="">21:00-23:00</option>
-                            </select>
+                            <select name="AID" id="AID"></select>
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="display: none;" id="AIDAlert">
                         <td>
                             <span class="alert-wrap">
-
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
                                 您選擇的時間訂位已滿
                             </span>
                         </td>
                     </tr>
                 </table>
-
                 <a href="javascript:;" id="second-btn-back"><div class="btn btn-standard">上一步</div></a>
                 <a href="javascript:;" id="second-btn"><div class="btn btn-standard">下一步</div></a>
             </div>
             
-
             <div style="max-width:300px;display: none;" class="main-container" id="third-section">
                 <table>
                     <tr>
@@ -218,13 +212,12 @@
                     </tr>
                     <tr>
                         <td>
-                           <input type="text">
+                           <input type="text" name="Name" id="Name">
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="display: none;" id="NameAlert">
                         <td>
                             <span class="alert-wrap alert-show">
-
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
                                 請輸入您的姓名
                             </span>
@@ -235,10 +228,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="tel">
+                            <input type="tel" name="Tel" id="Tel">
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="display: none;" id="TelAlert">
                         <td>
                             <span class="alert-wrap alert-show">
 
@@ -252,12 +245,12 @@
                     </tr>
                     <tr>
                         <td>
-                           <input type="email">
+                           <input type="email" name="EMail" id="EMail">
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="display: none;" id="EMailAlert">
                         <td>
-                            <span class="alert-wrap">
+                            <span class="alert-wrap alert-show">
 
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
                                 請輸入正確電子信箱
@@ -269,13 +262,11 @@
                     </tr>
                     <tr>
                        <td>
-                           <table>
+                           <table id="MealTable">
                                <tr>
                                    <td></td>
-                                   <th>雞</th>
-                                   <th>豬</th>
-                                   <th>素</th>
-                                   <th>魚</th>
+                                   <th>葷食</th>
+                                   <th>素食</th>
                                </tr>
                                <tr class="not-active">
                                    <td>顧客1</td>
@@ -286,14 +277,6 @@
                                    <th>
                                        <input id='c1-2' name="c1" type="radio">
                                        <label for="c1-2"><span></span></label>
-                                   </th>
-                                   <th>
-                                       <input id='c1-3' name="c1" type="radio">
-                                       <label for="c1-3"><span></span></label>
-                                   </th>
-                                   <th>
-                                       <input id='c1-4' name="c1" type="radio">
-                                       <label for="c1-4"><span></span></label>
                                    </th>
                                </tr>
                                <tr>
@@ -306,21 +289,13 @@
                                        <input id='c2-2' name="c2" type="radio">
                                        <label for="c2-2"><span></span></label>
                                    </th>
-                                   <th>
-                                       <input id='c2-3' name="c2" type="radio">
-                                       <label for="c2-3"><span></span></label>
-                                   </th>
-                                   <th>
-                                       <input id='c2-4' name="c2" type="radio">
-                                       <label for="c2-4"><span></span></label>
-                                   </th>
                                </tr>
                            </table>
                        </td>
                     </tr>
-                    <tr>
+                    <tr style="display: none;" id="MealAlert">
                         <td>
-                            <span class="alert-wrap">
+                            <span class="alert-wrap alert-show">
 
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
                                 請選擇主餐
@@ -332,7 +307,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <textarea rows="5"></textarea>
+                            <textarea rows="5" name="Notes" id="Notes"></textarea>
                         </td>
                     </tr>
                    
@@ -341,14 +316,14 @@
                     </tr>
                     <tr>
                         <td>
-                            <input id="agree" type="checkbox">
-                            <label class="agree-check" for="agree"><span></span></label>
+                            <input id="privatecheck" type="checkbox">
+                            <label class="agree-check" for="privatecheck"><span></span></label>
                             我已閱讀並同意<a class="privacy-link" href="#">隱私條款</a>
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="display: none;" id="PrivateAlert">
                         <td>
-                            <span class="alert-wrap">
+                            <span class="alert-wrap alert-show">
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
                                 請確認您已閱讀隱私條款
                             </span>
@@ -368,51 +343,35 @@
                 <table class="confirm-table">
                     <tr>
                         <td>人數：</td>
-                        <th>
-                            4
-                        </th>
+                        <th id="PopCheck"></th>
                     </tr>
                     <tr>
                         <td>日期：</td>
-                        <th>
-                            2016-03-17 Wed
-                        </th>
+                        <th id="ADayCheck"></th>
                     </tr>
                     <tr>
                         <td>時間：</td>
-                        <th>
-                            14:00-16:00
-                        </th>
+                        <th id="STimeCheck"></th>
                     </tr>
                     <tr>
                         <td>姓名：</td>
-                        <th>
-                            鍾孟儒
-                        </th>
+                        <th id="NameCheck"></th>
                     </tr>
                     <tr>
                         <td>電話：</td>
-                        <th>
-                            0918888888
-                        </th>
+                        <th id="TelCheck"></th>
                     </tr>
                     <tr>
                         <td>Email：</td>
-                        <th>
-                            norika30379@gmail.com
-                        </th>
+                        <th id="EMailCheck"></th>
                     </tr>
                     <tr>
                         <td>主餐選擇：</td>
-                        <th>
-                            豬/豬/豬/豬
-                        </th>
+                        <th id="MealCheck"></th>
                     </tr>
                     <tr>
                         <td>備註：</td>
-                        <th>
-                            豬心豬耳朵我不吃!
-                        </th>
+                        <th id="NotesCheck"></th>
                     </tr>
                 </table>
 
@@ -445,20 +404,28 @@
             </div>
         </div>
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-    <script type="text/javascript" src="/js/locales/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script src="/backstage/plugins/moment/moment.js"></script>
+<script src="/backstage/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/v4.0.0/build/css/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+
     <script type="text/javascript">
-     
-        $('.form_date').datetimepicker({
-            weekStart: 1,
-            todayBtn:  1,
-            autoclose: 1,
-            todayHighlight: 1,
-            startView: 2,
-            minView: 2,
-            forceParse: 0
-        });
+$('#form_date').datetimepicker({
+    format: "YYYY-MM-DD",
+    minDate:'{{ Carbon\Carbon::today()->format('Y-m-d') }}',
+    maxDate:'{{ config('setting.enddate') }}',
+    daysOfWeekDisabled: [1],
+    ignoreReadonly:true
+}).on('dp.change',function(event){
+    $.get('/GetAjaxData',{'act':'GetActByDate','Day':event.date.format('YYYY-MM-DD')},function(data){
+        $('#AID option').remove();
+        for(i=0;i<data.length;i++){
+            $('#AID').append('<option value="'+data[i].AID+'" data-pople="'+data[i].Pople+'">'+data[i].STime+'-'+data[i].ETime+'</option>');
+        }
+    },'json');
+});
 $(function(){
+    var showdate = [];
     // 第一步
     $('#first-btn').bind('click',function(){
         if($('#agree').prop('checked')){
@@ -474,19 +441,51 @@ $(function(){
     });
     $('#second-btn').bind('click',function(){
         // 驗證選項
+        var GoNext = 0;
+        if($('#Pople').val()==0){
+            $('#PopleAlert').show(); GoNext++;
+        } else {
+            $('#PopleAlert').hide();
+        }
+        if($('#AID').val()==0 || $('#AID:selected').data('Pople')<$('#Pople').val()){
+            $('#AIDAlert').show(); GoNext++;
+        } else {
+            $('#AIDAlert').hide();
+        }
+        if(GoNext==0){
+            // creat table 
+
+            ChangeSectionNav('third','second',2);
+        }
     });
 
     // 第三步
     $('#third-btn-back').bind('click',function(){
-        ChangeSectionNav('second','third',0);
+        ChangeSectionNav('second','third',1);
     });
     $('#third-btn').bind('click',function(){
         // 驗證資料
+        var GoNext = 0;
+        if($('#Name').val()==''){ $('#NameAlert').show(); GoNext++; } else { $('#NameAlert').hide(); }
+        if(validateTel($('#Tel').val())){ $('#TelAlert').show(); GoNext++; } else { $('#TelAlert').hide(); }
+        if(!validateEmail($('#EMail').val())){ $('#EMailAlert').show(); GoNext++; } else { $('#EMailAlert').hide(); }
+        if(!$('#privatecheck').prop('checked')){ $('#PrivateAlert').show(); GoNext++; } else { $('#PrivateAlert').hide(); }
+        if(GoNext==0){
+            $('#PopCheck').text($('#Pople').val());
+            $('#ADayCheck').text($('#ADay').val());
+            $('#STimeCheck').text($('#AID option:selected').text());
+            $('#NameCheck').text($('#Name').val());
+            $('#TelCheck').text($('#Tel').val());
+            $('#EMailCheck').text($('#EMail').val());
+            //$('#MealCheck').text($('#Name').val());
+            $('#NotesCheck').text($('#Notes').val());
+            ChangeSectionNav('fourth','third',3);
+        }
     });
 
     // 第四步
     $('#fourth-btn-back').bind('click',function(){
-        ChangeSectionNav('third','fourth',0);
+        ChangeSectionNav('third','fourth',2);
     });
     $('#fourth-btn-onsite').bind('click',function(){
         // 送出資料
@@ -500,6 +499,21 @@ $(function(){
 
     
     //$('#second-section,#third-section,#fourth-section,#done-section').hide();
+    $('#Pople').bind('change',function(){
+        var val = $(this).val();
+        $.get('/GetAjaxData',{'act':'GetActByPople','Pople':val},function(data){
+            var nowdata = [];
+            for(i=0;i<data.length;i++){
+                nowdata.push(data[i].ADay.replace(' 00:00:00',''));
+            }
+            if(nowdata.length>0){
+                $('#form_date').data("DateTimePicker").enabledDates(nowdata);
+                showdate = nowdata;
+            }
+        },'json');
+    });
+
+
 });
 function ChangeSectionNav(show,hide,nav){
     $('.reservation-nav ul li').removeClass('active');
@@ -507,6 +521,12 @@ function ChangeSectionNav(show,hide,nav){
     $('#'+hide+'-section').hide();
     $('#'+show+'-section').show();
 }
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+function validateTel(tel){
+    if(tel==''){ return true; } else if(tel.length<9){ return true; } else if(tel.length>12) { return true; } else { return false; }
+}
     </script>
-
 @endsection

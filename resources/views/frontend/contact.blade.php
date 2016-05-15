@@ -53,19 +53,19 @@
                            <table>
                                <tr>
                                    <td>
-                                       台北市忠誠路一段171巷2號1樓
+                                       台北市大安區延吉街261號1樓
                                    </td>
                                </tr>
                            </table>
                        </div>
                        <div>
                            <h1>
-                               聯絡電話｜Tel
+                               聯絡信箱 / E-mail
                            </h1>
                            <table>
                                <tr>
                                    <td>
-                                       +886 (0)2 2831 0023
+                                       service@surpriselab.com.tw
                                    </td>
                                </tr>
                            </table>
@@ -74,16 +74,22 @@
                </div>
            </div>
            <div class="contact-alert-container">
-               <div class="left-box">
+               <!--div class="left-box">
                    驚喜小故事
                </div>
                <div class="right-box">
                    如果你有任何想要在黑暗中驚喜的另外一半,愛人、好朋友、家人, 簡單寫下你的小故事與我們分享,我們會不定期挑選適合的故事,邀
                    請你們來品嚐無光晚餐。
+               </div-->
+               <div class="left-box">
+                   團隊招募 
+               </div>
+               <div class="right-box">
+                  零視覺空間中，什麼事情都有可能發生，<br />加入我們吧，我們樂見各種美好的事情發生！<br />請把履歷寄到我們的信箱：service@surpriselab.com.tw
                </div>
            </div>
            
-            <div class="main-container">
+            <!--div class="main-container">
                 <table>
                     <tr>
                         <td>＊姓名</td>
@@ -180,7 +186,7 @@
                         送出
                     </div>
                 </a>
-            </div>
+            </div-->
             
             
         </div>

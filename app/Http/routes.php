@@ -43,6 +43,14 @@ Route::group(['middleware' => ['web']], function () {
     Route::resource('email','EmailController');
     Route::resource('admin','AdminController');
 
+    Route::get('acts','BackendController@acts');
+    Route::get('act','BackendController@act');
+    Route::post('actstore','BackendController@actstore');
+
+    Route::get('test3',function(){ return view('backstage.order.list'); });
+    Route::get('test4',function(){ return view('backstage.order.edit'); });
+
+
     /* frontend */
     
     Route::get('about.html',function(){ return view('frontend.about'); });
@@ -50,6 +58,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('rules.html',function(){ return view('frontend.rules'); });
     Route::get('reservation.html',function(){ return view('frontend.reservation'); });
     Route::get('contact.html',function(){ return view('frontend.contact'); });
+    Route::get('index.html',function(){ return view('frontend.home'); });
+
+    // 動態取得資料
+    Route::get('GetAjaxData','FrontendController@GetAjaxData');
 
     // 存入資料
     Route::post('contact','HomeController@contact');
