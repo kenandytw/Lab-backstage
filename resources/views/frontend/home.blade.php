@@ -24,7 +24,7 @@
             <div class="logo-container">
                 <!-- LOGO z: 1000 -->
                 <div class="main-logo">
-                    <img src="images/cut1-intro/logo-big.png" alt="">
+                    <img src="/images/cut1-intro/logo-big.png" alt="">
                     <div class="btn btn-standard landing-btn">
                         ENTER
                     </div>
@@ -88,7 +88,7 @@
                         <img src="/images/cut2_index/slogan-phone1.png" alt="">
                     </div>
 
-                   <a href="/about.html">
+                   <a href="about.html">
                        <div class="btn btn-standard landing-btn show-4">
                            瞭解更多
                        </div>   

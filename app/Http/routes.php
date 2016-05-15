@@ -52,13 +52,24 @@ Route::group(['middleware' => ['web']], function () {
 
 
     /* frontend */
+    Route::group(['prefix' => 'dinnerinthedark'], function(){
+        Route::get('about.html',function(){ return view('frontend.about'); });
+        Route::get('chef.html',function(){ return view('frontend.chef'); });
+        Route::get('rules.html',function(){ return view('frontend.rules'); });
+        Route::get('contact.html',function(){ return view('frontend.contact'); });
+        Route::get('index.html',function(){ return view('frontend.home'); });
+        Route::get('/',function(){ return view('frontend.home'); });
+        //Route::get('reservation.html',function(){ return view('frontend.reservation'); });
+        Route::group(['prefix' => 'en'], function(){
+            Route::get('about.html',function(){ App::setLocale('en'); return view('frontend.about'); });
+            Route::get('chef.html',function(){ App::setLocale('en'); return view('frontend.chef'); });
+            Route::get('rules.html',function(){ App::setLocale('en'); return view('frontend.rules'); });
+            Route::get('contact.html',function(){ App::setLocale('en'); return view('frontend.contact'); });
+            Route::get('index.html',function(){ App::setLocale('en'); return view('frontend.home'); });
+            Route::get('/',function(){ App::setLocale('en'); return view('frontend.home'); });
+        });
+    });
     
-    Route::get('about.html',function(){ return view('frontend.about'); });
-    Route::get('chef.html',function(){ return view('frontend.chef'); });
-    Route::get('rules.html',function(){ return view('frontend.rules'); });
-    Route::get('reservation.html',function(){ return view('frontend.reservation'); });
-    Route::get('contact.html',function(){ return view('frontend.contact'); });
-    Route::get('index.html',function(){ return view('frontend.home'); });
 
     // 動態取得資料
     Route::get('GetAjaxData','FrontendController@GetAjaxData');

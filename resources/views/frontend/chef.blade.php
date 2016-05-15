@@ -20,8 +20,8 @@
             </div>
             <div class="main-container main-even-container">
                 <div class="main-box">
-                    <img class="hidden-xs" src="images/cut3_about/menu.png" alt="">
-                    <img class="visible-xs" src="images/cut3_about/munu-phone.png" alt="">
+                    <img class="hidden-xs" src="/images/cut3_about/menu.png" alt="">
+                    <img class="visible-xs" src="/images/cut3_about/munu-phone.png" alt="">
                 </div>
             </div>
         </div>
