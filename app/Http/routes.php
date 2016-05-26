@@ -46,20 +46,32 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('acts','BackendController@acts');
     Route::get('act','BackendController@act');
     Route::post('actstore','BackendController@actstore');
+    Route::delete('{aid}/actdelete','BackendController@actdelete');
 
-    Route::get('test3',function(){ return view('backstage.order.list'); });
-    Route::get('test4',function(){ return view('backstage.order.edit'); });
+    Route::get('act/{aid}/orders','BackendController@orders');
+    Route::get('act/{aid}/order/{oid}','BackendController@order');
+    Route::post('orderstore','BackendController@orderstore');
+
+    Route::get('contacts','BackendController@contacts');
+    Route::get('contact/{cid}','BackendController@contact');
+    Route::post('contactstore','BackendController@contactstore');
+
+    //Route::get('test3',function(){ return view('backstage.order.list'); });
+    //Route::get('test4',function(){ return view('backstage.order.edit'); });
 
 
     /* frontend */
-    Route::group(['prefix' => 'dinnerinthedark'], function(){
+    Route::group(['prefix' => 'dininginthedark'], function(){
         Route::get('about.html',function(){ return view('frontend.about'); });
         Route::get('chef.html',function(){ return view('frontend.chef'); });
         Route::get('rules.html',function(){ return view('frontend.rules'); });
         Route::get('contact.html',function(){ return view('frontend.contact'); });
         Route::get('index.html',function(){ return view('frontend.home'); });
         Route::get('/',function(){ return view('frontend.home'); });
-        //Route::get('reservation.html',function(){ return view('frontend.reservation'); });
+        Route::get('reservation.html',function(){ return view('frontend.reservation'); });
+        Route::post('ReOrderData','FrontendController@ReOrderData');
+        Route::post('getPayDone','FrontendController@getPayDone');
+
         Route::group(['prefix' => 'en'], function(){
             Route::get('about.html',function(){ App::setLocale('en'); return view('frontend.about'); });
             Route::get('chef.html',function(){ App::setLocale('en'); return view('frontend.chef'); });
@@ -67,10 +79,11 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('contact.html',function(){ App::setLocale('en'); return view('frontend.contact'); });
             Route::get('index.html',function(){ App::setLocale('en'); return view('frontend.home'); });
             Route::get('/',function(){ App::setLocale('en'); return view('frontend.home'); });
+            Route::get('reservation.html',function(){ App::setLocale('en'); return view('frontend.reservation'); });
         });
     });
     
-
+    Route::post('/frontcontactstore','FrontendController@contactstore');
     // 動態取得資料
     Route::get('GetAjaxData','FrontendController@GetAjaxData');
 

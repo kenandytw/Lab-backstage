@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <head>
-    <title>Dining in the dark</title>
+    <title>Dinner In The Dark</title>
     <meta charset="utf-8">
     <meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-    <link rel="icon" href="/images/tab-icon.png" >
     <link rel="stylesheet" href="/stylesheets/screen.css">
     <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -36,7 +35,7 @@
                                    Tue-Fri 
                                </td>
                                <td>
-                                   18:00-23:00
+                                   18:30-20:30 / 21:00-23:00
                                </td>
                            </tr>
                            <tr>
@@ -44,7 +43,15 @@
                                    Sat-Sun
                                </td>
                                <td>
-                                   11:30-16:30 / 18:00-23:00
+                                   11:30-13:30 / 14:00-16:00
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>
+                                   
+                               </td>
+                               <td>
+                                   18:30-20:30 / 21:00-23:00
                                </td>
                            </tr>
                            <tr>
@@ -64,14 +71,14 @@
                         <table>
                             <tr>
                                 <td>
-                                    {{ trans('front.contact.address') }}
+                                    台北市大安區延吉街261號1樓
                                 </td>
                             </tr>
                         </table>
                     </div>
                     <div class="footer-container-md">
                         <h1>
-                            聯絡信箱｜E-mail
+                            聯絡信箱 / E-mail
                         </h1>
                         <table>
                             <tr>

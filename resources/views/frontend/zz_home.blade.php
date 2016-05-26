@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <head>
-    <title>Dining in the dark</title>
+    <title>Dinner In The Dark</title>
     <meta charset="utf-8">
     <meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-    <link rel="icon" href="/images/tab-icon.png" >
     <link rel="stylesheet" href="/stylesheets/screen.css">
     <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -91,7 +90,7 @@
 
                    <a href="about.html">
                        <div class="btn btn-standard landing-btn show-4">
-                           {{ trans('front.home.more') }}
+                           瞭解更多
                        </div>   
                    </a>
                    <!--a href="/reservation.html">
@@ -120,21 +119,5 @@
         </div>
 
     </div>
-    <script type="text/javascript">
-        $(function(){
-             $('a').each(function(){
-                var href = $(this).attr('href');
-                if(href.indexOf('dininginthedark')<0){
-                    if(href!='#'){
-                        if(location.pathname.indexOf('en')>0){
-                            $(this).attr('href','/dininginthedark/en/'+href);
-                        } else {
-                            $(this).attr('href','/dininginthedark/'+href);
-                        }
-                    }
-                }
-             });
-        });
-    </script>
 </body>
 </html>

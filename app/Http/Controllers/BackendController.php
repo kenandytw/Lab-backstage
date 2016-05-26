@@ -62,24 +62,52 @@ class BackendController extends Controller
         return redirect('acts');
     }
 
+    public function actdelete(Request $request,$aid){
+
+        act::where('AID', $aid)->delete();
+        orderlist::where('AID',$aid)->delete();
+
+        return redirect()->back();
+    }
+
     /*
     報名清單
     */
-    public function poples(){
-
+    public function orders(Request $request,$aid){
+        $orders = orderlist::latest('updated_at')->where('AID',$aid)->get();
+        $act = act::find($aid);
+        return view('backstage.order.list',compact('orders','act'));
     }
-    public function pople(){
-
+    public function order(Request $request,$aid,$oid){
+        $order = orderlist::find($oid);
+        return view('backstage.order.edit',compact('order'));
+    }
+    public function orderstore(Request $request){
+        $input = $request->all();
+        $order = orderlist::find($input['OID']);
+        $order->PS = $input['PS'];
+        $order->save();
+        return redirect("/act/{$input['AID']}/orders");
     }
 
     /*
     contact
     */
-    public function contacts(){
-
+    public function contacts(Request $request){
+        $contacts = contact::latest('updated_at')->get();
+        return view('backstage.contact.list',compact('contacts'));
     }
-    public function contact(){
-
+    public function contact(Request $request,$cid){
+        $contact = contact::find($cid);
+        return view('backstage.contact.edit',compact('contact'));
+    }
+    public function contactstore(Request $request){
+        $input = $request->all();
+        $contact = contact::find($input['CID']);
+        $contact->Status = $input['Status'];
+        $contact->Notes  = $input['Notes'];
+        $contact->save(); 
+        return redirect('contacts');
     }
 
 }

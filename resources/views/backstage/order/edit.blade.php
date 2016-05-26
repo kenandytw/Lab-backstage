@@ -18,51 +18,61 @@
                     <div class="col-sm-12">
                        <div class="col-sm-12">
                         <div class="card-box">
-                            <h4 class="m-t-0 m-b-30 header-title"><b>報名序號：0630001</b></h4>
+                            <h4 class="m-t-0 m-b-30 header-title"><b>報名序號：{{ $order->SN }}</b></h4>
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form class="form-horizontal group-border-dashed" action="#">
+                                    <form class="form-horizontal group-border-dashed" action="/orderstore" method="post">
+                                    {!! csrf_field() !!}
+                                    <input type="hidden" name="OID" value="{{ $order->OID }}">
+                                    <input type="hidden" name="AID" value="{{ $order->AID }}">
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">姓名</label>
                                             <div class="col-sm-6">
-                                                <input type="text" class="form-control" required placeholder="Type something" />
+                                                <input type="text" class="form-control" required placeholder="Type something" readonly value="{{ $order->Name }}" />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">電話</label>
                                             <div class="col-sm-6">
-                                                <input data-parsley-type="number" type="text" class="form-control" required placeholder="Enter only numbers" />
+                                                <input data-parsley-type="number" type="text" class="form-control" required placeholder="Enter only numbers" readonly value="{{ $order->Tel }}" />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">E-Mail</label>
                                             <div class="col-sm-6">
-                                                <input type="email" class="form-control" required parsley-type="email" placeholder="Enter a valid e-mail" />
+                                                <input type="email" class="form-control" required parsley-type="email" placeholder="Enter a valid e-mail"readonly value="{{ $order->EMail }}" />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">主餐</label>
                                             <div class="col-sm-6">
-                                                <div class="radio radio-info radio-inline">
+                                                @foreach($order->pople as $k=>$r) <div>顧客 {{$k+1}} {{ $r->Meal=='Hunsi' ? '葷食' : '素食'}}</div> @endforeach
+                                                <!--div class="radio radio-info radio-inline">
                                                     <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked>
                                                     <label for="inlineRadio1"> 葷食 </label>
                                                 </div>
                                                 <div class="radio radio-inline">
                                                     <input type="radio" id="inlineRadio2" value="option2" name="radioInline" checked>
                                                     <label for="inlineRadio2"> 素食 </label>
-                                                </div>
+                                                </div-->
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">付款方式</label>
                                             <div class="col-sm-6">
-                                                <label class="control-label">線上預付</label>    
+                                                <label class="control-label">{{ $order->Pay=='online' ? '線上付款' : '現場繳費' }}</label>    
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">備註</label>
                                             <div class="col-sm-6">
-                                                <textarea required class="form-control"></textarea>
+                                                <textarea required class="form-control" readonly>{{ $order->Notes }}</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">註記</label>
+                                            <div class="col-sm-6">
+                                                <textarea required class="form-control" name="PS">{{ $order->PS }}</textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -101,23 +111,23 @@
 
         @include('backstage.jquery')
 
-        <script src="assets/plugins/switchery/switchery.min.js"></script>
-        <script src="assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/multiselect/js/jquery.multi-select.js"></script>
-        <script type="text/javascript" src="assets/plugins/jquery-quicksearch/jquery.quicksearch.js"></script>
-        <script src="assets/plugins/select2/select2.min.js" type="text/javascript"></script>
-        <script src="assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
-        <script src="assets/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js" type="text/javascript"></script>
+        <script src="/backstage/plugins/switchery/switchery.min.js"></script>
+        <script src="/backstage/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+        <script type="text/javascript" src="/backstage/plugins/multiselect/js/jquery.multi-select.js"></script>
+        <script type="text/javascript" src="/backstage/plugins/jquery-quicksearch/jquery.quicksearch.js"></script>
+        <script src="/backstage/plugins/select2/select2.min.js" type="text/javascript"></script>
+        <script src="/backstage/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
+        <script src="/backstage/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js" type="text/javascript"></script>
 
-        <script src="assets/plugins/moment/moment.js"></script>
-        <script src="assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
-        <script src="assets/plugins/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
-        <script src="assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-        <script src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script src="/backstage/plugins/moment/moment.js"></script>
+        <script src="/backstage/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+        <script src="/backstage/plugins/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+        <script src="/backstage/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="/backstage/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
 
-        <script src="assets/js/jquery.core.js"></script>
-        <script src="assets/js/jquery.app.js"></script>
+        <script src="/backstage/js/jquery.core.js"></script>
+        <script src="/backstage/js/jquery.app.js"></script>
 
         <script>
             jQuery(document).ready(function() {

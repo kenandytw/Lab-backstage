@@ -1,7 +1,7 @@
         <div class="mobile-menu">
             <ul class="language-list">
-                <a href="/dininginthedark/"><li class="first-child active">中文</li></a>
-                <a href="/dininginthedark/en/"><li>EN</li></a>
+                <a href="#"><li class="first-child active">中文</li></a>
+                <a href="#"><li>EN</li></a>
             </ul>
             <ul class="page-list">
                 <a href="about.html">
@@ -71,8 +71,8 @@
             <div class="nav-bar hidden-xs">
                
                 <ul class="language-list">
-                    <a href="/dininginthedark/"><li class="first-child">中文</li></a>
-                    <a href="/dininginthedark/en/"><li>English</li></a>
+                    <a href="/dinnerinthedark/"><li class="first-child">中文</li></a>
+                    <a href="/dinnerinthedark/en/"><li>English</li></a>
                 </ul>
                 <ul class="page-list">
                     <a href="about.html"><li>About</li></a>

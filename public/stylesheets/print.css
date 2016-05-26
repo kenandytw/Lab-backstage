@@ -983,6 +983,8 @@ a:hover {
   padding: 5px 20px;
   margin: 0 15px 15px;
   font-size: 12px;
+  border: solid 2px #a67c52;
+border-radius: 0px;
 }
 /* line 989, ../sass/print.scss */
 .reservation-section .btn-negative {

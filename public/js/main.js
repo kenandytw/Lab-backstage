@@ -109,7 +109,7 @@ $(document).ready(function(){
 // mene event
 $(function(){
     $('a[href="'+location.pathname+'"] li').addClass('active');
-    if(location.pathname=='/dinnerinthedark/' || location.pathname=='/dinnerinthedark/index.html' || location.pathname=='/dinnerinthedark/en/' || location.pathname=='/dinnerinthedark/en/index.html'){
+    if(location.pathname=='/dininginthedark' || location.pathname=='/dininginthedark/' || location.pathname=='/dininginthedark/index.html' || location.pathname=='/dininginthedark/en/' || location.pathname=='/dininginthedark/en/index.html'){
         $('.header-contaier').css({
             "position":"relative",
             "z-index":1

@@ -6,7 +6,7 @@
     <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
     <meta name="author" content="Coderthemes">
 
-    <link rel="icon" href="surprise/images/favi.png" >
+    <link rel="icon" href="/surprise/images/favi.png" >
     <title>Surprise Lab</title>
 
     <!-- Plugin Css-->
@@ -44,7 +44,7 @@
 
             <!-- Logo container-->
             <div class="logo">
-                <a href="/admin" class="logo"><img src="surprise/images/favi.png"><div style="float: right;margin-top:4px;"><span style="color: #FC6E52;font-size:16px;">SUPERISE LAB</span></div></a>
+                <a href="/admin" class="logo"><img src="/surprise/images/favi.png"><div style="float: right;margin-top:4px;"><span style="color: #FC6E52;font-size:16px;">SUPERISE LAB</span></div></a>
             </div>
             <!-- End Logo container-->
 
@@ -85,6 +85,12 @@
                     </li>
                     <li class="has-submenu">
                         <a href="/email"><i class="md md-dashboard"></i>Email</a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="/acts"><i class="md md-dashboard"></i>Activaty</a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="/contacts"><i class="md md-dashboard"></i>Contacts</a>
                     </li>
                 </ul>
                 <!-- End navigation menu -->

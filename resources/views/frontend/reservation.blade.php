@@ -98,39 +98,18 @@
            
             <div class="main-container" id="first-section">
                 <p>
-                    無光晚餐是一場全新的冒險,請花些時間詳讀規則,讓您的體驗做足準備。
+                    {{ trans('front.reservation.slug1title') }}
                 </p>    
-                <table>
-                    <tr>
-                        <td width="100px"> 每位單價：</td>
-                        <td>1800+10% 線上預付</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>2500+10% 現場付現</td>
-                    </tr>
-                    <tr>
-                        <td> 特別場次：</td>
-                        <td>2200+10% 線上預付(未定)</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>3000+10% 現場付現(未定)</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td style="color:#777">將收一成服務費用<br>特別場次資訊請至EVENT頁面</td>
-                    </tr>
-                </table>
+                {!! trans('front.reservation.slug1table') !!}
                 <p style="margin-top:25px;">
                     <input id="agree" type="checkbox">
                     <label class="agree-check" for="agree"><span></span></label>
-                    我已詳讀並遵守<a href="rules.html" target="_blank">無光晚餐訂位與用餐規則</a>。
-<span class="alert-wrap alert-show" id="agree-error" style="display: none;"><br /><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>請先閱讀並同意我們的定位與用餐規則</span>
+                    {{ trans('front.reservation.slug1agree') }}<a href="rules.html" target="_blank">{{ trans('front.reservation.slug1agrlink') }}</a>。
+<span class="alert-wrap alert-show" id="agree-error" style="display: none;"><br /><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>{{ trans('front.reservation.slug1agAlert') }}</span>
                 </p>
                 <a href="javascript:;" id="first-btn">
                     <div class="btn btn-standard">
-                        立即訂位
+                        {{ trans('front.home.order') }}
                     </div>
                 </a>
             </div>
@@ -139,7 +118,7 @@
             <div style="max-width:300px;display: none;" class="main-container" id="second-section">
                 <table>
                     <tr>
-                        <td>選擇人數</td>
+                        <td>{{ trans('front.reservation.s2party') }}</td>
                     </tr>
                     <tr>
                         <td class="select-wrap">
@@ -150,7 +129,6 @@
                                 <option value="6">6</option>
                                 <option value="8">8</option>
                                 <option value="10">10</option>
-                                <option value="12">12</option>
                             </select>
                         </td>
                     </tr>
@@ -158,12 +136,12 @@
                         <td>
                             <span class="alert-wrap alert-show">
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                請選擇您的用餐人數
+                                {{ trans('front.reservation.s2partyalert') }}
                             </span>
                         </td>
                     </tr>
                     <tr>
-                        <td>選擇日期</td>
+                        <td>{{ trans('front.reservation.s2date') }}</td>
                     </tr>
                     <tr>
                         <td>
@@ -185,7 +163,7 @@
                         </td>
                     </tr-->
                     <tr>
-                        <td>選擇時間</td>
+                        <td>{{ trans('front.reservation.s2time') }}</td>
                     </tr>
                     <tr>
                         <td class="select-wrap">
@@ -194,21 +172,21 @@
                     </tr>
                     <tr style="display: none;" id="AIDAlert">
                         <td>
-                            <span class="alert-wrap">
+                            <span class="alert-wrap alert-show">
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                您選擇的時間訂位已滿
+                                {{ trans('front.reservation.s2timealert') }}
                             </span>
                         </td>
                     </tr>
                 </table>
-                <a href="javascript:;" id="second-btn-back"><div class="btn btn-standard">上一步</div></a>
-                <a href="javascript:;" id="second-btn"><div class="btn btn-standard">下一步</div></a>
+                <a href="javascript:;" id="second-btn-back"><div class="btn btn-standard">{{ trans('front.reservation.prev') }}</div></a>
+                <a href="javascript:;" id="second-btn"><div class="btn btn-standard">{{ trans('front.reservation.next') }}</div></a>
             </div>
             
             <div style="max-width:300px;display: none;" class="main-container" id="third-section">
                 <table>
                     <tr>
-                        <td>＊姓名</td>
+                        <td>＊{{ trans('front.reservation.Name') }}</td>
                     </tr>
                     <tr>
                         <td>
@@ -219,12 +197,12 @@
                         <td>
                             <span class="alert-wrap alert-show">
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                請輸入您的姓名
+                                {{ trans('front.reservation.NameAlert') }}
                             </span>
                         </td>
                     </tr>
                     <tr>
-                        <td>＊電話</td>
+                        <td>＊{{ trans('front.reservation.Tel') }}</td>
                     </tr>
                     <tr>
                         <td>
@@ -236,7 +214,7 @@
                             <span class="alert-wrap alert-show">
 
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                請輸入正確電話
+                                {{ trans('front.reservation.TelAlert') }}
                             </span>
                         </td>
                     </tr>
@@ -253,44 +231,16 @@
                             <span class="alert-wrap alert-show">
 
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                請輸入正確電子信箱
+                                {{ trans('front.reservation.EMailAlert') }}
                             </span>
                         </td>
                     </tr>
                     <tr>
-                        <td>＊主餐選擇</td>
+                        <td>＊{{ trans('front.reservation.Main') }}</td>
                     </tr>
                     <tr>
                        <td>
-                           <table id="MealTable">
-                               <tr>
-                                   <td></td>
-                                   <th>葷食</th>
-                                   <th>素食</th>
-                               </tr>
-                               <tr class="not-active">
-                                   <td>顧客1</td>
-                                   <th>
-                                       <input id='c1-1' name="c1" type="radio">
-                                       <label for="c1-1"><span></span></label>
-                                   </th>
-                                   <th>
-                                       <input id='c1-2' name="c1" type="radio">
-                                       <label for="c1-2"><span></span></label>
-                                   </th>
-                               </tr>
-                               <tr>
-                                   <td>顧客2</td>
-                                   <th>
-                                       <input id='c2-1' name="c2" type="radio">
-                                       <label for="c2-1"><span></span></label>
-                                   </th>
-                                   <th>
-                                       <input id='c2-2' name="c2" type="radio">
-                                       <label for="c2-2"><span></span></label>
-                                   </th>
-                               </tr>
-                           </table>
+                           <table id="MealTable"></table>
                        </td>
                     </tr>
                     <tr style="display: none;" id="MealAlert">
@@ -303,14 +253,25 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>備註</td>
+                        <td>{{ trans('front.reservation.Notes') }}</td>
                     </tr>
                     <tr>
                         <td>
                             <textarea rows="5" name="Notes" id="Notes"></textarea>
                         </td>
                     </tr>
-                   
+                    <tr>
+                        <td>
+                            範例<br>
+                            飲食狀況:<br>
+                            1.  位葷 顧客對蝦蟹過敏<br>
+                            2.  為素 顧客可吃蛋奶素<br> 
+                            特別驚喜:<br>
+                            1. 我想要在無光晚餐中跟 友求婚<br>
+                            2. 慶祝爸爸的65歲  <br>
+                            3. 這是 場未曾  的初次相遇
+                        </td>
+                    </tr>
                     <tr>
                         <td></td>
                     </tr>
@@ -318,47 +279,47 @@
                         <td>
                             <input id="privatecheck" type="checkbox">
                             <label class="agree-check" for="privatecheck"><span></span></label>
-                            我已閱讀並同意<a class="privacy-link" href="#">隱私條款</a>
+                            {!! trans('front.reservation.AgreeLink') !!}
                         </td>
                     </tr>
                     <tr style="display: none;" id="PrivateAlert">
                         <td>
                             <span class="alert-wrap alert-show">
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                請確認您已閱讀隱私條款
+                                {{ trans('front.reservation.AgreeAlert') }}
                             </span>
                         </td>
                     </tr>
                 </table>
 
-                <a href="javascript:;" id="third-btn-back"><div class="btn btn-standard">上一步</div></a>
-                <a href="javascript:;" id="third-btn"><div class="btn btn-standard">下一步</div></a>
+                <a href="javascript:;" id="third-btn-back"><div class="btn btn-standard">{{ trans('front.reservation.prev') }}</div></a>
+                <a href="javascript:;" id="third-btn"><div class="btn btn-standard">{{ trans('front.reservation.next') }}</div></a>
             </div>
             
             
             <div class="main-container" id="fourth-section" style="display: none;">
                 <p style="max-width:350px;margin:0 auto;">
-                    請確認您的訂位資料
+                    {{ trans('front.reservation.MakeSure') }}
                 </p>
                 <table class="confirm-table">
                     <tr>
-                        <td>人數：</td>
+                        <td>{{ trans('front.reservation.s2party') }}：</td>
                         <th id="PopCheck"></th>
                     </tr>
                     <tr>
-                        <td>日期：</td>
+                        <td>{{ trans('front.reservation.s2date') }}：</td>
                         <th id="ADayCheck"></th>
                     </tr>
                     <tr>
-                        <td>時間：</td>
+                        <td>{{ trans('front.reservation.s2time') }}：</td>
                         <th id="STimeCheck"></th>
                     </tr>
                     <tr>
-                        <td>姓名：</td>
+                        <td>{{ trans('front.reservation.Name') }}：</td>
                         <th id="NameCheck"></th>
                     </tr>
                     <tr>
-                        <td>電話：</td>
+                        <td>{{ trans('front.reservation.Tel') }}：</td>
                         <th id="TelCheck"></th>
                     </tr>
                     <tr>
@@ -366,49 +327,58 @@
                         <th id="EMailCheck"></th>
                     </tr>
                     <tr>
-                        <td>主餐選擇：</td>
+                        <td>{{ trans('front.reservation.Main') }}：</td>
                         <th id="MealCheck"></th>
                     </tr>
                     <tr>
-                        <td>備註：</td>
+                        <td>{{ trans('front.reservation.Notes') }}：</td>
                         <th id="NotesCheck"></th>
                     </tr>
                 </table>
 
-                <a href="javascript:;" id="fourth-btn-back">
-                    <div style="height:54px;line-height:39px" class="btn btn-standard btn-pay btn-negative">
-                        上一步
-                    </div>
-                </a>
-                <a href="javascript:;" id="fourth-btn-onsite">
-                    <div class="btn btn-standard btn-pay btn-negative">
-                        現場付費<br>NT 2500
-                    </div>
-                </a>
-                <a href="javascript:;" id="fourth-btn-online">
-                    <div class="btn btn-standard btn-pay">
-                        線上付費<br>NT 1800
-                    </div>
-                </a>
+                <a href="javascript:;" id="fourth-btn-back"><div style="height:54px;line-height:39px" class="btn btn-standard btn-pay btn-negative">{{ trans('front.reservation.prev') }}</div></a>
+                <a href="javascript:;" id="fourth-btn-online"><div class="btn btn-standard btn-pay">{!! trans('front.reservation.Online') !!}</div></a>
+                <a href="javascript:;" id="fourth-btn-onsite"><div class="btn btn-standard btn-pay btn-negative">{!! trans('front.reservation.Self') !!}</div></a>
             </div>
         
 
         	<div style="padding: 60px 15px 140px;display: none;" class="main-container" id="done-section">
-               <h1>
-                   恭喜您已完成訂位! 
-                   <br>請至您的信箱確認訂位完成信件<div class="visible-xs"></div>及詳細的用餐規則
-               </h1>
-               <a href="about.html">
-                   <div class="btn btn-standard">關於無光晚餐</div>    
-               </a>
+                {!! trans('front.reservation.Done') !!}
             </div>
         </div>
+<form name='Pay2go' method='post' id='Pay2Go' action='https://api.pay2go.com/MPG/mpg_gateway' data-backup='https://capi.pay2go.com/MPG/mpg_gateway'>
+<input type="hidden" name="MerchantID" id="MerchantID" value="35699182">
+<input type="hidden" name="RespondType" id="RespondType" value="JSON">
+<input type="hidden" name="CheckValue" id="CheckValue">
+<input type="hidden" name="TimeStamp" id="TimeStamp">
+<input type="hidden" name="Version" id="Version" value="1.2">
+<input type="hidden" name="LangType" id="LangType" value="zh-tw">
+<input type="hidden" name="MerchantOrderNo" id="MerchantOrderNo">
+<input type="hidden" name="Amt" id="Amt">
+<input type="hidden" name="ItemDesc" id="ItemDesc">
+<!--input type="hidden" name="TradeLimit" id="TradeLimit"-->
+<input type="hidden" name="ReturnURL" id="ReturnURL" value="http://www.surpriselab.com.tw/dininginthedark/getPayDone">
+<input type="hidden" name="ClientBackURL" id="ClientBackURL" value="http://www.surpriselab.com.tw/dininginthedark/">
+<input type="hidden" name="Email" id="Email">
+<input type="hidden" name="LoginType" id="LoginType" value="0">
+<input type="hidden" name="OrderComment" id="OrderComment" value="無光晚餐">
+</form>
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script src="/backstage/plugins/moment/moment.js"></script>
-<script src="/backstage/plugins/timepicker/bootstrap-timepicker.min.js"></script>
-<link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/v4.0.0/build/css/bootstrap-datetimepicker.css">
+<!--script src="/backstage/plugins/timepicker/bootstrap-timepicker.min.js"></script-->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<style type="text/css">
 
+
+.bootstrap-datetimepicker-widget table td.day {
+  color:#000;
+}
+.bootstrap-datetimepicker-widget table td.disabled,
+.bootstrap-datetimepicker-widget table td.disabled:hover {
+  color: #F5F5F5;
+}
+</style>
     <script type="text/javascript">
 $('#form_date').datetimepicker({
     format: "YYYY-MM-DD",
@@ -422,12 +392,19 @@ $('#form_date').datetimepicker({
         for(i=0;i<data.length;i++){
             $('#AID').append('<option value="'+data[i].AID+'" data-pople="'+data[i].Pople+'">'+data[i].STime+'-'+data[i].ETime+'</option>');
         }
+        if($('#AID').html()==''){ $('#AID').append('<option value="0">此日期無時段可供選擇</option>'); }
     },'json');
 });
 $(function(){
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
     var showdate = [];
     // 第一步
     $('#first-btn').bind('click',function(){
+        console.log('');
         if($('#agree').prop('checked')){
             $('#agree-error').hide();
             ChangeSectionNav('second','first',1);
@@ -447,14 +424,18 @@ $(function(){
         } else {
             $('#PopleAlert').hide();
         }
-        if($('#AID').val()==0 || $('#AID:selected').data('Pople')<$('#Pople').val()){
+        if($('#AID').val()==0 || $('#AID option:selected').data('pople')<$('#Pople').val() || $('#AID').val()==null){
             $('#AIDAlert').show(); GoNext++;
         } else {
             $('#AIDAlert').hide();
         }
         if(GoNext==0){
             // creat table 
-
+            var html = '<tr><td></td><th>葷食</th><th>素食</th></tr>';
+            for(i=0;i<$('#Pople').val();i++){
+                html += '<tr><td>顧客'+i+'</td><th><input id="Pople_H'+i+'" name="Pople['+i+']" checked value="Hunsi" type="radio"><label for="Pople_H'+i+'"><span></span></label></th><th><input id="Pople_V'+i+'" name="Pople['+i+']" type="radio" value="Vegetarian"><label for="Pople_V'+i+'"><span></span></label></th></tr>';
+            }
+            $('#MealTable').html(html);
             ChangeSectionNav('third','second',2);
         }
     });
@@ -477,7 +458,16 @@ $(function(){
             $('#NameCheck').text($('#Name').val());
             $('#TelCheck').text($('#Tel').val());
             $('#EMailCheck').text($('#EMail').val());
-            //$('#MealCheck').text($('#Name').val());
+            var text = '';
+            for(i=0;i<$('input[value=Hunsi]').length;i++){
+                text += text=='' ? '' : '/';
+                if($('#Pople_H'+i).prop('checked')){
+                    text += '葷';
+                } else {
+                    text += '素';
+                }
+            }
+            $('#MealCheck').text(text);
             $('#NotesCheck').text($('#Notes').val());
             ChangeSectionNav('fourth','third',3);
         }
@@ -489,11 +479,11 @@ $(function(){
     });
     $('#fourth-btn-onsite').bind('click',function(){
         // 送出資料
-
+        SendOrderData('onsite');
     });
     $('#fourth-btn-online').bind('click',function(){
         // 轉到金流
-
+        SendOrderData('online');
     });
     //$('#first-section').val();
 
@@ -512,9 +502,46 @@ $(function(){
             }
         },'json');
     });
-
+@if(!empty($success) && $success) ChangeSectionNav('fourth','third',3); @endif
 
 });
+function SendOrderData(Pay){
+    var Meal = [];
+    for(i=0;i<$('input[value=Hunsi]').length;i++){
+        Meal[i] = $('#Pople_H'+i).prop('checked') ? 'Hunsi' : 'Vegetarian';
+    }
+    var obj = {
+        'Name'  : $('#Name').val(),
+        'Tel'   : $('#Tel').val(),
+        'EMail' : $('#EMail').val(),
+        'Notes' : $('#Notes').val(),
+        'AID'   : $('#AID').val(),
+        'Pople' : $('#Pople').val(),
+        'Meal'  : Meal,
+        'Pay'   : Pay,
+        'Lng'   : ''
+    };
+    $.post('/dininginthedark/ReOrderData',obj,function(data){
+        if(data.success==true){
+            if(Pay=='onsite'){ ChangeSectionNav('done','fourth',4); } else if(Pay=='online'){
+                $('#Email').val($('#EMail').val());
+                $('#CheckValue').val(data.CheckValue);
+                $('#TimeStamp').val(data.TimeStamp);
+                $('#MerchantOrderNo').val(data.SN);
+                $('#Amt').val(data.Amt);
+                $('#ItemDesc').val('無光晚餐'+$('#Pople').val()+'人套餐');
+                /*console.log('test');
+                $('#Pay2go').submit();*/
+                document.forms["Pay2go"].submit();
+            }
+        }
+    },'json');
+}
+
+
+
+
+
 function ChangeSectionNav(show,hide,nav){
     $('.reservation-nav ul li').removeClass('active');
     $('.reservation-nav ul li:eq('+nav+')').addClass('active');

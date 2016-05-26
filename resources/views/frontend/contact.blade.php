@@ -15,7 +15,7 @@
                                        Tue-Fri 
                                    </td>
                                    <td>
-                                       18:30-20:30 / 21:00-23:00
+                                       18:00-23:00
                                    </td>
                                </tr>
                                <tr>
@@ -23,15 +23,7 @@
                                        Sat-Sun
                                    </td>
                                    <td>
-                                       11:30-13:30 / 14:00-16:00
-                                   </td>
-                               </tr>
-                               <tr>
-                                   <td>
-
-                                   </td>
-                                   <td>
-                                       18:30-20:30 / 21:00-23:00
+                                       11:30-16:00 / 18:00-23:00
                                    </td>
                                </tr>
                                <tr>
@@ -53,14 +45,14 @@
                            <table>
                                <tr>
                                    <td>
-                                       台北市大安區延吉街261號1樓
+                                       {{ trans('front.contact.address') }}
                                    </td>
                                </tr>
                            </table>
                        </div>
                        <div>
                            <h1>
-                               聯絡信箱 / E-mail
+                               聯絡信箱｜E-mail
                            </h1>
                            <table>
                                <tr>
@@ -75,45 +67,44 @@
            </div>
            <div class="contact-alert-container">
                <!--div class="left-box">
-                   驚喜小故事
+                   {{ trans('front.contact.story') }} 
                </div>
                <div class="right-box">
-                   如果你有任何想要在黑暗中驚喜的另外一半,愛人、好朋友、家人, 簡單寫下你的小故事與我們分享,我們會不定期挑選適合的故事,邀
-                   請你們來品嚐無光晚餐。
+                   {{ trans('front.contact.storyc') }} 
                </div-->
                <div class="left-box">
-                   團隊招募 
+                   {{ trans('front.contact.title') }} 
                </div>
                <div class="right-box">
-                  零視覺空間中，什麼事情都有可能發生，<br />加入我們吧，我們樂見各種美好的事情發生！<br />請把履歷寄到我們的信箱：service@surpriselab.com.tw
+                  {!! trans('front.contact.content') !!}service@surpriselab.com.tw
                </div>
            </div>
            
-            <!--div class="main-container">
+            <!--div class="main-container"><form action="/frontcontactstore" method="post" id="contactform">{!! csrf_field() !!}
                 <table>
                     <tr>
-                        <td>＊姓名</td>
+                        <td>＊{{ trans('front.contact.Name') }}</td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="text">
+                            <input type="text" name="Name" id="Name" required>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="NameAlert" style="display: none;">
                         <td>
                             <span class="alert-wrap alert-show">
 
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                請輸入您的姓名
+                                {{ trans('front.contact.NameAlert') }}
                             </span>
                         </td>
                     </tr>
                     <tr>
-                        <td>電話</td>
+                        <td>{{ trans('front.contact.Tel') }}</td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="text">
+                            <input type="tel" name="Tel" id="Tel">
                         </td>
                     </tr>
                     <tr>
@@ -125,69 +116,83 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="email">
+                            <input type="email" name="EMail" id="EMail" required>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="EMailAlert" style="display: none;">
                         <td>
-                            <span class="alert-wrap">
-
+                            <span class="alert-wrap alert-show">
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                請輸入正確電子信箱
+                                {{ trans('front.contact.EMailAlert') }}
                             </span>
                         </td>
                     </tr>
                     <tr>
-                        <td>＊疑問類型</td>
+                        <td>＊{{ trans('front.contact.Sub') }}</td>
                     </tr>
                     <tr>
                         <td class="select-wrap">
-                            <select name="" id="">
-                                <option value="2">付款問題</option>
-                                <option value="4">訂位問題</option>
-                                <option value="6">媒體來信</option>
-                                <option value="6">包場詢問</option>
-                                <option value="6">驚喜小故事</option>
-                                <option value="6">服務建議</option>
-                                <option value="6">其他</option>
+                            <select name="Subject" id="Subject">
+                                <option value="付款問題">{{ trans('front.contact.SubTit1') }}</option>
+                                <option value="訂位問題">{{ trans('front.contact.SubTit2') }}</option>
+                                <option value="媒體來信">{{ trans('front.contact.SubTit3') }}</option>
+                                <option value="包場詢問">{{ trans('front.contact.SubTit4') }}</option>
+                                <option value="驚喜小故事">{{ trans('front.contact.SubTit5') }}</option>
+                                <option value="服務建議">{{ trans('front.contact.SubTit6') }}</option>
+                                <option value="其他">{{ trans('front.contact.SubTit7') }}</option>
                             </select>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="SubAlert" style="display: none;;">
                         <td>
                             <span class="alert-wrap alert-show">
-
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                請選擇您的疑問類型
+                                {{ trans('front.contact.SubAlert') }}
                             </span>
                         </td>
                     </tr>
                     <tr>
-                        <td>備註</td>
+                        <td>{{ trans('front.contact.Content') }}</td>
                     </tr>
                     <tr>
                         <td>
-                            <textarea rows="5"></textarea>
+                            <textarea rows="5" id="Content" name="Content"></textarea>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="ContAlert" style="display: none;">
                         <td>
-                            <span class="alert-wrap">
-
+                            <span class="alert-wrap alert-show">
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                請填寫您想對我們說的話
+                                {{ trans('front.contact.ContAlert') }}
                             </span>
                         </td>
                     </tr>
                 </table>
 
-                <a href="reservation.html">
+                <a href="javascript:;" id="contactbtn">
                     <div class="btn btn-standard">
-                        送出
+                        {{ trans('front.home.submit') }}
                     </div>
                 </a>
-            </div-->
+            </form></div-->
             
             
         </div>
+<script type="text/javascript">
+$(function(){
+  $('#contactbtn').bind('click',function(){
+    var GoNext = 0;
+    if($('#Name').val()==''){ $('#NameAlert').show(); GoNext++; } else { $('#NameAlert').hide(); }
+    if(!validateEmail($('#EMail').val())){ $('#EMailAlert').show(); GoNext++; } else { $('#EMailAlert').hide(); }
+    if($('#Content').val()==''){ $('#ContAlert').show(); GoNext++; } else { $('#ContAlert').hide(); }
+    if(GoNext==0){
+      $('#contactform').submit();
+    }
+  });
+});
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+</script>
 @endsection

@@ -22,7 +22,6 @@
                 <h1 style="margin-bottom:45px;">{{ trans('front.about.steptitle') }}</h1>
                 <div class="about-step-box">
                     <div class="row">
-                        <div class="col-sm-12">
                         <div class="col-sm-6">
                             <div class="about-step">
                                 <div class="step-number">
@@ -46,8 +45,6 @@
 
                             </div>
                         </div>
-                        </div>
-                        <div class="col-sm-12">
                         <div class="col-sm-6">
                             <div class="about-step">
                                 <div class="step-number">
@@ -69,7 +66,6 @@
                                     <p>{{ trans('front.about.step4') }}</p>
                                 </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>

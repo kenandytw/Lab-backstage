@@ -16,8 +16,8 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="card-box table-responsive">
-                            <h4 class="m-t-0 header-title"><b>日期：6/29&nbsp;時間：11:30 - 13:30</b></h4>
-                            <table id="datatable-buttons" class="table table-striped table-bordered">
+                            <h4 class="m-t-0 header-title"><b>日期：{{ $act->ADay->format('Y-m-d') }}&nbsp;時間：{{ substr($act->STime,0,5) }} - {{ substr($act->STime,0,5) }}</b></h4>
+                            <table id="datatable" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
                                         <th>報名序號</th>
@@ -30,33 +30,21 @@
                                         <th></th>
                                     </tr>
                                 </thead>
-
-
                                 <tbody>
+@forelse ($orders as $row)
                                     <tr>
-                                        <td>063001</td>
-                                        <td>A</td>
-                                        <td>0921333222</td>
-                                        <td>test@gmail.com</td>
-                                        <td>葷食</td>
-                                        <td>線上預付</td>
-                                        <td></td>
+                                        <td>{{ $row->SN }}</td>
+                                        <td>{{ $row->Name }}</td>
+                                        <td>{{ $row->Tel }}</td>
+                                        <td>{{ $row->EMail }}</td>
+                                        <td>@foreach($row->pople as $k=>$r) <div>顧客 {{$k+1}} {{ $r->Meal=='Hunsi' ? '葷食' : '素食'}}</div> @endforeach</td>
+                                        <td>{{ $row->Pay=='online' ? '線上付款' : '現場繳費' }}</td>
+                                        <td>{{ $row->Notes }}</td>
                                         <td >
-                                            <a href="#"><i class="fa fa-pencil"></i></a>
+                                            <a href="/act/{{ $row->AID }}/order/{{ $row->OID }}"><i class="fa fa-pencil"></i></a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>063002</td>
-                                        <td>B</td>
-                                        <td>0921000333</td>
-                                        <td>test123@gmail.com</td>
-                                        <td>素食</td>
-                                        <td>現場付費</td>
-                                        <td></td>
-                                        <td class="actions">
-                                            <a href="#"><i class="fa fa-pencil"></i></a>
-                                        </td>
-                                    </tr>
+@endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -85,33 +73,33 @@
         @include('backstage.jquery')
 
         <!-- Datatables-->
-        <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
-        <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
-        <script src="assets/plugins/datatables/dataTables.buttons.min.js"></script>
-        <script src="assets/plugins/datatables/buttons.bootstrap.min.js"></script>
-        <script src="assets/plugins/datatables/jszip.min.js"></script>
-        <script src="assets/plugins/datatables/pdfmake.min.js"></script>
-        <script src="assets/plugins/datatables/vfs_fonts.js"></script>
-        <script src="assets/plugins/datatables/buttons.html5.min.js"></script>
-        <script src="assets/plugins/datatables/buttons.print.min.js"></script>
-        <script src="assets/plugins/datatables/dataTables.fixedHeader.min.js"></script>
-        <script src="assets/plugins/datatables/dataTables.keyTable.min.js"></script>
-        <script src="assets/plugins/datatables/dataTables.responsive.min.js"></script>
-        <script src="assets/plugins/datatables/responsive.bootstrap.min.js"></script>
-        <script src="assets/plugins/datatables/dataTables.scroller.min.js"></script>
+        <script src="/backstage/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="/backstage/plugins/datatables/dataTables.bootstrap.js"></script>
+        <script src="/backstage/plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="/backstage/plugins/datatables/buttons.bootstrap.min.js"></script>
+        <script src="/backstage/plugins/datatables/jszip.min.js"></script>
+        <script src="/backstage/plugins/datatables/pdfmake.min.js"></script>
+        <script src="/backstage/plugins/datatables/vfs_fonts.js"></script>
+        <script src="/backstage/plugins/datatables/buttons.html5.min.js"></script>
+        <script src="/backstage/plugins/datatables/buttons.print.min.js"></script>
+        <script src="/backstage/plugins/datatables/dataTables.fixedHeader.min.js"></script>
+        <script src="/backstage/plugins/datatables/dataTables.keyTable.min.js"></script>
+        <script src="/backstage/plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="/backstage/plugins/datatables/responsive.bootstrap.min.js"></script>
+        <script src="/backstage/plugins/datatables/dataTables.scroller.min.js"></script>
 
         <!-- Datatable init js -->
-        <script src="assets/pages/datatables.init.js"></script>
+        <script src="/backstage/pages/datatables.init.js"></script>
 
-        <script src="assets/js/jquery.core.js"></script>
-        <script src="assets/js/jquery.app.js"></script>
+        <script src="/backstage/js/jquery.core.js"></script>
+        <script src="/backstage/js/jquery.app.js"></script>
 
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#datatable').dataTable();
                 $('#datatable-keytable').DataTable( { keys: true } );
                 $('#datatable-responsive').DataTable();
-                $('#datatable-scroller').DataTable( { ajax: "assets/plugins/datatables/json/scroller-demo.json", deferRender: true, scrollY: 380, scrollCollapse: true, scroller: true } );
+                $('#datatable-scroller').DataTable( { ajax: "/backstage/plugins/datatables/json/scroller-demo.json", deferRender: true, scrollY: 380, scrollCollapse: true, scroller: true } );
                 var table = $('#datatable-fixed-header').DataTable( { fixedHeader: true } );
             } );
             TableManageButtons.init();

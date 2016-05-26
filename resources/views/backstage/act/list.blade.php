@@ -63,14 +63,18 @@
                                                     </thead>
                                                     <tbody>
 @forelse ($acts as $row)
-                                                        <tr class="gradeC"><!--  gradeU  -->
+                                                        <tr class="gradeC" id="tr_{{ $row->AID }}"><!--  gradeU  -->
                                                             <td>{{ $row->ADay->format('m/d') }}</td>
                                                             <td>{{ substr($row->STime,0,5) }}-{{ substr($row->ETime,0,5) }}</td>
                                                             <td>{{ $row->order->sum('Pople') }}/{{ $row->Pop }}</td>
                                                             <td class="actions">
-                                                                <a href="#"><i class="fa fa-list-alt"></i></a>
+                                                                <a href="/act/{{$row->AID}}/orders"><i class="fa fa-list-alt"></i></a>
                                                                 <a href="/act?AID={{ $row->AID }}"><i class="fa fa-pencil"></i></a>
-                                                                <a href="#"><i class="fa fa-trash-o"></i></a>
+<form method="post" action="/{{ $row->AID }}/actdelete" style="display: inline;">
+{!! csrf_field() !!}<input name="_method" type="hidden" value="DELETE"> <!--刪除的偽方法-->
+<a href="javascript:;" class="delbtn"><i class="fa fa-trash-o"></i></a>
+</form>
+                                                                
                                                             </td>
                                                         </tr>
 @empty
@@ -126,6 +130,11 @@
 
         <script>
 			$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
+$(function(){
+    $('.delbtn').bind('click',function(){
+        if(confirm("確定要刪除此活動?如有訂單將一併刪除")) $(this).parent().submit();
+    });
+});
 		</script>
 
 
