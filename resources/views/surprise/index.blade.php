@@ -271,15 +271,18 @@
                                 <span class="integer">00</span>
                             </div>
                         </div>
-                        <h5>
+                        <!--h5>
                             在黑暗中，讓味蕾替你照路
                         </h5>
                         <h5>
                             開啟一趟頂級品饌之旅
-                        </h5>
-                        <button class="free-experience">
+                        </h5-->
+                        <h5>得獎名單已於驚喜製造粉絲頁公布</h5>
+                        <h5>無光晚餐官方網站即將推出</h5>
+                        <a href="https://www.facebook.com/surpriselabtw" style="color:#FFAA33;">請密切關注 驚喜製造 Surprise Lab.</a>
+                        <!--button class="free-experience">
                             搶先體驗
-                        </button>
+                        </button-->
                     </section>
                     <!-- subscribe for web -->
                     <section id="subscribe">
@@ -327,7 +330,7 @@
                             </form>
                         </div>
                         <h1 style="margin-top:25px">
-                            4月24日截止報名，在完成隨機抽選後，將寄送邀請函給10位中獎者，每人將可攜伴乙位免費體驗無光晚餐。(原價3960元/兩位)
+                            5月28日截止報名，在完成隨機抽選後，將寄送邀請函給10位中獎者，每人將可攜伴乙位免費體驗無光晚餐。(原價3960元/兩位)
                         </h1>
                     </section>
                 </div>
@@ -430,7 +433,7 @@
                     </form>
                 </div>
                 <h1 class="xs-ps">
-                    4月24日截止報名，在完成隨機抽選後，將寄送邀請函給10位中獎者，每人將可攜伴乙位免費體驗無光晚餐。(原價3960元/兩位)
+                    5月28日截止報名，在完成隨機抽選後，將寄送邀請函給10位中獎者，每人將可攜伴乙位免費體驗無光晚餐。(原價3960元/兩位)
                 </h1>
 
                 <!-- mobile footer -->
