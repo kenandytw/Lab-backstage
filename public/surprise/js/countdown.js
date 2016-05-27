@@ -1,5 +1,5 @@
 // declare weddingdate and data variables
-var weddingDate = new Date("2016-05-14"),
+var weddingDate = new Date("2016-05-28"),
     years, months, days, minutes, seconds,
     //declare Dom position
     countdown = document.getElementsByClassName("integer");
@@ -9,7 +9,7 @@ console.log(countdown);
 function padZero(number){
   return String("0" + number).slice(-2);
 }
-
+/*
 setInterval(function() {
   var now = Date.now();
   var trackTime = (weddingDate - now)/1000;
@@ -38,3 +38,4 @@ setInterval(function() {
   countdown[10].innerHTML = minutes;
   countdown[11].innerHTML = seconds;
 }, 1000)
+*/
