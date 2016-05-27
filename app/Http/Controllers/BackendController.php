@@ -54,10 +54,18 @@ class BackendController extends Controller
     public function actstore(Request $request){
         $input = $request->all();
         $act = act::firstOrCreate(['AID'=>$input['AID']]);
-        $act->ADay  = $input['ADay'];
-        $act->Pop   = $input['Pop'];
-        $act->STime = $input['STime'];
-        $act->ETime = $input['ETime'];
+        if(orderlist::where('Status','SUCCESS')->where('AID',$input['AID'])->count()>0){
+            $act->Pop   = $input['Pop'];
+        } else {
+            $act->ADay  = $input['ADay'];
+            $act->Pop   = $input['Pop'];
+            $act->STime = $input['STime'];
+            $act->ETime = $input['ETime'];
+            $act->One   = $request->has('One') ? $input['One'] : 0;
+            $act->Sp    = $request->has('Sp') ? $input['Sp'] : 0;
+            $act->Card  = $input['Card'];
+            $act->Money = $input['Money'];
+        }
         $act->save();
         return redirect('acts');
     }
@@ -86,6 +94,9 @@ class BackendController extends Controller
         $input = $request->all();
         $order = orderlist::find($input['OID']);
         $order->PS = $input['PS'];
+        if($request->has('Cancel') && $input['Cancel']==1){
+            $order->Status = 'Cancel';
+        }
         $order->save();
         return redirect("/act/{$input['AID']}/orders");
     }

@@ -70,11 +70,37 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label class="col-sm-3 control-label">訂單狀態</label>
+                                            <div class="col-sm-6">
+                                                <input data-parsley-type="number" type="text" class="form-control" required placeholder="Enter only numbers" readonly value="{{ $order->Status }}" />
+                                            </div>
+                                        </div>
+                                        @if($order->Pay=='online')
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">刷卡訊息</label>
+                                            <div class="col-sm-6">
+                                                <input data-parsley-type="number" type="text" class="form-control" required placeholder="Enter only numbers" readonly value="{{ $order->Message }}" />
+                                            </div>
+                                        </div>
+                                        @endif
+                                        <div class="form-group">
                                             <label class="col-sm-3 control-label">註記</label>
                                             <div class="col-sm-6">
                                                 <textarea required class="form-control" name="PS">{{ $order->PS }}</textarea>
                                             </div>
                                         </div>
+                                        @if($order->Pay=='onsite')
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-3 col-sm-6">
+                                                <div class="checkbox checkbox-primary">
+                                                    <input id="checkbox1" type="checkbox" name="Cancel" value="1">
+                                                    <label for="checkbox1">
+                                                        取消訂位
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endif
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-9 m-t-15">
                                                 <button type="submit" class="btn btn-primary waves-effect waves-light">

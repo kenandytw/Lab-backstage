@@ -52,12 +52,15 @@
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="home">
                                             <div class="">
-                                                <table class="table table-striped" id="datatable-editable">
+                                                <table class="table table-striped" id="datatable">
                                                     <thead>
                                                         <tr>
                                                             <th>活動日期</th>
                                                             <th>活動場次</th>
                                                             <th>參加人數</th>
+                                                            <th>特別活動</th>
+                                                            <th>開放單身</th>
+                                                            <th>刷卡/現金<br />不含服務費 10%</th>
                                                             <th></th>
                                                         </tr>
                                                     </thead>
@@ -66,7 +69,10 @@
                                                         <tr class="gradeC" id="tr_{{ $row->AID }}"><!--  gradeU  -->
                                                             <td>{{ $row->ADay->format('m/d') }}</td>
                                                             <td>{{ substr($row->STime,0,5) }}-{{ substr($row->ETime,0,5) }}</td>
-                                                            <td>{{ $row->order->sum('Pople') }}/{{ $row->Pop }}</td>
+                                                            <td>{{ App\model\orderlist::where('Status','SUCCESS')->count() }}/{{ $row->Pop }}</td>
+                                                            <td>{{ $row->Sp ? '是' : '否' }}</td>
+                                                            <td>{{ $row->One ? '是' : '否' }}</td>
+                                                            <td>{{ $row->Card }}/{{ $row->Money }}</td>
                                                             <td class="actions">
                                                                 <a href="/act/{{$row->AID}}/orders"><i class="fa fa-list-alt"></i></a>
                                                                 <a href="/act?AID={{ $row->AID }}"><i class="fa fa-pencil"></i></a>
@@ -78,7 +84,7 @@
                                                             </td>
                                                         </tr>
 @empty
-<tr><td colspan="4" align="center">尚無資料</td></tr>
+<tr><td colspan="7" align="center">尚無資料</td></tr>
 @endforelse
 
                                                     </tbody>
@@ -129,7 +135,8 @@
         <script src="/backstage/js/jquery.app.js"></script>
 
         <script>
-			$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
+        $('#datatable').dataTable();
+			//$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
 $(function(){
     $('.delbtn').bind('click',function(){
         if(confirm("確定要刪除此活動?如有訂單將一併刪除")) $(this).parent().submit();

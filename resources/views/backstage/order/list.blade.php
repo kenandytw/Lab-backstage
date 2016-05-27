@@ -27,6 +27,7 @@
                                         <th>主餐</th>
                                         <th>付款方式</th>
                                         <th>備註</th>
+                                        <th>註記</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -38,8 +39,9 @@
                                         <td>{{ $row->Tel }}</td>
                                         <td>{{ $row->EMail }}</td>
                                         <td>@foreach($row->pople as $k=>$r) <div>顧客 {{$k+1}} {{ $r->Meal=='Hunsi' ? '葷食' : '素食'}}</div> @endforeach</td>
-                                        <td>{{ $row->Pay=='online' ? '線上付款' : '現場繳費' }}</td>
+                                        <td>{{ $row->Pay=='online' ? '線上付款' : '現場繳費' }}<br /><span class="label label-warning">{{ $row->Status }}</span></td>
                                         <td>{{ $row->Notes }}</td>
+                                        <td>{{ $row->PS }}</td>
                                         <td >
                                             <a href="/act/{{ $row->AID }}/order/{{ $row->OID }}"><i class="fa fa-pencil"></i></a>
                                         </td>
