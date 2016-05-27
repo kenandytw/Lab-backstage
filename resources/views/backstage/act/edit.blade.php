@@ -102,7 +102,7 @@
                                                 <button style="background-color: #7266ba !important;border: 1px solid #7266ba !important;" type="button" class="btn waves-effect waves-light btn-primary">Submit(時間已過無法修改)</button>
                                             @else
                                                 <button style="background-color: #7266ba !important;border: 1px solid #7266ba !important;" type="submit" class="btn waves-effect waves-light btn-primary">Submit</button>
-                                                @if(App\model\orderlist::where('Status','SUCCESS')->count()>0)
+                                                @if(!empty($act->AID) && App\model\orderlist::where('Status','SUCCESS')->where('AID',$act->AID)->sum('Pople')>0)
                                                     <span>已有人員報名~僅提供人數欄位修改</span>
                                                 @endif
                                             @endif

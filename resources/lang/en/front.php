@@ -334,8 +334,8 @@ return [
         'Main'        => 'Choice of Main Course',
         'Notes'       => 'Special Instructions',
         'AgreeLink'   => 'I have read and agreed to the <a class="privacy-link" href="#">Privacy Policy.</a>',
-        'Self'        => 'Pay in Cash<br>NT 2500',
-        'Online'      => 'Pay Online<br>NT 1800',
+        'Self'        => 'Pay in Cash<br>NT ',
+        'Online'      => 'Pay Online<br>NT ',
         'Done'        => '<h1>
                    Congratulations, you have successfully made your reservation!<br>
 Please check your e-mail for the reservation confirmation<div class="visible-xs"></div> and more information.
@@ -344,5 +344,18 @@ Please check your e-mail for the reservation confirmation<div class="visible-xs"
                    <div class="btn btn-standard">About Dining in the dark</div>    
                </a>',
         'MakeSure'    => 'Please confirm your reservation information',
+        'slug3ex'     => '<tr>
+                        <td>
+                            Example<br>
+                            Food requests:<br>
+                            1.  One non-vegetarian diner who is allergic to shrimp and crabs<br>
+                            2.  One vegetarian diner who can eat dairy and eggs<br> 
+                            Special surprises:<br>
+                            1. I\'d like to propose to my girlfriend over dinner.<br>
+                            2. We\'re celebrating my dad\'s 65th birthday. <br>
+                            3. This is a first date. We\'ve never met before.
+                        </td>
+                    </tr>',
     ]
 ];
+

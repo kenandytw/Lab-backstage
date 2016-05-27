@@ -54,7 +54,7 @@ class BackendController extends Controller
     public function actstore(Request $request){
         $input = $request->all();
         $act = act::firstOrCreate(['AID'=>$input['AID']]);
-        if(orderlist::where('Status','SUCCESS')->where('AID',$input['AID'])->count()>0){
+        if(orderlist::where('Status','SUCCESS')->where('AID',$input['AID'])->sum('Pople')>0){
             $act->Pop   = $input['Pop'];
         } else {
             $act->ADay  = $input['ADay'];

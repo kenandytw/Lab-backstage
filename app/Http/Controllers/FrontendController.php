@@ -88,9 +88,12 @@ class FrontendController extends Controller
             $pople->save();
         }
         $time = time();
-        $Amt  = 1980*$order->Pople;
+        $act = act::find($request->AID);
+        $Amt  = $act->Card*$order->Pople;
         $CheckValue = strtoupper(hash("sha256", "HashKey=ybmYe0KpakHaNnkJGYUOLe7pLFfoPO9o&Amt={$Amt}&MerchantID=35699182&MerchantOrderNo={$count}&TimeStamp={$time}&Version=1.2&HashIV=Zvnev7DFskQfIbYo"));
 
+
+        // 加入電子報
         $data = array(
             'email_address' => $request->EMail
         );
@@ -135,12 +138,12 @@ class FrontendController extends Controller
     		if($request->has('act')){
     			switch ($request->act) {
     				case 'GetActByPople':
-    					$act = act::whereRaw('(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID),0))>'.$request->Pople)
+    					$act = act::whereRaw("(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID AND Status='SUCCESS'),0))>".$request->Pople)
     						->select('ADay')->groupBy('ADay')->where('ADay','>=',Carbon::today())->get();
     					return $act->toJson();
     				break;
     				case 'GetActByDate':
-    					$act = act::where('ADay',$request->Day)->select(DB::raw('(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID),0)) AS Pople, ADay,AID,STime,ETime'))->get();
+    					$act = act::where('ADay',$request->Day)->select(DB::raw("(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID AND Status='SUCCESS'),0)) AS Pople, ADay,AID,STime,ETime,One,Sp,Card,Money"))->get();
     					return $act->toJson();
     				break;
     			}

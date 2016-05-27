@@ -69,7 +69,7 @@
                                                         <tr class="gradeC" id="tr_{{ $row->AID }}"><!--  gradeU  -->
                                                             <td>{{ $row->ADay->format('m/d') }}</td>
                                                             <td>{{ substr($row->STime,0,5) }}-{{ substr($row->ETime,0,5) }}</td>
-                                                            <td>{{ App\model\orderlist::where('Status','SUCCESS')->count() }}/{{ $row->Pop }}</td>
+                                                            <td>{{ App\model\orderlist::where('Status','SUCCESS')->where('AID',$row->AID)->sum('Pople') }}/{{ $row->Pop }}</td>
                                                             <td>{{ $row->Sp ? '是' : '否' }}</td>
                                                             <td>{{ $row->One ? '是' : '否' }}</td>
                                                             <td>{{ $row->Card }}/{{ $row->Money }}</td>

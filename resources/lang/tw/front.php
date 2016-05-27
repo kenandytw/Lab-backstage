@@ -335,8 +335,8 @@ return [
         'Main'        => '主餐選擇',
         'Notes'       => '備註',
         'AgreeLink'   => '我已閱讀並同意<a class="privacy-link" href="#">隱私條款</a>',
-        'Self'        => '現場付費<br>NT 2500',
-        'Online'      => '線上付費<br>NT 1800',
+        'Self'        => '現場付費<br>NT ',
+        'Online'      => '線上付費<br>NT ',
         'Done'        => '<h1>
                    恭喜您已完成訂位! 
                    <br>請至您的信箱確認訂位完成信件<div class="visible-xs"></div>及詳細的用餐規則
@@ -345,5 +345,18 @@ return [
                    <div class="btn btn-standard">關於無光晚餐</div>    
                </a>',
         'MakeSure'    => '請確認您的訂位資料',
+        'slug3ex'     => '<tr>
+                        <td>
+                            範例<br>
+                            飲食狀況:<br>
+                            1. 一位葷食顧客對蝦蟹過敏<br>
+                            2. 一位素食顧客可以吃蛋奶素<br> 
+                            特別驚喜:<br>
+                            1. 我想要在無光晚餐中跟 友求婚<br>
+                            2. 慶祝爸爸的65歲  <br>
+                            3. 這是一場未曾見面的初次相遇
+                        </td>
+                    </tr>',
     ]
 ];
+

@@ -124,6 +124,7 @@
                         <td class="select-wrap">
                             <select name="Pople" id="Pople">
                                 <option value="0">0</option>
+                                <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="4">4</option>
                                 <option value="6">6</option>
@@ -147,7 +148,7 @@
                         <td>
                             <div class="form-group">
                                 <div class="input-group date form_date" id="form_date">
-                                    <input class="form-control" size="14" type="text" value="" name="ADay" id="ADay" readonly>
+                                    <input class="form-control" size="14" type="text" name="ADay" id="ADay" readonly>
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                                 </div>
                             </div>
@@ -260,18 +261,7 @@
                             <textarea rows="5" name="Notes" id="Notes"></textarea>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            範例<br>
-                            飲食狀況:<br>
-                            1.  位葷 顧客對蝦蟹過敏<br>
-                            2.  為素 顧客可吃蛋奶素<br> 
-                            特別驚喜:<br>
-                            1. 我想要在無光晚餐中跟 友求婚<br>
-                            2. 慶祝爸爸的65歲  <br>
-                            3. 這是 場未曾  的初次相遇
-                        </td>
-                    </tr>
+                    {!! trans('front.reservation.slug3ex') !!}
                     <tr>
                         <td></td>
                     </tr>
@@ -337,8 +327,8 @@
                 </table>
 
                 <a href="javascript:;" id="fourth-btn-back"><div style="height:54px;line-height:39px" class="btn btn-standard btn-pay btn-negative">{{ trans('front.reservation.prev') }}</div></a>
-                <a href="javascript:;" id="fourth-btn-online"><div class="btn btn-standard btn-pay">{!! trans('front.reservation.Online') !!}</div></a>
-                <a href="javascript:;" id="fourth-btn-onsite"><div class="btn btn-standard btn-pay btn-negative">{!! trans('front.reservation.Self') !!}</div></a>
+                <a href="javascript:;" id="fourth-btn-online"><div class="btn btn-standard btn-pay">{!! trans('front.reservation.Online') !!}<span id="CardView"></span></div></a>
+                <a href="javascript:;" id="fourth-btn-onsite"><div class="btn btn-standard btn-pay btn-negative">{!! trans('front.reservation.Self') !!}<span id="MoneyView"></span></div></a>
             </div>
         
 
@@ -390,7 +380,7 @@ $('#form_date').datetimepicker({
     $.get('/GetAjaxData',{'act':'GetActByDate','Day':event.date.format('YYYY-MM-DD')},function(data){
         $('#AID option').remove();
         for(i=0;i<data.length;i++){
-            $('#AID').append('<option value="'+data[i].AID+'" data-pople="'+data[i].Pople+'">'+data[i].STime+'-'+data[i].ETime+'</option>');
+            $('#AID').append('<option value="'+data[i].AID+'" data-pople="'+data[i].Pople+'" data-one="'+data[i].One+'" data-sp="'+data[i].Sp+'" data-card="'+data[i].Card+'" data-money="'+data[i].Money+'">'+data[i].STime+'-'+data[i].ETime+'</option>');
         }
         if($('#AID').html()==''){ $('#AID').append('<option value="0">此日期無時段可供選擇</option>'); }
     },'json');
@@ -433,7 +423,8 @@ $(function(){
             // creat table 
             var html = '<tr><td></td><th>葷食</th><th>素食</th></tr>';
             for(i=0;i<$('#Pople').val();i++){
-                html += '<tr><td>顧客'+i+'</td><th><input id="Pople_H'+i+'" name="Pople['+i+']" checked value="Hunsi" type="radio"><label for="Pople_H'+i+'"><span></span></label></th><th><input id="Pople_V'+i+'" name="Pople['+i+']" type="radio" value="Vegetarian"><label for="Pople_V'+i+'"><span></span></label></th></tr>';
+                var Num = i+1;
+                html += '<tr><td>顧客'+Num+'</td><th><input id="Pople_H'+Num+'" name="Pople['+Num+']" checked value="Hunsi" type="radio"><label for="Pople_H'+Num+'"><span></span></label></th><th><input id="Pople_V'+Num+'" name="Pople['+Num+']" type="radio" value="Vegetarian"><label for="Pople_V'+Num+'"><span></span></label></th></tr>';
             }
             $('#MealTable').html(html);
             ChangeSectionNav('third','second',2);
@@ -469,6 +460,8 @@ $(function(){
             }
             $('#MealCheck').text(text);
             $('#NotesCheck').text($('#Notes').val());
+            $('#MoneyView').text($('#AID option:selected').data('money'));
+            $('#CardView').text($('#AID option:selected').data('card'));
             ChangeSectionNav('fourth','third',3);
         }
     });
