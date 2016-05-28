@@ -493,6 +493,7 @@ $(function(){
     //$('#second-section,#third-section,#fourth-section,#done-section').hide();
     $('#Pople').bind('change',function(){
         var val = $(this).val();
+        $('#AID option').remove();
         $.get('/GetAjaxData',{'act':'GetActByPople','Pople':val},function(data){
             var nowdata = [],spday = [],oneday = [];
             for(i=0;i<data.length;i++){
@@ -509,7 +510,7 @@ $(function(){
                 $('#form_date').data("DateTimePicker").date(nowdata[0]);
                 showdate = nowdata;
             } else {
-                $('#form_date').data("DateTimePicker").enabledDates('{{ Carbon\Carbon::today()->format('Y-m-d') }}');
+                $('#form_date').data("DateTimePicker").enabledDates(['{{ Carbon\Carbon::today()->format('Y-m-d') }}']);
             }
         },'json');
     });
