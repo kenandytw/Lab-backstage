@@ -121,15 +121,16 @@ class FrontendController extends Controller
     }
 
     public function getPayDone(Request $request){
-        $obj = json_decode($request->JSONData);
+        $obj = json_decode($request->JSONData,true);
 
-        $result = json_decode($obj['Result']);
+        $result = json_decode($obj['Result'],true);
         $order = orderlist::where('SN',$result['MerchantOrderNo'])->first();
         $order->Status  = $obj['Status'];
         $order->Message = $obj['Message'];
         $order->Result  = $obj['Result'];
         $order->save();
-        $success = true;
+        $success = false;
+        if($obj['Status']=='SUCCESS') $success = true;
         return view('frontend.reservation',compact('success'));
     }
 

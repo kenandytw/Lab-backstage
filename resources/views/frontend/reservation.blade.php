@@ -495,7 +495,7 @@ $(function(){
             }
         },'json');
     });
-@if(!empty($success) && $success) ChangeSectionNav('fourth','third',3); @endif
+@if(!empty($success) && $success) ChangeSectionNav('done','first',4); @endif
 
 });
 function SendOrderData(Pay){
