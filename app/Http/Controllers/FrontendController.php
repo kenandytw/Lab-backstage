@@ -140,7 +140,11 @@ class FrontendController extends Controller
     			switch ($request->act) {
     				case 'GetActByPople':
     					$act = act::whereRaw("(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID AND Status='SUCCESS'),0))>".$request->Pople)
-    						->select('ADay')->groupBy('ADay')->where('ADay','>=',Carbon::today())->get();
+    						->select('ADay','Sp','One')->groupBy('ADay')->where('ADay','>=',Carbon::today());
+                        if($request->Pople==1){
+                            $act = $act->where('One',1);
+                        }
+                        $act = $act->get();
     					return $act->toJson();
     				break;
     				case 'GetActByDate':

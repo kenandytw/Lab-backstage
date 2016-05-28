@@ -370,12 +370,13 @@
 }
 </style>
     <script type="text/javascript">
+var spday = [],oneday = [];
 $('#form_date').datetimepicker({
     format: "YYYY-MM-DD",
     minDate:'{{ Carbon\Carbon::today()->format('Y-m-d') }}',
     maxDate:'{{ config('setting.enddate') }}',
     daysOfWeekDisabled: [1],
-    ignoreReadonly:true
+    ignoreReadonly:true,
 }).on('dp.change',function(event){
     $.get('/GetAjaxData',{'act':'GetActByDate','Day':event.date.format('YYYY-MM-DD')},function(data){
         $('#AID option').remove();
@@ -384,6 +385,14 @@ $('#form_date').datetimepicker({
         }
         if($('#AID').html()==''){ $('#AID').append('<option value="0">此日期無時段可供選擇</option>'); }
     },'json');
+}).on('dp.show',function(event){
+    if(spday.length>0){
+        for(i=0;i<spday.length;i++) $('.table-condensed tbody').find('[data-day="'+spday[i]+'"]').css('color','#F00');
+    }
+    if(oneday.length>0){
+        for(i=0;i<oneday.length;i++) $('.table-condensed tbody').find('[data-day="'+oneday[i]+'"]').css('color','#00F');
+        //$('.table-condensed tbody').find('[data-day="06/02/2016"]').css('color','#F00');
+    }
 });
 $(function(){
     $.ajaxSetup({
@@ -485,13 +494,22 @@ $(function(){
     $('#Pople').bind('change',function(){
         var val = $(this).val();
         $.get('/GetAjaxData',{'act':'GetActByPople','Pople':val},function(data){
-            var nowdata = [];
+            var nowdata = [],spday = [],oneday = [];
             for(i=0;i<data.length;i++){
                 nowdata.push(data[i].ADay.replace(' 00:00:00',''));
+                var tmp = data[i].ADay.replace(' 00:00:00','');
+                tmp = tmp.replace('2016-','');
+                tmp = tmp.replace('-','/');
+                tmp = tmp+'/2016';
+                if(data[i].Sp) spday.push(tmp);
+                if(data[i].One) oneday.push(tmp);
             }
             if(nowdata.length>0){
                 $('#form_date').data("DateTimePicker").enabledDates(nowdata);
+                $('#form_date').data("DateTimePicker").date(nowdata[0]);
                 showdate = nowdata;
+            } else {
+                $('#form_date').data("DateTimePicker").enabledDates('{{ Carbon\Carbon::today()->format('Y-m-d') }}');
             }
         },'json');
     });
