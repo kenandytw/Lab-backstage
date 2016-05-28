@@ -31,8 +31,9 @@ $role1section = <<<'FOOBAR'
                             Price per person：
                         </td>
                         <td class="pull-left">
-                            1500 for online reservations <br>
-                            2200 for walk-ins
+                            $1500 for online reservations  <br>
+                            $2000 for walk-ins <br>
+                            10% service charge is additional.
                         </td>
                     </tr>
                     <tr>
@@ -43,8 +44,7 @@ $role1section = <<<'FOOBAR'
                             Special events：
                         </td>
                         <td class="pull-left">
-                            1800 for online reservations<br>
-                            2500 for walk-ins<br>10% service charge is additional.<br>Please see the Event page for information on special events.
+                            Please see the Event page for information on special events.
                         </td>
                     </tr>
                     <tr>
@@ -295,24 +295,20 @@ return [
         'slug1title'  => 'Dining in the Dark is a whole new adventure. Please take the time to read the rules and prepare for the experience.',
         'slug1table'  => '<table>
                     <tr>
+                        <td width="100px"> Darkness Experience:</td>
+                        <td>6-course meal, and a small gift.</td>
+                    </tr>
+                    <tr>
                         <td width="100px"> Price per person:</td>
-                        <td>NT$1,800 for online reservations</td>
+                        <td>$1500 for online reservations</td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td>NT$2,500 for walk-ins (cash only)</td>
-                    </tr>
-                    <tr>
-                        <td> Special events:</td>
-                        <td>NT$2,200 for online reservations</td>
+                        <td>$2000 for walk-ins</td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td>NT$3,000 for walk-ins (cash only)</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td style="color:#777">10% service charge is additional.<br />Please see the Event page for information on special events</td>
+                        <td>10% service charge is additional.</td>
                     </tr>
                 </table>',
         'slug1agree'  => 'I have read and will follow the',

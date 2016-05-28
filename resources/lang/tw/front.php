@@ -31,8 +31,9 @@ $role1section = <<<'FOOBAR'
                             每位單價：
                         </td>
                         <td class="pull-left">
-                            1500 線上預付 <br>
-                            2200 現場付現
+                            $1500 線上付費 (享受 速付款、尊榮折扣) <br>
+                            $2000 現場付費<br>
+                            將加收一成服務費 
                         </td>
                     </tr>
                     <tr>
@@ -43,8 +44,7 @@ $role1section = <<<'FOOBAR'
                             特別場次：
                         </td>
                         <td class="pull-left">
-                            1800 線上預付<br>
-                            2500 現場付現<br>將收一成服務費用<br>特別場次資訊請至EVENT頁面
+                            特別場次資訊請⾄EVENT⾴⾯
                         </td>
                     </tr>
                     <tr>
@@ -293,27 +293,23 @@ return [
     
     ],
     'reservation' => [
-        'slug1title'  => '無光晚餐是一場全新的冒險,請花些時間詳讀規則,讓您的體驗做足準備。',
+        'slug1title'  => '無光晚餐是一場全新的冒險，請花些時間詳讀規則,讓您的體驗做足準備。',
         'slug1table'  => '<table>
                     <tr>
+                        <td width="100px"> 無光餐點：</td>
+                        <td>6道料理 / 餐後⼩禮</td>
+                    </tr>
+                    <tr>
                         <td width="100px"> 每位單價：</td>
-                        <td>1800+10% 線上預付</td>
+                        <td>$1500 線上付費 (享受⾼速付款、尊榮折扣) </td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td>2500+10% 現場付現</td>
-                    </tr>
-                    <tr>
-                        <td> 特別場次：</td>
-                        <td>2200+10% 線上預付(未定)</td>
+                        <td>$2000 現場付費</td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td>3000+10% 現場付現(未定)</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td style="color:#777">將收一成服務費用<br>特別場次資訊請至EVENT頁面</td>
+                        <td>*此價格將另收⼀成服務費</td>
                     </tr>
                 </table>',
         'slug1agree'  => '我已詳讀並遵守',
