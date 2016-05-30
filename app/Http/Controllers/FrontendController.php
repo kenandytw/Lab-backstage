@@ -15,6 +15,7 @@ use DB;
 use Response;
 use App\model\contact;
 use Carbon\Carbon;
+use Mail;
 
 class FrontendController extends Controller
 {
@@ -110,6 +111,12 @@ class FrontendController extends Controller
             //訂閱的動作
             $rr = MC::subscribe('0656269a9c',$data);
         }
+        if($order->Status=='SUCCESS'){
+            $this->SendSuccessByGmail([
+                'tomail' => $request->EMail,
+                'name'   => $request->Name
+            ]);
+        }
 
         return Response::json(array(
             'success'   => true,
@@ -130,8 +137,25 @@ class FrontendController extends Controller
         $order->Result  = $obj['Result'];
         $order->save();
         $success = false;
-        if($obj['Status']=='SUCCESS') $success = true;
+        if($obj['Status']=='SUCCESS'){
+            $this->SendSuccessByGmail([
+                'tomail' => $order->EMail,
+                'name'   => $order->Name
+            ]);
+            $success = true;  
+        } 
         return view('frontend.reservation',compact('success'));
+    }
+
+    private function SendSuccessByGmail($obj){
+        Mail::send('frontend.email',$obj,function($m) use ($obj){
+            $m->from('service@surpriselab.com.tw', '無光晚餐');
+            $m->sender('service@surpriselab.com.tw', '無光晚餐');
+            $m->replyTo('service@surpriselab.com.tw', '無光晚餐');
+
+            $m->to($obj['tomail'], $obj['name']);
+            $m->subject('無光晚餐訂位成功 !');
+        });
     }
 
     public function GetAjaxData(Request $request){
