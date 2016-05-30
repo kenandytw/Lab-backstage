@@ -503,7 +503,7 @@ $(function(){
         var val = $(this).val();
         $('#AID option').remove();
         $.get('/GetAjaxData',{'act':'GetActByPople','Pople':val},function(data){
-            var nowdata = [],spday = [],oneday = [];
+            var nowdata = [];
             for(i=0;i<data.length;i++){
                 nowdata.push(data[i].ADay.replace(' 00:00:00',''));
                 var tmp = data[i].ADay.replace(' 00:00:00','');
