@@ -53,7 +53,7 @@
                 <div class="lightbox-cancel-container">
                     <a class="privacy-link" href="#">
                         <div class="btn btn-standard">
-                            我瞭解了！
+                            我瞭解了
                         </div>
                     </a>
                 </div>
