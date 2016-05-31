@@ -10,7 +10,7 @@
                     <li rules="0">{{ trans('front.rules.role1title') }}</li>
                     <li rules="1">{{ trans('front.rules.role2title') }}</li>
                     <li rules="2">{{ trans('front.rules.role3title') }}</li>
-                    <li rules="3">{{ trans('front.rules.role4title') }}</li>
+                    <li rules="3" style="border-right: solid 0px #777;">{{ trans('front.rules.role4title') }}</li>
                 </ul>
             </div>
            
