@@ -68,6 +68,15 @@ class FrontendController extends Controller
         } else {
             $count = Carbon::now()->format('Ymd').'001';
         }
+
+        $act = act::where('AID',$request->AID)->select(DB::raw("(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID AND Status='SUCCESS'),0)) AS Count,Card"))->first();
+        if($request->Pople>$act->Count){
+            return Response::json(array(
+                'success' => false,
+                'message' => 'full'
+            ), 200);
+        }
+
         //$count = str_pad($count,3,"0",STR_PAD_LEFT);
         $order = new orderlist;
         $order->Name   = $request->Name;

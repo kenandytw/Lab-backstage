@@ -351,6 +351,7 @@
 <!--script src="/backstage/plugins/timepicker/bootstrap-timepicker.min.js"></script-->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
 <style type="text/css">
 
 
@@ -511,6 +512,7 @@ $(function(){
 
 });
 function SendOrderData(Pay){
+    $.blockUI();
     var Meal = [];
     for(i=0;i<$('input[value=Hunsi]').length;i++){
         Meal[i] = $('#Pople_H'+i).prop('checked') ? 'Hunsi' : 'Vegetarian';
@@ -539,7 +541,10 @@ function SendOrderData(Pay){
                 $('#Pay2go').submit();*/
                 document.forms["Pay2go"].submit();
             }
+        } else {
+            alert('本場次人數已滿!');
         }
+        $.unblockUI();
     },'json');
 }
 
