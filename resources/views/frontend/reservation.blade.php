@@ -113,8 +113,6 @@
                                 <option value="2">2</option>
                                 <option value="4">4</option>
                                 <option value="6">6</option>
-                                <option value="8">8</option>
-                                <option value="10">10</option>
                             </select>
                         </td>
                     </tr>
@@ -139,14 +137,14 @@
                             </div>
                         </td>
                     </tr>
-                    <tr>
+                    <!--tr>
                         <td>
                         <span class="alert-wrap alert-show" style="color:#fff">
                         <i class="fa fa-exclamation-triangle"></i>
                             <span style="color:#81a7fd">藍色</span>為單人場次，<span style="color:#fa4b4b">紅色</span>為特別場次
                         </span>
                         </td>
-                    </tr>
+                    </tr-->
                     <!--tr>
                         <td>
                             <span class="alert-wrap alert-show">
@@ -375,7 +373,7 @@ $('#form_date').datetimepicker({
     $.get('/GetAjaxData',{'act':'GetActByDate','Day':event.date.format('YYYY-MM-DD')},function(data){
         $('#AID option').remove();
         for(i=0;i<data.length;i++){
-            $('#AID').append('<option value="'+data[i].AID+'" data-pople="'+data[i].Pople+'" data-one="'+data[i].One+'" data-sp="'+data[i].Sp+'" data-card="'+data[i].Card+'" data-money="'+data[i].Money+'">'+data[i].STime+'-'+data[i].ETime+'</option>');
+            $('#AID').append('<option value="'+data[i].AID+'" data-pople="'+data[i].Pople+'" data-one="'+data[i].One+'" data-sp="'+data[i].Sp+'" data-card="'+data[i].Card+'" data-money="'+data[i].Money+'">'+data[i].STime.substr(0,5)+'-'+data[i].ETime.substr(0,5)+'</option>');
         }
         if($('#AID').html()==''){ $('#AID').append('<option value="0">此日期無時段可供選擇</option>'); }
     },'json');
@@ -490,14 +488,19 @@ $(function(){
         $('#AID option').remove();
         $.get('/GetAjaxData',{'act':'GetActByPople','Pople':val},function(data){
             var nowdata = [];
+            spday = [],oneday = [];
             for(i=0;i<data.length;i++){
                 nowdata.push(data[i].ADay.replace(' 00:00:00',''));
                 var tmp = data[i].ADay.replace(' 00:00:00','');
                 tmp = tmp.replace('2016-','');
                 tmp = tmp.replace('-','/');
                 tmp = tmp+'/2016';
-                if(data[i].Sp) spday.push(tmp);
-                if(data[i].One) oneday.push(tmp);
+                if(parseInt(data[i].Sp)>0){
+                   spday.push(tmp); 
+                } 
+                if(parseInt(data[i].One)>0){
+                    oneday.push(tmp);
+                }
             }
             if(nowdata.length>0){
                 $('#form_date').data("DateTimePicker").enabledDates(nowdata);

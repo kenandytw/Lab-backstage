@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="card-box table-responsive">
-                            <h4 class="m-t-0 header-title"><b>日期：{{ $act->ADay->format('Y-m-d') }}&nbsp;時間：{{ substr($act->STime,0,5) }} - {{ substr($act->STime,0,5) }}</b></h4>
+                            <h4 class="m-t-0 header-title"><b>日期：{{ $act->ADay->format('Y-m-d') }}&nbsp;時間：{{ substr($act->STime,0,5) }} - {{ substr($act->ETime,0,5) }}</b></h4>
                             <table id="datatable" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>

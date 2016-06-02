@@ -99,7 +99,8 @@ class FrontendController extends Controller
         }
         $time = time();
         $act = act::find($request->AID);
-        $Amt  = $act->Card*$order->Pople;
+        $Money = $act->Card*$order->Pople;
+        $Amt  = ($Money*.1) + $Money;
         $CheckValue = strtoupper(hash("sha256", "HashKey=ybmYe0KpakHaNnkJGYUOLe7pLFfoPO9o&Amt={$Amt}&MerchantID=35699182&MerchantOrderNo={$count}&TimeStamp={$time}&Version=1.2&HashIV=Zvnev7DFskQfIbYo"));
 
 
@@ -172,7 +173,7 @@ class FrontendController extends Controller
     		if($request->has('act')){
     			switch ($request->act) {
     				case 'GetActByPople':
-    					$act = act::whereRaw("(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID AND Status='SUCCESS'),0))>".$request->Pople)
+    					$act = act::whereRaw("(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID AND Status='SUCCESS'),0))>=".$request->Pople)
     						->select('ADay','Sp','One')->groupBy('ADay')->where('ADay','>=',Carbon::today());
                         if($request->Pople==1){
                             $act = $act->where('One',1);

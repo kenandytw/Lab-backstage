@@ -65,7 +65,7 @@
                                                     <div class="input-group m-b-15">
 
                                                         <div class="bootstrap-timepicker">
-                                                            <input name="STime" type="text" value="{{ $act->STime or '' }}" class="form-control timepicker">
+                                                            <input name="STime" type="text" value="{{ $act->STime or '18:00' }}" class="form-control timepicker">
                                                         </div>
                                                         <span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span>
                                                     </div><!-- input-group -->
@@ -75,7 +75,7 @@
                                                     <div class="input-group m-b-15">
 
                                                         <div class="bootstrap-timepicker">
-                                                            <input name="ETime" type="text" value="{{ $act->ETime or '' }}" class="form-control timepicker">
+                                                            <input name="ETime" type="text" value="{{ $act->ETime or '20:00' }}" class="form-control timepicker">
                                                         </div>
                                                         <span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span>
                                                     </div><!-- input-group -->
@@ -92,7 +92,7 @@
                                                     <label>現金金額</label>
                                                     <div class="input-group m-b-15">
                                                         <div class="bootstrap-timepicker">
-                                                            <input name="Money" id="Money" type="text" value="{{ $act->Money or '2200' }}" class="form-control" readonly>
+                                                            <input name="Money" id="Money" type="text" value="{{ $act->Money or '2000' }}" class="form-control" readonly>
                                                         </div>
                                                     </div><!-- input-group -->
                                             </div>
@@ -171,10 +171,10 @@ $("#datepicker").datetimepicker({
 $('#checkbox2').bind('click',function(){
     if($(this).prop('checked')){
         $('#Card').val('1800');
-        $('#Money').val('2500');
+        $('#Money').val('2300');
     } else {
         $('#Card').val('1500');
-        $('#Money').val('2200');
+        $('#Money').val('2000');
     }
 });
 
