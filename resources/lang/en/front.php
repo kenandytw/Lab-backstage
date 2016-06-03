@@ -38,7 +38,7 @@ $role1section = <<<'FOOBAR'
                     </tr>
                     <tr>
                         <td>
-                            
+                            4.
                         </td>
                         <td>
                             Special events：
@@ -49,7 +49,7 @@ $role1section = <<<'FOOBAR'
                     </tr>
                     <tr>
                         <td>
-                            4.
+                            5.
                         </td>
                         <td>
                             Time：
@@ -91,14 +91,6 @@ $role2section = <<<'FOOBAR'
                     <tr>
                         <td>
                             4.
-                        </td>
-                        <td>
-                            Please see the Event page for information on special events.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            5.
                         </td>
                         <td>
                             Please use the Contact page to connect with us if you have any other special requirements or questions.

@@ -2,11 +2,13 @@
 /* line 5, ../sass/print.scss */
 body {
   font-family: serif;
+  font-family: "datm7";
 }
 
 /* line 9, ../sass/print.scss */
 h1 {
-  font-family: serif;
+  font-family: "datm7";
+  color:#a57c52;
 }
 
 /* line 16, ../sass/print.scss */
@@ -337,16 +339,19 @@ a:hover {
   margin-bottom: 15px;
   line-height: 1.6em;
   font-weight: bold;
+  font-family:"datm7";
 }
 /* line 342, ../sass/print.scss */
 .main-container h2 {
   font-size: 16px;
+  font-family:"datm7";
 }
 /* line 346, ../sass/print.scss */
 .main-container p {
   padding: 10px 0px;
   letter-spacing: 1px;
   line-height: 1.65em;
+  font-family:"datm7";
 }
 
 /* line 353, ../sass/print.scss */
@@ -445,6 +450,7 @@ a:hover {
 .footer-section h1 {
   color: #a67c52;
   font-size: 14px;
+  font-family: "datm7";
   margin-bottom: 17.5px;
 }
 /* line 445, ../sass/print.scss */
@@ -454,6 +460,7 @@ a:hover {
 /* line 447, ../sass/print.scss */
 .footer-section table td {
   padding: 3.5px 0.8em 3.5px 0;
+  font-family: "datm7";
 }
 /* line 452, ../sass/print.scss */
 .footer-section .footer-zone {
@@ -679,6 +686,7 @@ a:hover {
   padding: 1px 15px;
   border-right: solid 1px #777;
   cursor: pointer;
+  font-family: "datm7";
 }
 /* line 680, ../sass/print.scss */
 .rules-section .rules-nav li:hover {
@@ -704,6 +712,7 @@ a:hover {
   padding: 5px 3px;
   letter-spacing: 1.3px;
   line-height: 1.5em;
+  font-family:"datm7";
 }
 /* line 708, ../sass/print.scss */
 .rules-section .btn-standard {
@@ -905,6 +914,7 @@ a:hover {
 /* line 905, ../sass/print.scss */
 .reservation-section p {
   text-align: left;
+  font-family: "datm7";
 }
 /* line 908, ../sass/print.scss */
 .reservation-section p a {

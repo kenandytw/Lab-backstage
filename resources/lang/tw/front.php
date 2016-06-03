@@ -31,14 +31,14 @@ $role1section = <<<'FOOBAR'
                             每位單價：
                         </td>
                         <td class="pull-left">
-                            $1500 線上付費 (享受 速付款、尊榮折扣) <br>
+                            $1500 線上付費 (享受高速付款、尊榮折扣) <br>
                             $2000 現場付費<br>
                             將加收一成服務費 
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            
+                            4.
                         </td>
                         <td>
                             特別場次：
@@ -49,7 +49,7 @@ $role1section = <<<'FOOBAR'
                     </tr>
                     <tr>
                         <td>
-                            4.
+                            5.
                         </td>
                         <td>
                             營業時間：
@@ -91,14 +91,6 @@ $role2section = <<<'FOOBAR'
                     <tr>
                         <td>
                             4.
-                        </td>
-                        <td>
-                            特別場次資訊，請至EVENT頁面查詢。
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            5.
                         </td>
                         <td>
                             如有其他特殊需求、疑問，請透過CONTACT與我們聯絡。
