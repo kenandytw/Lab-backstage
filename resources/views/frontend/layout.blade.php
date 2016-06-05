@@ -53,7 +53,7 @@
                                    Monday
                                </td>
                                <td>
-                                   Close
+                                   Closed
                                </td>
                            </tr>
                        </table>

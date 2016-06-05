@@ -6,7 +6,7 @@
                <div class="row">
                    <div class="col-md-6">
                        <div>
-                           <h1>
+                           <h1 class="datm7">
                                營業時間｜Opening hour
                            </h1>
                            <table>
@@ -39,7 +39,7 @@
                    </div>
                    <div class="col-md-6">
                        <div>
-                           <h1>
+                           <h1 class="datm7">
                                地址｜Address
                            </h1>
                            <table>
@@ -51,7 +51,7 @@
                            </table>
                        </div>
                        <div>
-                           <h1>
+                           <h1 class="datm7">
                                聯絡信箱｜E-mail
                            </h1>
                            <table>
@@ -66,18 +66,18 @@
                </div>
            </div>
            <div class="contact-alert-container">
-               <!--div class="left-box">
+               <div class="left-box">
                    {{ trans('front.contact.story') }} 
                </div>
                <div class="right-box">
                    {{ trans('front.contact.storyc') }} 
-               </div-->
-               <div class="left-box">
+               </div>
+               <!--div class="left-box">
                    {{ trans('front.contact.title') }} 
                </div>
                <div class="right-box">
                   {!! trans('front.contact.content') !!}service@surpriselab.com.tw
-               </div>
+                </div-->
            </div>
            
             <!--div class="main-container"><form action="/frontcontactstore" method="post" id="contactform">{!! csrf_field() !!}

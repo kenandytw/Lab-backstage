@@ -77,7 +77,7 @@ $role2section = <<<'FOOBAR'
                             2.
                         </td>
                         <td>
-                            Please write to us using the Contact page for parties of 8 and above, or if you would like to book the whole space (28 people).
+                            Please write to us using the Contact page for parties of 8 and above, or if you would like to book the whole space.
                         </td>
                     </tr>
                     <tr>
@@ -122,7 +122,7 @@ $role3section = <<<'FOOBAR'
                             3.
                         </td>
                         <td>
-                            No-shows will not be refunded.
+                            About refund process, we will apply to financial institutions within seven working days, but the date of actual refund is still in accordance with the provisions of the issuing bank.
                         </td>
                     </tr>
                     <tr>
@@ -130,12 +130,20 @@ $role3section = <<<'FOOBAR'
                             4.
                         </td>
                         <td>
-                            You may transfer your reservation by giving another person the reservation number on your confirmation email.
+                            No-shows will not be refunded.
                         </td>
                     </tr>
                     <tr>
                         <td>
                             5.
+                        </td>
+                        <td>
+                            You may transfer your reservation by giving another person the reservation number on your confirmation email.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6.
                         </td>
                         <td>
                             Please call or e-mail ahead of time to notify us of any changes in main course orders or food preferences due to a transfer of your reservation.
@@ -233,13 +241,13 @@ return [
         'steptitle'     => 'The Experience',
         'step1'         => 'Staff members greet guests in the lighted reception area, explaining the details of the experience and confirming each guest’s preferences. A full description of the meal will be given when the guests return to the reception area after the meal is over.',
         'step2'         => 'Guests enter the darkened dining space, where all lighting sources are blocked. Their sense of sight is deprived from when they sit down until they leave.',
-        'step3'         => 'Seven courses designed by a Michelin chef, each one full of surprise, bring guests an unprecedented dining experience in the dark.',
+        'step3'         => 'Six courses designed by a Michelin chef, each one full of surprise, bring guests an unprecedented dining experience in the dark.',
         'step4'         => 'Seating and table service are provided by staff members wearing night-vision goggles.',
         'eventfooter'   => '<p><img src="/images/SLlogo-1.png" alt=""></p><p>The city is full of surprises,<br> but we need people to discover them and share them.<br> The goal of our team is to show everyone the endless possibilities contained in our imagination.<br> Dining in the Dark is only our first surprise.</p><p>Dining in the Dark is a culinary feast,<br> but it is also a multisensory experience. Surprise is everywhere. Enjoy!</p><!--a href="/reservation.html"><div class="btn btn-standard">馬上訂位</div></a-->',
     ],
     'chef'  => [
-        'section' => 'Life would be too hard without an interesting job. What is fine cuisine without a sense of play? In the years I spent overseas, I realized the beauty and richness of Taiwan’s local ingredients. It’s a good thing there is no limit to discovering new tastes, because every new culinary experience is a surprise for my tastebuds. Make every meal amazing--that should be what life is all about.',
-        'name'    => '-Chef Leon',
+        'section' => 'Life would be too hard without an interesting job. What if fine cuisine without a sense of play? In the years I spent overseas, I realized the beauty and richness of Taiwan’s local ingredients. It’s a good thing there is no limit to discovering new tastes, because every new culinary experience is a surprise for my tastebuds. Make every meal amazing-that should be what life is all about.',
+        'name'    => '-Creative Chef',
         'exp'     => '<p>Professional Experience:</p><p class="hidden-xs">Branch Manager at Bo Innovation, a three-star Michelin restaurant in Hong Kong.<br>Creative Chef and Director at Bo London, a one-star Michelin restaurant in London</p><p class="visible-xs">Branch Manager at Bo Innovation, a three-star Michelin restaurant in Hong Kong.<br><br>Creative Chef and Director at Bo London, a one-star Michelin restaurant in London</p>',
     ],
     'rules' => [
@@ -319,7 +327,10 @@ return [
         'AgreeAlert'  => 'Make sure you have read the Privacy Policy',
         'next'        => 'Next',
         'prev'        => 'Back',
-        'Main'        => 'Choice of Main Course',
+        'Main'        => 'Choice of Meal',
+        'Meal1'        => 'Non-vegetarian',
+        'Meal2'        => 'Vegetarian',
+        'Customer'        => 'Customer',
         'Notes'       => 'Special Instructions',
         'AgreeLink'   => 'I have read and agreed to the <a class="privacy-link" href="#">Privacy Policy.</a>',
         'Self'        => 'Pay in Cash<br>NT ',

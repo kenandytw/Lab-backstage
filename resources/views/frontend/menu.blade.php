@@ -5,27 +5,27 @@
             </ul>
             <ul class="page-list">
                 <a href="about.html">
-                    <li>
+                    <li class="datm7">
                         About
                     </li>
                 </a>
                 <a href="chef.html">
-                    <li>
-                        Chef
+                    <li class="datm7">
+                        Menu
                     </li>
                 </a>
                 <a href="rules.html">
-                    <li>
+                    <li class="datm7">
                         Rules
                     </li>
                 </a>
                 <!--a href="reservation.html">
-                    <li>
+                <li class="datm7">
                         Reservation
                     </li>
                 </a>
                 <a href="#">
-                    <li class="dropdown">
+                        <li class="dropdown datm7">
                         Story
                         <i class="fa fa-angle-down"></i>
                         <ul>
@@ -43,7 +43,7 @@
                     </li>
                 </a>
                 <a href="events.html">
-                    <li>
+                <li class="datm7">
                         Events
                     </li>
                 </a-->
