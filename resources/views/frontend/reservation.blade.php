@@ -422,10 +422,10 @@ $(function(){
         }
         if(GoNext==0){
             // creat table 
-            var html = '<tr><td></td><th>葷食</th><th>素食</th></tr>';
+            var html = '<tr><td></td><th>{{ trans('front.reservation.Meal1') }}</th><th>{{ trans('front.reservation.Meal2') }}</th></tr>';
             for(i=0;i<$('#Pople').val();i++){
                 var Num = i+1;
-                html += '<tr><td>顧客'+Num+'</td><th><input id="Pople_H'+Num+'" name="Pople['+Num+']" checked value="Hunsi" type="radio"><label for="Pople_H'+Num+'"><span></span></label></th><th><input id="Pople_V'+Num+'" name="Pople['+Num+']" type="radio" value="Vegetarian"><label for="Pople_V'+Num+'"><span></span></label></th></tr>';
+                html += '<tr><td>{{ trans('front.reservation.Customer') }}'+Num+'</td><th><input id="Pople_H'+Num+'" name="Pople['+Num+']" checked value="Hunsi" type="radio"><label for="Pople_H'+Num+'"><span></span></label></th><th><input id="Pople_V'+Num+'" name="Pople['+Num+']" type="radio" value="Vegetarian"><label for="Pople_V'+Num+'"><span></span></label></th></tr>';
             }
             $('#MealTable').html(html);
             ChangeSectionNav('third','second',2);
@@ -454,9 +454,9 @@ $(function(){
             for(i=0;i<$('input[value=Hunsi]').length;i++){
                 text += text=='' ? '' : '/';
                 if($('#Pople_H'+i).prop('checked')){
-                    text += '葷';
+                    text += '{{ trans('front.reservation.Meal1') }}';
                 } else {
-                    text += '素';
+                    text += '{{ trans('front.reservation.Meal2') }}';
                 }
             }
             $('#MealCheck').text(text);

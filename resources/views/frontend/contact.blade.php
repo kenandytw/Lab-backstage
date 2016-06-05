@@ -80,7 +80,7 @@
                 </div-->
            </div>
            
-            <!--div class="main-container"><form action="/frontcontactstore" method="post" id="contactform">{!! csrf_field() !!}
+            <div class="main-container"><form action="/frontcontactstore" method="post" id="contactform">{!! csrf_field() !!}
                 <table>
                     <tr>
                         <td>＊{{ trans('front.contact.Name') }}</td>
@@ -174,7 +174,7 @@
                         {{ trans('front.home.submit') }}
                     </div>
                 </a>
-            </form></div-->
+            </form></div>
             
             
         </div>
