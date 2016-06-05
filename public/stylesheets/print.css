@@ -234,6 +234,7 @@ a:hover {
   margin-top: 40px;
   border-radius: 1px;
   border-width: 1px;
+  font-family: "datm7";
 }
 
 /* line 238, ../sass/print.scss */
@@ -307,6 +308,7 @@ a:hover {
   padding: 10px 20px;
   font-size: 17px;
   letter-spacing: 1.5px;
+  font-family: "datm7";    
 }
 /* line 311, ../sass/print.scss */
 .nav-bar a {
