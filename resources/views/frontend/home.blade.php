@@ -12,7 +12,6 @@
     <script src="/js/jquery-1.11.3.min.js"></script>
     <script src="/js/imagesLoaded.js"></script>
     <script src="/js/index.js"></script>
-    
     <script src="/js/main.js"></script>
 </head>
 <body>
@@ -26,7 +25,7 @@
                 <!-- LOGO z: 1000 -->
                 <div class="main-logo">
                     <img src="/images/cut1-intro/logo-big.png" alt="">
-                    <div class="btn btn-standard landing-btn datm7">
+                    <div class="btn btn-standard landing-btn datm7" style="font-family:datm7;">
                         ENTER
                     </div>
                 </div>
