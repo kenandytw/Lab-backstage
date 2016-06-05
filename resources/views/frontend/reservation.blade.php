@@ -547,8 +547,12 @@ function SendOrderData(Pay){
         } else {
             alert('本場次人數已滿!');
         }
-        $.unblockUI();
-    },'json');
+    },'json').fail(function() {
+    alert('服務繁忙中請稍後在試!');
+  })
+  .always(function() {
+    $.unblockUI();
+});
 }
 
 

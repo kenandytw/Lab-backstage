@@ -32,11 +32,11 @@ class BackendController extends Controller
     */
     public function acts(Request $request){
         if($request->has('filter') && $request->filter=='feature'){
-            $acts = act::latest('updated_at')->where('ADay','>=',Carbon::today())->get();
+            $acts = act::orderBy('ADay','ASC')->orderBy('STime','ASC')->orderBy('updated_at','DESC')->where('ADay','>=',Carbon::today())->get();
         } elseif($request->has('filter') && $request->filter=='old'){
-            $acts = act::orderBy('ADay', 'ASC')->where('ADay','<',Carbon::today())->get();
+            $acts = act::orderBy('ADay', 'ASC')->orderBy('STime','ASC')->where('ADay','<',Carbon::today())->get();
         } else {
-            $acts = act::latest('updated_at')->get();
+            $acts = act::orderBy('ADay','ASC')->orderBy('STime','ASC')->orderBy('updated_at','DESC')->get();
         }
         return view('backstage.act.list',compact('acts','request'));
     }
