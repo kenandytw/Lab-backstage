@@ -16,6 +16,7 @@ use Response;
 use App\model\contact;
 use Carbon\Carbon;
 use Mail;
+use Redirect;
 
 class FrontendController extends Controller
 {
@@ -57,6 +58,21 @@ class FrontendController extends Controller
         $contact->Content = $request->Content;
         $contact->Status  = 0;
         $contact->save();
+        $obj = [
+            'Name'    => $request->Name,
+            'Tel'     => $request->Tel,
+            'EMail'   => $request->EMail,
+            'Subject' => $request->Subject,
+            'Content' => $request->Content,
+        ];
+        Mail::send('frontend.contacemail',$obj,function($m) use ($obj){
+            $m->from('service@surpriselab.com.tw', '無光晚餐');
+            $m->sender('service@surpriselab.com.tw', '無光晚餐');
+            $m->replyTo('service@surpriselab.com.tw', '無光晚餐');
+
+            $m->to('service@surpriselab.com.tw', '無光晚餐');
+            $m->subject('無光晚餐，聯絡我們-通知');
+        });
         return Redirect::to("/dininginthedark/")->with('message','留言完成!');
     }
 

@@ -17,7 +17,7 @@
                     </div>
                     <div class="chef-info">
                         <h2 class="mg-top-45" style="color: #a67c52;">
-                            {{ trans('front.chef.name') }}
+                            {!! trans('front.chef.name2') !!}
                         </h2>
                     </div>
                     <div class="chef-info">{!! trans('front.chef.exp') !!}</div>

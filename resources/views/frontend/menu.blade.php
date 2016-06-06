@@ -76,7 +76,7 @@
                 </ul>
                 <ul class="page-list">
                     <a href="about.html"><li>About</li></a>
-                    <a href="chef.html"><li>Chef</li></a>
+                    <a href="chef.html"><li>Menu</li></a>
                     <a href="rules.html"><li>Rules</li></a>
                     <!--a href="/reservation.html"><li>Reservation</li></a>
                     <a href="#">

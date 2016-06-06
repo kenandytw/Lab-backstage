@@ -376,6 +376,7 @@ $('#form_date').datetimepicker({
             $('#AID').append('<option value="'+data[i].AID+'" data-pople="'+data[i].Pople+'" data-one="'+data[i].One+'" data-sp="'+data[i].Sp+'" data-card="'+data[i].Card+'" data-money="'+data[i].Money+'">'+data[i].STime.substr(0,5)+'-'+data[i].ETime.substr(0,5)+'</option>');
         }
         if($('#AID').html()==''){ $('#AID').append('<option value="0">此日期無時段可供選擇</option>'); }
+        $('#AIDAlert').hide();
     },'json');
 }).on('dp.show',function(event){
     if(spday.length>0){
@@ -509,7 +510,14 @@ $(function(){
             } else {
                 $('#form_date').data("DateTimePicker").enabledDates(['{{ Carbon\Carbon::today()->format('Y-m-d') }}']);
             }
+            $('#AIDAlert').hide();
         },'json');
+    });
+
+    $('#AID').bind('change',function(){
+        if($(this).data('pople')>$('#Pople').val()){
+            $('#AIDAlert').hide();
+        }
     });
 @if(!empty($success) && $success) ChangeSectionNav('done','first',4); @endif
 
