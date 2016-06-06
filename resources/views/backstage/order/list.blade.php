@@ -39,7 +39,16 @@
                                         <td>{{ $row->Tel }}</td>
                                         <td>{{ $row->EMail }}</td>
                                         <td>@foreach($row->pople as $k=>$r) <div>顧客 {{$k+1}} {{ $r->Meal=='Hunsi' ? '葷食' : '素食'}}</div> @endforeach</td>
-                                        <td>{{ $row->Pay=='online' ? '線上付款' : '現場繳費' }}<br /><span class="label label-warning">{{ $row->Status }}</span></td>
+                                        <td>{{ $row->Pay=='online' ? '線上付款' : '現場繳費' }}<br />
+@if($row->Status == 'SUCCESS')
+<span class="label label-success">{{ $row->Status }}</span>
+@elseif($row->Status == 'Cancel')
+<span class="label label-warning">{{ $row->Status }}</span>
+@else
+<span class="label label-danger">{{ $row->Status=='' ? '無付款(失敗)' : $row->Status }}</span>
+@endif
+
+                                        </td>
                                         <td>{{ $row->Notes }}</td>
                                         <td>{{ $row->PS }}</td>
                                         <td >

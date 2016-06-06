@@ -85,7 +85,7 @@ class FrontendController extends Controller
             $count = Carbon::now()->format('Ymd').'001';
         }
 
-        $act = act::where('AID',$request->AID)->select(DB::raw("(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID AND Status='SUCCESS'),0)) AS Count,Card"))->first();
+        $act = act::where('AID',$request->AID)->select(DB::raw("(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID AND Status='SUCCESS'),0)) AS Count,Card,ADay,STime,ETime"))->first();
         if($request->Pople>$act->Count){
             return Response::json(array(
                 'success' => false,
@@ -140,7 +140,9 @@ class FrontendController extends Controller
         if($order->Status=='SUCCESS'){
             $this->SendSuccessByGmail([
                 'tomail' => $request->EMail,
-                'name'   => $request->Name
+                'name'   => $request->Name,
+                'time'   => str_replace(' 00:00:00','',$act->ADay).' '.substr($act->STime,0,5).'~'.substr($act->ETime,0,5),
+                'pop'    => $request->Pople
             ]);
         }
 

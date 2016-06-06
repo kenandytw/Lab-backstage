@@ -142,6 +142,7 @@ $(function(){
         if(confirm("確定要刪除此活動?如有訂單將一併刪除")) $(this).parent().submit();
     });
 });
+@if(Session::has('message')) alert('{{ Session::get('message') }}'); @endif
 		</script>
 
 

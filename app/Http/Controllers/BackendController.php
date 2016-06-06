@@ -71,11 +71,15 @@ class BackendController extends Controller
     }
 
     public function actdelete(Request $request,$aid){
-
-        act::where('AID', $aid)->delete();
-        orderlist::where('AID',$aid)->delete();
-
-        return redirect()->back();
+        if(orderlist::where('AID',$aid)->count()>0){
+            $message = '錯誤~已有人報名!';
+            return redirect()->back()->with('message',$message);
+        } else {
+            $message = '';
+            act::where('AID', $aid)->delete();
+            return redirect()->back();
+        }
+        
     }
 
     /*
