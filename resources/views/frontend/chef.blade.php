@@ -15,7 +15,7 @@
                     <div class="chef-photo">
                         <img src="/images/chef-bnw.jpg" alt="" height="240">
                     </div>
-                    <div class="chef-info">
+                    <div class="chef-info visible-xs">
                         <h2 class="mg-top-45" style="color: #a67c52;">
                             {!! trans('front.chef.name2') !!}
                         </h2>
