@@ -17,7 +17,7 @@ $role1section = <<<'FOOBAR'
                             2.
                         </td>
                         <td>
-                            黑暗餐點：
+                            無光餐點：
                         </td>
                         <td class="pull-left">
                             6道料理 / 餐後小禮
