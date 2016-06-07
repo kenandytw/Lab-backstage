@@ -315,7 +315,7 @@ return [
                 </table>',
         'slug1agree'  => '我已詳讀並遵守',
         'slug1agrlink'=> '無光晚餐訂位與用餐規則',
-        'slug1agAlert'=> '請先閱讀並同意我們的定位與用餐規則',
+        'slug1agAlert'=> '請先閱讀並同意我們的訂位與用餐規則',
         's2party'     => '選擇人數',
         's2partyalert'=> '請選擇您的用餐人數',
         's2date'      => '選擇日期',
