@@ -551,15 +551,19 @@ function SendOrderData(Pay){
                 /*console.log('test');
                 $('#Pay2go').submit();*/
                 document.forms["Pay2go"].submit();
+                //$.unblockUI();
             }
         } else {
             alert('本場次人數已滿!');
+            //$.unblockUI();
         }
+        $.unblockUI();
     },'json').fail(function() {
     alert('服務繁忙中請稍後在試!');
+    $.unblockUI();
   })
   .always(function() {
-    $.unblockUI();
+    
 });
 }
 

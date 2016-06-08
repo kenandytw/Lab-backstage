@@ -35,7 +35,7 @@
                 <!-- LOGO z: 1000 -->
                 <div class="main-logo">
                     <img src="/images/cut1-intro/logo-big.png" alt="">
-                    <div class="btn btn-standard landing-btn datm7">
+                    <div class="btn btn-standard landing-btn datm7" style="font-family:datm7;">
                         ENTER
                     </div>
                 </div>

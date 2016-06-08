@@ -19,12 +19,12 @@
                         Rules
                     </li>
                 </a>
-                <!--a href="reservation.html">
+                <a href="reservation.html">
                 <li class="datm7">
                         Reservation
                     </li>
                 </a>
-                <a href="#">
+                <!--a href="#">
                         <li class="dropdown datm7">
                         Story
                         <i class="fa fa-angle-down"></i>
@@ -78,8 +78,8 @@
                     <a href="about.html"><li>About</li></a>
                     <a href="chef.html"><li>Menu</li></a>
                     <a href="rules.html"><li>Rules</li></a>
-                    <!--a href="/reservation.html"><li>Reservation</li></a>
-                    <a href="#">
+                    <a href="reservation.html"><li>Reservation</li></a>
+                    <!--a href="#">
                         <li class="dropdown">
                             Story
                             <i style="margin-left:5px;" class="fa fa-angle-down"></i>
