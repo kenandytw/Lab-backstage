@@ -105,7 +105,7 @@
                    </a>
                    <!--a href="/reservation.html">
                        <div class="btn btn-standard landing-btn show-4">
-                           立即訂位
+                           {{ trans('front.home.order') }}
                        </div>
                    </a-->
                 </div>

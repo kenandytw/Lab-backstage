@@ -243,13 +243,14 @@ return [
         'step2'         => 'Guests enter the darkened dining space, where all lighting sources are blocked. Their sense of sight is deprived from when they sit down until they leave.',
         'step3'         => 'Six courses designed by a Michelin chef, each one full of surprise, bring guests an unprecedented dining experience in the dark.',
         'step4'         => 'Seating and table service are provided by staff members wearing night-vision goggles.',
-        'eventfooter'   => '<p><img src="/images/SLlogo-1.png" alt=""></p><p>The city is full of surprises,<br> but we need people to discover them and share them.<br> The goal of our team is to show everyone the endless possibilities contained in our imagination.<br> Dining in the Dark is only our first surprise.</p><p>Dining in the Dark is a culinary feast,<br> but it is also a multisensory experience. Surprise is everywhere. Enjoy!</p><!--a href="/reservation.html"><div class="btn btn-standard">馬上訂位</div></a-->',
+        'eventfooter'   => '<p><img src="/images/SLlogo-1.png" alt=""></p><p>The city is full of surprises,<br> but we need people to discover them and share them.<br> The goal of our team is to show everyone the endless possibilities contained in our imagination.<br> Dining in the Dark is only our first surprise.</p><p>Dining in the Dark is a culinary feast,<br> but it is also a multisensory experience. Surprise is everywhere. Enjoy!</p><a href="/reservation.html"><div class="btn btn-standard">Reserve a table</div></a>',
     ],
     'chef'  => [
         'section' => 'Life would be too hard without an interesting job. What if fine cuisine without a sense of play? In the years I spent overseas, I realized the beauty and richness of Taiwan’s local ingredients. It’s a good thing there is no limit to discovering new tastes, because every new culinary experience is a surprise for my tastebuds. Make every meal amazing-that should be what life is all about.',
         'name'    => '-Creative Chef',
         'name2'   => '-Creative Chef',
-        'exp'     => '<p>Professional Experience:</p><p class="hidden-xs">Branch Manager at Bo Innovation, a three-star Michelin restaurant in Hong Kong.<br>Creative Chef and Director at Bo London, a one-star Michelin restaurant in London</p><p class="visible-xs">Branch Manager at Bo Innovation, a three-star Michelin restaurant in Hong Kong.<br><br>Creative Chef and Director at Bo London, a one-star Michelin restaurant in London</p>',
+        'exp'     => '<p>Professional Experience:</p><p class="hidden-xs">Branch Manager at Bo Innovation, a three-star Michelin restaurant in Hong Kong.<br>Creative Chef and Director at Bo London, a one-star Michelin restaurant in London</p><p class="visible-xs">Branch Manager at<br>Bo Innovation, a three-star Michelin restaurant in Hong Kong.<br><br>Creative Chef and Director at<br>Bo London, a one-star Michelin restaurant in London</p>',
+        'menu'   => '<img class="hidden-xs" src="/images/MENU-en-final.png" alt=""><img style="width: 100%;" class="visible-xs" src="/images/MENU-en-final.png" alt="">',
     ],
     'rules' => [
         'role1title'   => 'Reservations',

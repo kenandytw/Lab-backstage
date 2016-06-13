@@ -244,13 +244,14 @@ return [
         'step3'         => '驚喜的主要來源，是使用視覺除外的感官品嘗料理，而和同伴的交心談話，則能讓美味更加昇華。',
         'step4'         => '就座與用餐時的所有服務需求，皆由佩戴夜視鏡的工作人員悉心照料。',
         'eventfooter'   => '<p><img src="/images/SLlogo-1.png" alt=""></p><p>城市不乏驚喜，但需要樂於發現和分享的人
-<br>我們要用奔放的想像力持續向城市發聲<br>無光晚餐是為你精心製造的第一號驚喜</p><p>它是味覺的饗宴，更是全感官的體驗<br>無所不在的驚喜，歡迎享用</p><!--a href="/reservation.html"><div class="btn btn-standard">馬上訂位</div></a-->',
+<br>我們要用奔放的想像力持續向城市發聲<br>無光晚餐是為你精心製造的第一號驚喜</p><p>它是味覺的饗宴，更是全感官的體驗<br>無所不在的驚喜，歡迎享用</p><a href="/reservation.html"><div class="btn btn-standard">馬上訂位</div></a>',
     ],
     'chef'  => [
         'section' => '工作如果不有趣，人生就太辛苦了；料理若沒有玩心，能剩得下什麼滋味？<br>旅居海外多年，因而透悟台灣本地食材的優美豐富，還好味覺的經驗值沒有額度限制，才能藉由每一次的美食體驗，讓味蕾不間斷地品嚐到驚喜，把每餐飯吃得有聲有色，就該是生活最確切的目的。',
         'name'    => '─創意主廚 LEON',
         'name2'   => '─<br>創意主廚 LEON',
-        'exp'     => '<p>餐飲經歷</p><p class="hidden-xs" style="width: 320px;">香港米其林三星餐廳Bo Innovation 展店人<br>倫敦米其林一星餐廳Bo London 創意主廚/總監</p><p class="visible-xs">香港米其林三星餐廳Bo<br>Innovation 展店人<br><br>倫敦米其林一星餐廳Bo<br>London 創意主廚/總監</p>',
+        'exp'     => '<p>餐飲經歷</p><p class="hidden-xs" style="width: 320px;">香港米其林三星餐廳<br>Bo Innovation 展店人<br>倫敦米其林一星餐廳Bo London 創意主廚/總監</p><p class="visible-xs">香港米其林三星餐廳<br>Bo Innovation 展店人<br><br>倫敦米其林一星餐廳<br>Bo London 創意主廚/總監</p>',
+        'menu'   => '<img class="hidden-xs" src="/images/MENU-ch-final.png" alt=""><img style="width: 100%;" class="visible-xs" src="/images/MENU-ch-final.png" alt="">',
     ],
     'rules' => [
         'role1title'   => '訂位服務',
