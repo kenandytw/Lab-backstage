@@ -233,7 +233,6 @@ a:hover {
   margin-top: 40px;
   border-radius: 1px;
   border-width: 1px;
-  font-family: "datm7";
 }
 
 /* line 238, ../sass/print.scss */
@@ -352,7 +351,6 @@ a:hover {
   padding: 10px 0px;
   letter-spacing: 1px;
   line-height: 1.65em;
-  font-family:"datm7";
 }
 
 /* line 353, ../sass/print.scss */
