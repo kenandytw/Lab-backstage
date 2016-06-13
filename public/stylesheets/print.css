@@ -711,7 +711,6 @@ a:hover {
   padding: 5px 3px;
   letter-spacing: 1.3px;
   line-height: 1.5em;
-  font-family:"datm7";
 }
 /* line 708, ../sass/print.scss */
 .rules-section .btn-standard {
@@ -913,7 +912,6 @@ a:hover {
 /* line 905, ../sass/print.scss */
 .reservation-section p {
   text-align: left;
-  font-family: "datm7";
 }
 /* line 908, ../sass/print.scss */
 .reservation-section p a {
