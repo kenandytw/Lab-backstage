@@ -454,7 +454,8 @@ $(function(){
             var text = '';
             for(i=0;i<$('input[value=Hunsi]').length;i++){
                 text += text=='' ? '' : '/';
-                if($('#Pople_H'+i).prop('checked')){
+                var tmpval = i + 1;
+                if($('#Pople_H'+tmpval).prop('checked')){
                     text += '{{ trans('front.reservation.Meal1') }}';
                 } else {
                     text += '{{ trans('front.reservation.Meal2') }}';
@@ -515,7 +516,7 @@ $(function(){
     });
 
     $('#AID').bind('change',function(){
-        if($(this).data('pople')>$('#Pople').val()){
+        if($('#AID option:selected').data('pople')>$('#Pople').val()){
             $('#AIDAlert').hide();
         }
     });
@@ -526,7 +527,8 @@ function SendOrderData(Pay){
     $.blockUI();
     var Meal = [];
     for(i=0;i<$('input[value=Hunsi]').length;i++){
-        Meal[i] = $('#Pople_H'+i).prop('checked') ? 'Hunsi' : 'Vegetarian';
+        var tmpval = i + 1;
+        Meal[i] = $('#Pople_H'+tmpval).prop('checked') ? 'Hunsi' : 'Vegetarian';
     }
     var obj = {
         'Name'  : $('#Name').val(),
