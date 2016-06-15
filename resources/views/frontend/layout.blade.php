@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="無光晚餐 DINING IN THE DARK" />
 <meta property="og:image" content="http://surpriselab.com.tw/images/share.jpg" />
 <meta property="og:type" content="website" />
-<meta name="description" content="這裡黑暗無光，唯有你的舌尖，將被美到料理點亮。">
+<meta name="description" content="這裡黑暗無光，唯有你的舌尖，將被每道料理點亮。">
 <meta name="keywords" content="無光晚餐、無光餐廳、約會餐廳、黑暗餐廳、黑暗體驗">
 </head>
 <body>
