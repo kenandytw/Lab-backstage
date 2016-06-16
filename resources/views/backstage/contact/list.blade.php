@@ -46,7 +46,11 @@
                                                             <td>{{ $row->created_at->format('Y-m-d H:i:s') }}</td>
                                                             <td class="actions">
                                                                 <a href="/contact/{{ $row->CID }}"><i class="fa fa-pencil"></i></a>
-                                                                <a href="javascript:;" data-id="{{ $row->CID }}" class="delitem"><i class="fa fa-trash-o"></i></a>
+<form method="post" action="/contact/{{ $row->CID }}/delete" style="display: inline;">
+{!! csrf_field() !!}<input name="_method" type="hidden" value="DELETE"> <!--刪除的偽方法-->
+<a href="javascript:;" class="delbtn"><i class="fa fa-trash-o"></i></a>
+</form>
+
                                                             </td>
                                                         </tr>
 @empty
@@ -105,6 +109,9 @@
                 $('#datatable-responsive').DataTable();
                 $('#datatable-scroller').DataTable( { ajax: "assets/plugins/datatables/json/scroller-demo.json", deferRender: true, scrollY: 380, scrollCollapse: true, scroller: true } );
                 var table = $('#datatable-fixed-header').DataTable( { fixedHeader: true } );
+    $('.delbtn').bind('click',function(){
+        if(confirm("確定要刪除此留言?刪除後無法將無法復原此留言!")) $(this).parent().submit();
+    });
             } );
             TableManageButtons.init();
 		</script>

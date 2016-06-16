@@ -55,6 +55,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('contacts','BackendController@contacts');
     Route::get('contact/{cid}','BackendController@contact');
     Route::post('contactstore','BackendController@contactstore');
+    Route::delete('contact/{cid}/delete','BackendController@deleteContact');
 
     //Route::get('test3',function(){ return view('backstage.order.list'); });
     //Route::get('test4',function(){ return view('backstage.order.edit'); });

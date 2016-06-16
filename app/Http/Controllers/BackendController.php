@@ -124,5 +124,9 @@ class BackendController extends Controller
         $contact->save(); 
         return redirect('contacts');
     }
+    public function deleteContact(Request $request,$cid){
+        contact::where('CID', $cid)->delete();
+        return redirect()->back();
+    }
 
 }
