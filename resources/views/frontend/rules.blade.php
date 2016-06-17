@@ -33,11 +33,7 @@
                 <h1>{{ trans('front.rules.role4title') }}</h1>
                 <hr>
                 {!! trans('front.rules.role4section') !!}
-                <!--a href="reservation.html">
-                    <div class="btn btn-standard">
-                        立即訂位
-                    </div>
-                </a-->
+                {!! trans('front.rules.standard') !!}
                
             </div>
             

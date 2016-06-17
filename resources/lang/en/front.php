@@ -251,6 +251,7 @@ return [
         'name2'   => '-Creative Chef',
         'exp'     => '<p>Professional Experience:</p><p class="hidden-xs">Branch Manager at Bo Innovation, a three-star Michelin restaurant in Hong Kong.<br>Creative Chef and Director at Bo London, a one-star Michelin restaurant in London</p><p class="visible-xs">Branch Manager at<br>Bo Innovation, a three-star Michelin restaurant in Hong Kong.<br><br>Creative Chef and Director at<br>Bo London, a one-star Michelin restaurant in London</p>',
         'menu'   => '<img class="hidden-xs" src="/images/MENU-en-final.png" alt=""><img style="width: 100%;" class="visible-xs" src="/images/MENU-en-final.png" alt="">',
+        'standard'   => '<a href="reservation.html"><div class="btn btn-standard">Reserve a table</div></a>',
     ],
     'rules' => [
         'role1title'   => 'Reservations',
@@ -261,6 +262,7 @@ return [
         'role3section' => $role3section,
         'role4title'   => 'Darkness Experience Rules',
         'role4section' => $role4section,
+        'standard'   => '<a href="reservation.html"><div class="btn btn-standard">Reserve a table</div></a>',
     ],
     'contact' => [
         'title'   => 'RECRUIT',

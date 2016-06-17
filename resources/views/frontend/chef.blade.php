@@ -23,10 +23,10 @@
                     <div class="chef-info">{!! trans('front.chef.exp') !!}</div>
                 </div>
             </div>
-            <!--菜單調整中-->
             <div class="main-container main-even-container">
             <div class="main-box">
                 {!! trans('front.chef.menu') !!}
+                {!! trans('front.chef.standard') !!}
             </div>
             </div>
             <!--<div class="main-container main-even-container">

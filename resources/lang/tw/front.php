@@ -252,6 +252,7 @@ return [
         'name2'   => '─<br>創意主廚 LEON',
         'exp'     => '<p>餐飲經歷</p><p class="hidden-xs" style="width: 320px;">香港米其林三星餐廳<br>Bo Innovation 展店人<br>倫敦米其林一星餐廳<br>Bo London 創意主廚/總監</p><p class="visible-xs">香港米其林三星餐廳<br>Bo Innovation 展店人<br><br>倫敦米其林一星餐廳<br>Bo London 創意主廚/總監</p>',
         'menu'   => '<img class="hidden-xs" src="/images/MENU-ch-final.png" alt=""><img style="width: 100%;" class="visible-xs" src="/images/MENU-ch-final.png" alt="">',
+        'standard'   => '<a href="reservation.html"><div class="btn btn-standard">馬上訂位</div></a>',
     ],
     'rules' => [
         'role1title'   => '訂位服務',
@@ -262,6 +263,7 @@ return [
         'role3section' => $role3section,
         'role4title'   => '黑暗體驗規則',
         'role4section' => $role4section,
+        'standard'   => '<a href="reservation.html"><div class="btn btn-standard">馬上訂位</div></a>',
     ],
     'contact' => [
         'title'   => '團隊招募',
