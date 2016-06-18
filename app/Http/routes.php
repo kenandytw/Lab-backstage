@@ -74,7 +74,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('reservation.html',function(){ return view('frontend.reservation'); });
         Route::post('ReOrderData','FrontendController@ReOrderData');
         Route::post('getPayDone','FrontendController@getPayDone');
-
+Route::get('test',function(){ return view('frontend.payfail'); });
         Route::group(['prefix' => 'en'], function(){
             Route::get('about.html',function(){ App::setLocale('en'); return view('frontend.about'); });
             Route::get('chef.html',function(){ App::setLocale('en'); return view('frontend.chef'); });

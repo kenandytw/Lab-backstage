@@ -174,8 +174,10 @@ class FrontendController extends Controller
                 'pop'    => $request->Pople
             ]);
             $success = true;  
-        } 
-        return view('frontend.reservation',compact('success'));
+            return view('frontend.reservation',compact('success'));
+        } else {
+            return view('frontend.payfail');
+        }
     }
 
     private function SendSuccessByGmail($obj){
