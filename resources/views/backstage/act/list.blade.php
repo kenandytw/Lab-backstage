@@ -47,6 +47,12 @@
                                                 <span class="hidden-xs">已結束</span>
                                             </a>
                                         </li>
+                                        <li>
+                                            <a href="/orderlist">
+                                                <span class="visible-xs"><i class="fa fa-user"></i></span>
+                                                <span class="hidden-xs">完整參加名單</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                     <!-- table-->
                                     <div class="tab-content">

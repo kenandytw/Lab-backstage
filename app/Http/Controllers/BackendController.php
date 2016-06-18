@@ -102,7 +102,15 @@ class BackendController extends Controller
             $order->Status = 'Cancel';
         }
         $order->save();
-        return redirect("/act/{$input['AID']}/orders");
+        if($input['ref']=='orderlist'){
+            return redirect("/orderlist");
+        } else {
+            return redirect("/act/{$input['AID']}/orders");
+        }
+    }
+    public function orderlist(Request $request){
+        $orders = orderlist::latest('updated_at')->get();
+        return view('backstage.order.lists',compact('orders'));
     }
 
     /*

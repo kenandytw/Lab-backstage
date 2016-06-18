@@ -23,6 +23,7 @@
                                 <div class="col-lg-6">
                                     <form class="form-horizontal group-border-dashed" action="/orderstore" method="post">
                                     {!! csrf_field() !!}
+                                    <input type="hidden" name="ref" value="{{ strrpos($_SERVER['HTTP_REFERER'],'orderlist')>0 ? 'orderlist' : ''}}">
                                     <input type="hidden" name="OID" value="{{ $order->OID }}">
                                     <input type="hidden" name="AID" value="{{ $order->AID }}">
                                         <div class="form-group">

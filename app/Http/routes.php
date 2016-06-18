@@ -52,6 +52,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('act/{aid}/order/{oid}','BackendController@order');
     Route::post('orderstore','BackendController@orderstore');
 
+    Route::get('orderlist','BackendController@orderlist');
+
     Route::get('contacts','BackendController@contacts');
     Route::get('contact/{cid}','BackendController@contact');
     Route::post('contactstore','BackendController@contactstore');
