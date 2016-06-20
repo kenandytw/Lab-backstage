@@ -124,10 +124,10 @@
                             </span>
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="date_tr">
                         <td>{{ trans('front.reservation.s2date') }}</td>
                     </tr>
-                    <tr>
+                    <tr class="date_tr">
                         <td>
                             <div class="form-group">
                                 <div class="input-group date form_date" id="form_date">
@@ -145,19 +145,18 @@
                         </span>
                         </td>
                     </tr-->
-                    <!--tr>
+                    <tr style="display: none;" id="OneAlert">
                         <td>
                             <span class="alert-wrap alert-show">
-
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                您選擇的日期訂位已滿
+                                目前無1人場次
                             </span>
                         </td>
-                    </tr-->
-                    <tr>
+                    </tr>
+                    <tr class="date_tr">
                         <td>{{ trans('front.reservation.s2time') }}</td>
                     </tr>
-                    <tr>
+                    <tr class="date_tr">
                         <td class="select-wrap">
                             <select name="AID" id="AID"></select>
                         </td>
@@ -394,6 +393,7 @@ $(function(){
         }
     });
     var showdate = [];
+    $('.date_tr').hide();
     // 第一步
     $('#first-btn').bind('click',function(){
         console.log('');
@@ -487,6 +487,11 @@ $(function(){
     //$('#second-section,#third-section,#fourth-section,#done-section').hide();
     $('#Pople').bind('change',function(){
         var val = $(this).val();
+        if(val>0){
+            $('.date_tr').show();
+        } else {
+            $('.date_tr').hide();
+        }
         $('#AID option').remove();
         $.get('/GetAjaxData',{'act':'GetActByPople','Pople':val},function(data){
             var nowdata = [];
@@ -512,6 +517,11 @@ $(function(){
                 $('#form_date').data("DateTimePicker").enabledDates(['{{ Carbon\Carbon::today()->format('Y-m-d') }}']);
             }
             $('#AIDAlert').hide();
+            if(oneday.length==0 && val==1){
+                $('#OneAlert').show();
+            } else {
+                $('#OneAlert').hide();
+            }
         },'json');
     });
 
