@@ -171,7 +171,7 @@ class FrontendController extends Controller
                 'tomail' => $order->EMail,
                 'name'   => $order->Name,
                 'time'   => str_replace(' 00:00:00','',$act->ADay).' '.substr($act->STime,0,5).'~'.substr($act->ETime,0,5),
-                'pop'    => $request->Pople
+                'pop'    => $order->Pople
             ]);
             $success = true;  
             return view('frontend.reservation',compact('success'));
