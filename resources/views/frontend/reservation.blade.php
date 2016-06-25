@@ -336,7 +336,7 @@
 <input type="hidden" name="MerchantOrderNo" id="MerchantOrderNo">
 <input type="hidden" name="Amt" id="Amt">
 <input type="hidden" name="ItemDesc" id="ItemDesc">
-<!--input type="hidden" name="TradeLimit" id="TradeLimit"-->
+<input type="hidden" name="TradeLimit" id="TradeLimit" value="600">
 <input type="hidden" name="ReturnURL" id="ReturnURL" value="http://www.surpriselab.com.tw/dininginthedark/getPayDone">
 <input type="hidden" name="ClientBackURL" id="ClientBackURL" value="http://www.surpriselab.com.tw/dininginthedark/">
 <input type="hidden" name="Email" id="Email">

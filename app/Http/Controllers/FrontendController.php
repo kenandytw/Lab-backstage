@@ -85,7 +85,7 @@ class FrontendController extends Controller
             $count = Carbon::now()->format('Ymd').'001';
         }
 
-        $act = act::where('AID',$request->AID)->select(DB::raw("(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID AND Status='SUCCESS'),0)) AS Count,Card,ADay,STime,ETime"))->first();
+        $act = act::where('AID',$request->AID)->select(DB::raw("(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID AND (Status='SUCCESS' OR (Status='' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count,Card,ADay,STime,ETime"))->first();
         if($request->Pople>$act->Count){
             return Response::json(array(
                 'success' => false,
@@ -196,16 +196,17 @@ class FrontendController extends Controller
     		if($request->has('act')){
     			switch ($request->act) {
     				case 'GetActByPople':
-    					$act = act::whereRaw("(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID AND Status='SUCCESS'),0))>=".$request->Pople)
+    					$act = act::whereRaw("(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID AND (Status='SUCCESS' OR (Status='' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=".$request->Pople)
     						->select('ADay','Sp','One')->groupBy('ADay')->where('ADay','>=',Carbon::today());
                         if($request->Pople==1){
                             $act = $act->where('One',1);
                         }
                         $act = $act->get();
+                        //dd(DB::getQueryLog());
     					return $act->toJson();
     				break;
     				case 'GetActByDate':
-    					$act = act::where('ADay',$request->Day)->select(DB::raw("(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID AND Status='SUCCESS'),0)) AS Pople, ADay,AID,STime,ETime,One,Sp,Card,Money"))->get();
+    					$act = act::where('ADay',$request->Day)->select(DB::raw("(Pop-IFNULL((SELECT SUM(Pople) FROM(OrderLists) WHERE OrderLists.AID=Acts.AID AND (Status='SUCCESS' OR (Status='' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Pople, ADay,AID,STime,ETime,One,Sp,Card,Money"))->get();
     					return $act->toJson();
     				break;
     			}
