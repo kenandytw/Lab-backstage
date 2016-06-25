@@ -359,6 +359,11 @@
 .bootstrap-datetimepicker-widget table td.disabled:hover {
   color: #F5F5F5;
 }
+#AID option:disabled {
+    -webkit-border-radius:25px; -moz-border-radius:25px; border-radius:25px;
+    color:red;
+    /*background-color:red;*/
+}
 </style>
     <script type="text/javascript">
 var spday = [],oneday = [];
@@ -371,8 +376,15 @@ $('#form_date').datetimepicker({
 }).on('dp.change',function(event){
     $.get('/GetAjaxData',{'act':'GetActByDate','Day':event.date.format('YYYY-MM-DD')},function(data){
         $('#AID option').remove();
+        $('#AID').append('<option value="">請選擇時段</option>');
         for(i=0;i<data.length;i++){
-            $('#AID').append('<option value="'+data[i].AID+'" data-pople="'+data[i].Pople+'" data-one="'+data[i].One+'" data-sp="'+data[i].Sp+'" data-card="'+data[i].Card+'" data-money="'+data[i].Money+'">'+data[i].STime.substr(0,5)+'-'+data[i].ETime.substr(0,5)+'</option>');
+            var disable = '';
+            var fulltxt = '';
+            if(parseInt(data[i].Pople)<parseInt($("#Pople").val())){
+                disable = 'disabled';
+                fulltxt = '(額滿)';
+            }
+            $('#AID').append('<option value="'+data[i].AID+'" data-pople="'+data[i].Pople+'" data-one="'+data[i].One+'" data-sp="'+data[i].Sp+'" data-card="'+data[i].Card+'" data-money="'+data[i].Money+'" '+disable+'>'+data[i].STime.substr(0,5)+'-'+data[i].ETime.substr(0,5)+' '+fulltxt+'</option>');
         }
         if($('#AID').html()==''){ $('#AID').append('<option value="0">此日期無時段可供選擇</option>'); }
         $('#AIDAlert').hide();
