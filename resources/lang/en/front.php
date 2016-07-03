@@ -249,8 +249,8 @@ return [
         'section' => 'Life would be too hard without an interesting job. What if fine cuisine without a sense of play? In the years I spent overseas, I realized the beauty and richness of Taiwan’s local ingredients. It’s a good thing there is no limit to discovering new tastes, because every new culinary experience is a surprise for my tastebuds. Make every meal amazing-that should be what life is all about.',
         'name'    => '-Guest Creative Chef',
         'name2'   => '-Guest Creative Chef',
-        'exp'     => '<p>Professional Experience:</p><p class="hidden-xs">Former Creative Chef and Director at Bo London</p><p class="visible-xs">Former Creative Chef and Director at Bo London</p>',
-        'menu'   => '<img class="hidden-xs" src="/images/MENU-en-final.png" alt=""><img style="width: 100%;" class="visible-xs" src="/images/menu_edit_en.png" alt="">',
+        'exp'     => '<p>Professional Experience:</p><p class="hidden-xs">Former Creative Chef and Director <br>at Bo London</p><p class="visible-xs">Former Creative Chef and Director <br>at Bo London</p>',
+        'menu'   => '<img class="hidden-xs" src="/images/menu_edit_en.png" alt=""><img style="width: 100%;" class="visible-xs" src="/images/menu_edit_en.png" alt="">',
         'standard'   => '<a href="reservation.html"><div class="btn btn-standard">Reserve a table</div></a>',
     ],
     'rules' => [

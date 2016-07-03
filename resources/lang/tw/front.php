@@ -251,7 +251,7 @@ return [
         'name'    => '─客座創意主廚',
         'name2'   => '─<br>客座創意主廚',
         'exp'     => '<p>餐飲經歷</p><p class="hidden-xs" style="width: 320px;">Former Bo London 創意主廚/總監</p><p class="visible-xs">Former Bo London 創意主廚/總監</p>',
-        'menu'   => '<img class="hidden-xs" src="/images/MENU-ch-final.png" alt=""><img style="width: 100%;" class="visible-xs" src="/images/menu_edit_tw.png" alt="">',
+        'menu'   => '<img class="hidden-xs" src="/images/menu_edit_tw.png" alt=""><img style="width: 100%;" class="visible-xs" src="/images/menu_edit_tw.png" alt="">',
         'standard'   => '<a href="reservation.html"><div class="btn btn-standard">馬上訂位</div></a>',
     ],
     'rules' => [
