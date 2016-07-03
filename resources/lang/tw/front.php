@@ -250,7 +250,7 @@ return [
         'section' => '工作如果不有趣，人生就太辛苦了；料理若沒有玩心，能剩得下什麼滋味？<br>旅居海外多年，因而透悟台灣本地食材的優美豐富，還好味覺的經驗值沒有額度限制，才能藉由每一次的美食體驗，讓味蕾不間斷地品嚐到驚喜，把每餐飯吃得有聲有色，就該是生活最確切的目的。',
         'name'    => '─創意主廚 LEON',
         'name2'   => '─<br>創意主廚 LEON',
-        'exp'     => '<p>餐飲經歷</p><p class="hidden-xs" style="width: 320px;">香港米其林三星餐廳<br>Bo Innovation 展店人<br>倫敦米其林一星餐廳<br>Bo London 創意主廚/總監</p><p class="visible-xs">香港米其林三星餐廳<br>Bo Innovation 展店人<br><br>倫敦米其林一星餐廳<br>Bo London 創意主廚/總監</p>',
+        'exp'     => '<p>餐飲經歷</p><p class="hidden-xs" style="width: 320px;">倫敦米其林一星餐廳<br>Bo London 創意主廚/總監</p><p class="visible-xs">倫敦米其林一星餐廳<br>Bo London 創意主廚/總監</p>',
         'menu'   => '<img class="hidden-xs" src="/images/MENU-ch-final.png" alt=""><img style="width: 100%;" class="visible-xs" src="/images/MENU-ch-final.png" alt="">',
         'standard'   => '<a href="reservation.html"><div class="btn btn-standard">馬上訂位</div></a>',
     ],

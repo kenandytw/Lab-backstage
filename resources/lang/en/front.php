@@ -249,7 +249,7 @@ return [
         'section' => 'Life would be too hard without an interesting job. What if fine cuisine without a sense of play? In the years I spent overseas, I realized the beauty and richness of Taiwan’s local ingredients. It’s a good thing there is no limit to discovering new tastes, because every new culinary experience is a surprise for my tastebuds. Make every meal amazing-that should be what life is all about.',
         'name'    => '-Creative Chef',
         'name2'   => '-Creative Chef',
-        'exp'     => '<p>Professional Experience:</p><p class="hidden-xs">Branch Manager at Bo Innovation, a three-star Michelin restaurant in Hong Kong.<br>Creative Chef and Director at Bo London, a one-star Michelin restaurant in London</p><p class="visible-xs">Branch Manager at<br>Bo Innovation, a three-star Michelin restaurant in Hong Kong.<br><br>Creative Chef and Director at<br>Bo London, a one-star Michelin restaurant in London</p>',
+        'exp'     => '<p>Professional Experience:</p><p class="hidden-xs">Creative Chef and Director at Bo London, a one-star Michelin restaurant in London</p><p class="visible-xs">Creative Chef and Director at<br>Bo London, a one-star Michelin restaurant in London</p>',
         'menu'   => '<img class="hidden-xs" src="/images/MENU-en-final.png" alt=""><img style="width: 100%;" class="visible-xs" src="/images/MENU-en-final.png" alt="">',
         'standard'   => '<a href="reservation.html"><div class="btn btn-standard">Reserve a table</div></a>',
     ],
