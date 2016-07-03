@@ -3,6 +3,12 @@
 
 @section('content')
 <div class="section-02">
+            <div class="main-container main-even-container">
+                <div class="main-box">
+                    {!! trans('front.chef.menu') !!}
+                    {!! trans('front.chef.standard') !!}
+                </div>
+            </div>
             <div class="main-container">
                 <div class="main-box hidden-xs">
                     <p>{!! trans('front.chef.section') !!}</p>
@@ -22,12 +28,6 @@
                     </div>
                     <div class="chef-info">{!! trans('front.chef.exp') !!}</div>
                 </div>
-            </div>
-            <div class="main-container main-even-container">
-            <div class="main-box">
-                {!! trans('front.chef.menu') !!}
-                {!! trans('front.chef.standard') !!}
-            </div>
             </div>
             <!--<div class="main-container main-even-container">
                 <div class="main-box">
