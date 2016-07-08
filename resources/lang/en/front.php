@@ -381,10 +381,10 @@ Please check your e-mail for the reservation confirmation<div class="visible-xs"
                             Food requests:<br>
                             1.  One non-vegetarian diner who is allergic to shrimp and crabs<br>
                             2.  One vegetarian diner who can eat dairy and eggs<br> 
-                            Special surprises:<br>
+                            Special surprises from you:<br>
                             1. I\'d like to propose to my girlfriend over dinner.<br>
-                            2. We\'re celebrating my dad\'s 65th birthday. <br>
-                            3. This is a first date. We\'ve never met before.
+                            2. We\'re celebrating my dad\'s 65th birthday, please helping us to give our prepared gift to him with dessert.<br>
+                            3. This is a first date. We\'ve never met before. I would like to enter the darkness first to surprise the others.
                         </td>
                     </tr>',
     ]
