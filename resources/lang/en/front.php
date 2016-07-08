@@ -96,6 +96,14 @@ $role2section = <<<'FOOBAR'
                             Please use the Contact page to connect with us if you have any other special requirements or questions.
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            5.
+                        </td>
+                        <td>
+                            A friendly reminder, there is a chance you may have to share table with someone else. Within the darkness you may even find your true love or even a new best friend. Go on, take your chances and tell our staff: “I request for joined tables.”
+                        </td>
+                    </tr>
                 </table>
 FOOBAR;
 $role3section = <<<'FOOBAR'
@@ -113,8 +121,8 @@ $role3section = <<<'FOOBAR'
                             2.
                         </td>
                         <td>
-                            Full refunds are available up to three days before the date of the reservation when you call or e-mail to cancel.<br>
-                            For example: A reservation for 9/4 may be fully refunded if you call or e-mail to cancel any time before 0:00 on 9/1.
+                            For any changes or cancellations, guests must call or email 3 days prior reservation date. A refund will be reinstated after a 5% surcharge for processing and handling fee for any cancellations. <br>For example: If your booking is for the 4th Sept, changes and cancellations must be made on the 1st Sept in order to receive the full refund.
+
                         </td>
                     </tr>
                     <tr>
@@ -122,7 +130,8 @@ $role3section = <<<'FOOBAR'
                             3.
                         </td>
                         <td>
-                            About refund process, we will apply to financial institutions within seven working days, but the date of actual refund is still in accordance with the provisions of the issuing bank.
+                            Reservation time can no longer be changed within 1 or 2 days prior of the reservation date. For any cancellations, 50% of the initial reservation fee will be deducted for process and handling fee and cost of food already prepared by the kitchen. We recommend to maybe give the reservation to friends or family if unable to make it due to unexpected changes. <br>For example: Booking is for 4th Sept and guests calls or emails in on the 2nd or 3rd of Sept. Then 50% of the initial booking fee paid will be refunded. However, change of date or time will no longer be permitted.
+
                         </td>
                     </tr>
                     <tr>
@@ -130,7 +139,7 @@ $role3section = <<<'FOOBAR'
                             4.
                         </td>
                         <td>
-                            No-shows will not be refunded.
+                            About refund process, we will apply to financial institutions within seven working days, but the date of actual refund is still in accordance with the provisions of the issuing bank.
                         </td>
                     </tr>
                     <tr>
@@ -138,7 +147,7 @@ $role3section = <<<'FOOBAR'
                             5.
                         </td>
                         <td>
-                            You may transfer your reservation by giving another person the reservation number on your confirmation email.
+                            On the day of the reservation, change of date or cancellation will not be permitted. If guest still insist to cancel, the initial booking fee will not be refunded. If guest are running late and may require change in their reservation time then they must first notify the restaurant through phone. We will then do our best and assist in arranging a new time slow within the same day if possible.
                         </td>
                     </tr>
                     <tr>
@@ -146,7 +155,23 @@ $role3section = <<<'FOOBAR'
                             6.
                         </td>
                         <td>
+                            You may transfer your reservation by giving another person the reservation number on your confirmation email.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            7.
+                        </td>
+                        <td>
                             Please call or e-mail ahead of time to notify us of any changes in main course orders or food preferences due to a transfer of your reservation.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            8.
+                        </td>
+                        <td>
+                            If there are unexpected natural occurrence or disasters and suspension of schools and office is issued by the Government, D.I.T.D will also be CLOSED due to the safety of you, our beloved guests, and our staff. We will re-arrange a different reservation date for you or refund for any cancellations.
                         </td>
                     </tr>
                 </table>
@@ -214,7 +239,7 @@ $role4section = <<<'FOOBAR'
                             8.
                         </td>
                         <td>
-                            Access to the dining space is through stairs. If you need assistance, please call in advance. 
+                            Because most of this experience will be within complete darkness and if you have prior history or symptoms of claustrophobia or nyctophobia, may we remind you please be mindful of your health and reconsider booking when you are feeling more confident.
                         </td>
                     </tr>
                     <tr>
@@ -267,7 +292,9 @@ return [
     'contact' => [
         'title'   => 'RECRUIT',
         'content' => 'In the dark, beautiful stories happen.<br />Come join the journey with us, witness the very beginning of every story.<br>Send us your resume: ',
-        'address' => 'No.261, Yanji St., Da’an Dist., Taipei City 106, Taiwan (R.O.C.)',
+        'address' => 'No.261, Yanji St., Da’an Dist., Taipei City 106, Taiwan (R.O.C.)<br>(The closest available parking spaces is located at Taipei City Da-an Land Office
+Address:No. 6, Lane 335, Section 4, Xinyi Rd, Da’an District, Taipei City.) 
+',
         'story'   => 'Surprise Story',
         'storyc'  => 'If there’s anyone in your life that you would like to give a surprise to—a friend, a family member, a loved one—please share your story with us. From time to time we will pick a story that moved us and invite the writer and the person they want to surprise to a Dining in the Darkness experience.',
         'SubTit1' => 'Payment Question or Problem',

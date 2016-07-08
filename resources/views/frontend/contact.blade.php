@@ -66,6 +66,9 @@
                </div>
            </div>
            <div class="contact-alert-container">
+               <div class="main-box">
+                   <img class="hidden-xs" src="/images/map.jpg" alt=""><img style="width: 100%;" class="visible-xs" src="/images/map-MOBILE.jpg" alt="">
+               </div>
                <div class="left-box">
                    {{ trans('front.contact.story') }} 
                </div>
