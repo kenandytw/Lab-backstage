@@ -45,7 +45,7 @@
                            <table>
                                <tr>
                                    <td>
-                                       {{ trans('front.contact.address') }}
+                                       {{ trans('front.contact.address') }}<br>{{ trans('front.contact.address2') }}
                                    </td>
                                </tr>
                            </table>
@@ -65,10 +65,10 @@
                    </div>
                </div>
            </div>
+            <div>
+                <img style="max-width: 640px;" class="hidden-xs" src="/images/map.jpg" alt=""><img style="width: 100%;margin-bottom: 25px;" class="visible-xs" src="/images/map-MOBILE.jpg" alt="">  
+            </div>
            <div class="contact-alert-container">
-               <div class="main-box">
-                   <img class="hidden-xs" src="/images/map.jpg" alt=""><img style="width: 100%;" class="visible-xs" src="/images/map-MOBILE.jpg" alt="">
-               </div>
                <div class="left-box">
                    {{ trans('front.contact.story') }} 
                </div>

@@ -292,7 +292,8 @@ return [
     'contact' => [
         'title'   => 'RECRUIT',
         'content' => 'In the dark, beautiful stories happen.<br />Come join the journey with us, witness the very beginning of every story.<br>Send us your resume: ',
-        'address' => 'No.261, Yanji St., Da’an Dist., Taipei City 106, Taiwan (R.O.C.)<br>(The closest available parking spaces is located at Taipei City Da-an Land Office
+        'address' => 'No.261, Yanji St., Da’an Dist., Taipei City 106, Taiwan (R.O.C.)',
+        'address2' => '(The closest available parking spaces is located at Taipei City Da-an Land Office
 Address:No. 6, Lane 335, Section 4, Xinyi Rd, Da’an District, Taipei City.) 
 ',
         'story'   => 'Surprise Story',
