@@ -139,7 +139,7 @@ $role3section = <<<'FOOBAR'
                             4.
                         </td>
                         <td>
-                            About refund process, we will apply to financial institutions within seven working days, but the date of actual refund is still in accordance with the provisions of the issuing bank.
+                            On the day of the reservation, change of date or cancellation will not be permitted. If guest still insist to cancel, the initial booking fee will not be refunded. If guest are running late and may require change in their reservation time then they must first notify the restaurant through phone. We will then do our best and assist in arranging a new time slow within the same day if possible.
                         </td>
                     </tr>
                     <tr>
@@ -147,7 +147,7 @@ $role3section = <<<'FOOBAR'
                             5.
                         </td>
                         <td>
-                            On the day of the reservation, change of date or cancellation will not be permitted. If guest still insist to cancel, the initial booking fee will not be refunded. If guest are running late and may require change in their reservation time then they must first notify the restaurant through phone. We will then do our best and assist in arranging a new time slow within the same day if possible.
+                            About refund process, we will apply to financial institutions within seven working days, but the date of actual refund is still in accordance with the provisions of the issuing bank.
                         </td>
                     </tr>
                     <tr>
