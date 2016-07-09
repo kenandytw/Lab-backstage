@@ -1206,3 +1206,26 @@ border-radius: 0px;
     color: #999;
     font-size: 14px;
 }
+
+@media (max-width: 776px){
+        .people-section .people-nav ul {
+            padding-left: 0px;
+            max-width: 270px;
+            text-align: left;
+            margin: 0 auto;
+        }
+        .people-section .people-nav {
+            padding-top: 80px;
+            padding-bottom: 55px;
+        }
+        .people-section .people-nav .after-arrow {
+            padding-right: 0px;
+            padding-bottom: 90px;    
+        }
+        .people-section .people-nav .after-arrow:after {
+        left: 13px;
+        top: 65px;
+        transform: rotate(90deg);
+        }
+}
+    
