@@ -53,6 +53,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('orderstore','BackendController@orderstore');
 
     Route::get('orderlist','BackendController@orderlist');
+    Route::get('printxlsx','BackendController@printxlsx');
 
     Route::get('contacts','BackendController@contacts');
     Route::get('contact/{cid}','BackendController@contact');
@@ -61,7 +62,6 @@ Route::group(['middleware' => ['web']], function () {
 
     //Route::get('test3',function(){ return view('backstage.order.list'); });
     //Route::get('test4',function(){ return view('backstage.order.edit'); });
-
 
     /* frontend */
     Route::group(['prefix' => 'dininginthedark'], function(){
@@ -72,6 +72,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('index.html',function(){ return view('frontend.home'); });
         Route::get('/',function(){ return view('frontend.home'); });
         Route::get('reservation.html',function(){ return view('frontend.reservation'); });
+        Route::get('people.html',function(){ return view('frontend.people'); });
         Route::post('ReOrderData','FrontendController@ReOrderData');
         Route::post('getPayDone','FrontendController@getPayDone');
 //Route::get('test',function(){ return view('frontend.payfail'); });
@@ -83,6 +84,7 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('index.html',function(){ App::setLocale('en'); return view('frontend.home'); });
             Route::get('/',function(){ App::setLocale('en'); return view('frontend.home'); });
             Route::get('reservation.html',function(){ App::setLocale('en'); return view('frontend.reservation'); });
+            Route::get('people.html',function(){ App::setLocale('en'); return view('frontend.people'); });
         });
     });
     

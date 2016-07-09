@@ -113,6 +113,33 @@ class BackendController extends Controller
         return view('backstage.order.lists',compact('orders'));
     }
 
+    public function printxlsx(Request $request){
+        Excel::create('filesname', function($excel) {
+            $excel->sheet('人員清單', function($sheet) {
+                $sheet->row(1, ['（日期）']);
+                $sheet->row(2, [
+                    '三天前電話確認',
+                    '到店順序',
+                    '桌號安排 B',
+                    '到店桌號 A',
+                    '離店桌號 L',
+                    '訂位時間',
+                    '人數',
+                    '報名序號',
+                    '姓名',
+                    '電話',
+                    'Email',
+                    '主餐',
+                    '葷',
+                    '素',
+                    '付款方式',
+                    'For Kitchen Surprise',
+                    '備註',
+                    '註記'
+                ]);
+            });
+        })->export('xlsx');
+    }
     /*
     contact
     */

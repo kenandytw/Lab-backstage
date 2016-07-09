@@ -156,6 +156,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Mailchimp\MailchimpServiceProvider::class,
+        'Maatwebsite\Excel\ExcelServiceProvider',
     ],
 
     /*
@@ -202,6 +203,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'MC' => Mailchimp\MailchimpFacade::class,
+        'Excel' => 'Maatwebsite\Excel\Facades\Excel',
     ],
 
 ];
