@@ -79,7 +79,7 @@
                     <a href="chef.html"><li>Menu</li></a>
                     <a href="rules.html"><li>Rules</li></a>
                     <a href="reservation.html"><li>Reservation</li></a>
-                    <!--a href="#">
+                    <a href="#">
                         <li class="dropdown">
                             Story
                             <i style="margin-left:5px;" class="fa fa-angle-down"></i>
@@ -89,15 +89,15 @@
                                         People
                                     </li>   
                                 </a>
-                                <a href="press.html">
+                                <!--a href="press.html">
                                     <li>
                                         Press
                                     </li>    
-                                </a>
+                                </a-->
                             </ul>
                         </li>
                     </a>
-                    <a href="events.html"><li>Events</li></a-->
+                    <!--a href="events.html"><li>Events</li></a-->
                     <a href="contact.html"><li>Contact</li></a>
                 </ul>
             </div>

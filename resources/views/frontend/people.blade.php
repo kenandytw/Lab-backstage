@@ -27,7 +27,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="tagboard-embed" tgb-slug="無光晚餐/273851" tgb-layout="waterfall" tgb-feed-type="default" tgb-inverted="true" tgb-post-count="50" tgb-mobile-count="5" tgb-fixed-height="true" tgb-toolbar="none" tgb-animation-type="fade" tgb-hashtag-color="b28247" tgb-font-color="c1c1c1" fixed-height="true"></div>
+            <div class="tagboard-embed" tgb-slug="無光晚餐/273851" tgb-layout="waterfall" tgb-feed-type="default" tgb-inverted="true" tgb-post-count="50" tgb-mobile-count="5" tgb-toolbar="none" tgb-animation-type="fade" tgb-hashtag-color="b28247" tgb-font-color="c1c1c1" fixed-height="true"></div>
             <script src="https://static.tagboard.com/public/js/embedAdvanced.js"></script>
            <div style="min-height:460px;">
                
