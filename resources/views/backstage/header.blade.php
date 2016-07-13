@@ -92,6 +92,9 @@
                     <li class="has-submenu">
                         <a href="/contacts"><i class="md md-dashboard"></i>Contacts</a>
                     </li>
+                    <li class="has-submenu">
+                        <a href="/printdaily"><i class="md md-dashboard"></i>Print Daily</a>
+                    </li>
                 </ul>
                 <!-- End navigation menu -->
             </div>

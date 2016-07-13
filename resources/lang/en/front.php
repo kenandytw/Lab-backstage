@@ -314,9 +314,10 @@ Address:No. 6, Lane 335, Section 4, Xinyi Rd, Da’an District, Taipei City.)
         'Content'    => 'Remark',
         'ContAlert'  => 'Please write us if you want to say',
     ],
-    'pople'   => [
-
-    ],
+    'people'  => [
+        'two'   => 'Upload your photos on Instagram<br><span class="hidden-xs">&nbsp;&nbsp;</span>and share to Facebook',
+        'three' => 'Share your own D.I.T.D experience',
+    ], 
     'press'   => [
 
     ],

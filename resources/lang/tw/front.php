@@ -313,8 +313,9 @@ return [
         'Content'    => '備註',
         'ContAlert'  => '請填寫您想對我們說的話',
     ],
-    'pople'   => [
-
+    'people'  => [
+        'two'   => 'Instagram 上傳照片<br><span class="hidden-xs">&nbsp;&nbsp;</span>同步分享至Facebook',
+        'three' => '分享屬於自己的無光體驗',
     ],
     'press'   => [
 

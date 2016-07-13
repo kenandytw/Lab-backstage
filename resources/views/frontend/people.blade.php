@@ -15,14 +15,13 @@
                     <li class="after-arrow">
                         <div>2</div>
                         <span style="margin-top:-10px;">
-                            Instagram 上傳照片<br>
-                            <span class="hidden-xs">&nbsp;&nbsp;</span>同步分享至Facebook
+                            {!! trans('front.people.two') !!}
                         </span>
                     </li>
                     <li>
                         <div>3</div>
                         <span>
-                            分享屬於自己的無光體驗
+                            {{ trans('front.people.three') }}
                         </span>
                     </li>
                 </ul>
