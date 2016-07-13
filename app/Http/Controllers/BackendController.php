@@ -13,6 +13,8 @@ use App\model\orderlist;
 use App\model\pople;
 use App\model\contact;
 use Carbon\Carbon;
+use Excel;
+use DB;
 
 class BackendController extends Controller
 {
@@ -25,6 +27,7 @@ class BackendController extends Controller
         } else {
             $this->user = $request->session()->get('key');
         }
+        DB::enableQueryLog();
     }
 
     /*
@@ -113,9 +116,26 @@ class BackendController extends Controller
         return view('backstage.order.lists',compact('orders'));
     }
 
+    public function printdaily(Request $request){
+        $input = $request->all();
+        $orders = DB::table('OrderLists')->leftJoin('Acts', 'Acts.AID', '=', 'OrderLists.AID');
+        if($request->has('Day') && $input['Day']!=''){
+            $orders = $orders->where('ADay',$input['Day'])->orderBy('STime','asc');
+            //$orders = $orders->whereIn('AID', [ DB::raw("SELECT AID FROM Acts WHERE `ADay` = '".$input['Day']."' order by `STime` asc") ]);
+        } else {
+            $orders = $orders->where('ADay',Carbon::today()->toDateString())->orderBy('STime','asc');
+            //$orders = $orders->whereIn('AID', [ DB::raw("SELECT AID FROM Acts WHERE `ADay` = '".Carbon::today()->toDateString()."' order by `STime` asc") ]);
+            
+        }
+        $orders = $orders->get();
+        
+        return view('backstage.order.print',compact('orders','request'));
+    }
+
     public function printxlsx(Request $request){
-        Excel::create('filesname', function($excel) {
-            $excel->sheet('人員清單', function($sheet) {
+$orders = orderlist::latest('updated_at')->get();
+        Excel::create('filesname', function($excel) use ($orders) {
+            $excel->sheet('人員清單', function($sheet) use ($orders) {
                 $sheet->row(1, ['（日期）']);
                 $sheet->row(2, [
                     '三天前電話確認',
@@ -137,6 +157,13 @@ class BackendController extends Controller
                     '備註',
                     '註記'
                 ]);
+                $i = 3;
+                foreach($orders as $row){
+                    $sheet->row($i,[
+                        $row['OID']
+                    ]);
+                    $i++;
+                }
             });
         })->export('xlsx');
     }

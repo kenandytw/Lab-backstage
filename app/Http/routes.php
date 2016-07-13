@@ -53,7 +53,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('orderstore','BackendController@orderstore');
 
     Route::get('orderlist','BackendController@orderlist');
-    Route::get('printxlsx','BackendController@printxlsx');
+    Route::get('printdaily','BackendController@printdaily');
 
     Route::get('contacts','BackendController@contacts');
     Route::get('contact/{cid}','BackendController@contact');
