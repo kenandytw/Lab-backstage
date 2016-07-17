@@ -251,6 +251,14 @@
                             <textarea rows="5" name="Notes" id="Notes"></textarea>
                         </td>
                     </tr>
+                    <tr>
+                        <td>{{ trans('front.reservation.Surprised') }}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea rows="5" name="Surprised" id="Surprised"></textarea>
+                        </td>
+                    </tr>
                     {!! trans('front.reservation.slug3ex') !!}
                     <tr>
                         <td></td>

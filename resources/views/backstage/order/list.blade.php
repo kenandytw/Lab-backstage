@@ -26,7 +26,8 @@
                                         <th>Email</th>
                                         <th>主餐</th>
                                         <th>付款方式</th>
-                                        <th>備註</th>
+                                        <th>飲食備註</th>
+                                        <th>你的驚喜</th>
                                         <th>註記</th>
                                         <th></th>
                                     </tr>
@@ -49,8 +50,9 @@
 @endif
 
                                         </td>
-                                        <td>{{ $row->Notes }}</td>
-                                        <td>{{ $row->PS }}</td>
+                                        <td>{!! nl2br($row->Notes) !!}</td>
+                                        <td>{!! nl2br($row->Surprised) !!}</td>
+                                        <td>{!! $row->PS !!}</td>
                                         <td >
                                             <a href="/act/{{ $row->AID }}/order/{{ $row->OID }}"><i class="fa fa-pencil"></i></a>
                                         </td>

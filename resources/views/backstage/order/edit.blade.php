@@ -65,9 +65,15 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">備註</label>
+                                            <label class="col-sm-3 control-label">飲食備註</label>
                                             <div class="col-sm-6">
                                                 <textarea required class="form-control" readonly>{{ $order->Notes }}</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">你的驚喜</label>
+                                            <div class="col-sm-6">
+                                                <textarea required class="form-control" readonly>{{ $order->Surprised }}</textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">

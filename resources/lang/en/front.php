@@ -365,6 +365,7 @@ Address:No. 6, Lane 335, Section 4, Xinyi Rd, Da’an District, Taipei City.)
         'Meal2'        => 'Vegetarian',
         'Customer'        => 'Customer',
         'Notes'       => 'Special Instructions',
+        'Surprised'   => 'Pleasantly surprised',
         'AgreeLink'   => 'I have read and agreed to the <a class="privacy-link" href="#">Privacy Policy.</a>',
         'Self'        => 'Pay in Cash<br>NT ',
         'Online'      => 'Pay Online<br>NT ',
