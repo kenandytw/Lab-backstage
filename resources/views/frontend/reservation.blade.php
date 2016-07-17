@@ -565,6 +565,7 @@ function SendOrderData(Pay){
         'Tel'   : $('#Tel').val(),
         'EMail' : $('#EMail').val(),
         'Notes' : $('#Notes').val(),
+        'Surprised' : $('#Surprised').val(),
         'AID'   : $('#AID').val(),
         'Pople' : $('#Pople').val(),
         'Meal'  : Meal,

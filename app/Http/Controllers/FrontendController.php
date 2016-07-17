@@ -100,6 +100,7 @@ class FrontendController extends Controller
         $order->EMail  = $request->EMail;
         $order->SN     = $count;
         $order->Notes  = $request->Notes;
+        $order->Surprised  = $request->Surprised;
         $order->Pay    = $request->Pay;
         $order->AID    = $request->AID;
         $order->Pople  = $request->Pople;
