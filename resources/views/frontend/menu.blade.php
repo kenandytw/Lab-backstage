@@ -24,34 +24,26 @@
                         Reservation
                     </li>
                 </a>
-                <!--a href="#">
-                        <li class="dropdown datm7">
+                <a href="#">
+                    <li class="dropdown">
                         Story
-                        <i class="fa fa-angle-down"></i>
+                        <i style="margin-left:5px;" class="fa fa-angle-down"></i>
                         <ul>
                             <a href="people.html">
                                 <li>
                                     People
                                 </li>   
                             </a>
-                            <a href="press.html">
-                                <li class="last-child">
-                                    Press
-                                </li>    
-                            </a>
+                            <!--a href="press.html">
+                            <li>
+                            Press
+                            </li>    
+                            </a-->
                         </ul>
                     </li>
                 </a>
-                <a href="events.html">
-                <li class="datm7">
-                        Events
-                    </li>
-                </a-->
-                <a href="contact.html">
-                    <li class="last-child">
-                        Contact
-                    </li>
-                </a>
+                <a href="event.html"><li>Events</li></a>
+                <a href="contact.html"><li>Contact</li></a>
             </ul>
         </div>      
       
