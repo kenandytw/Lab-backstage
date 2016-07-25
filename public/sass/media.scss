@@ -34,12 +34,12 @@ $theme_color: #a67c52;
     .footer-container-md{
         display: none;
     }
-    
+
     .footer-container-xs{
         ul{
             text-align: left;    
         }
-        
+
         .copyright{
             bottom: 15px!important;
         }
@@ -133,6 +133,37 @@ $theme_color: #a67c52;
     .contact-section{
         .btn-standard{
             margin: 0 auto;
+        }
+    }
+    
+    // 0710 update
+
+    .people-section{
+        
+        .people-nav{
+            padding-top: 80px;
+            padding-bottom: 55px;
+
+            ul{
+                padding-left: 0px;   
+                max-width: 270px;
+                text-align: left;
+                margin: 0 auto;
+            }
+
+            .after-arrow{
+                padding-right: 0px;
+                padding-bottom: 90px;
+            }
+
+            .after-arrow:after{
+                left: 13px;
+                top: 65px;
+                transform: rotate(90deg);
+
+            }
+
+         
         }
     }
     
