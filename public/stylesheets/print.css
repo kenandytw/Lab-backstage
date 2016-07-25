@@ -1,12 +1,13 @@
 /* color  */
 /* line 5, ../sass/print.scss */
 body {
-  font-family: serif;
+  font-family: "datm7" !important;
 }
 
 /* line 9, ../sass/print.scss */
 h1 {
-  font-family: serif;
+  font-family: "datm7";
+  color:#a57c52;
 }
 
 /* line 16, ../sass/print.scss */
@@ -305,6 +306,7 @@ a:hover {
   padding: 10px 20px;
   font-size: 17px;
   letter-spacing: 1.5px;
+  font-family: "datm7"; 
 }
 /* line 311, ../sass/print.scss */
 .nav-bar a {
@@ -342,6 +344,7 @@ a:hover {
 /* line 343, ../sass/print.scss */
 .main-container h2 {
   font-size: 16px;
+  font-family:"datm7";
 }
 /* line 347, ../sass/print.scss */
 .main-container p {
@@ -447,6 +450,7 @@ a:hover {
   color: #a67c52;
   font-size: 14px;
   margin-bottom: 17.5px;
+  font-family: "datm7";
 }
 /* line 446, ../sass/print.scss */
 .footer-section table {
@@ -455,6 +459,7 @@ a:hover {
 /* line 448, ../sass/print.scss */
 .footer-section table td {
   padding: 3.5px 0.8em 3.5px 0;
+  font-family: "datm7";
 }
 /* line 453, ../sass/print.scss */
 .footer-section .footer-zone {
@@ -680,6 +685,7 @@ a:hover {
   padding: 1px 15px;
   border-right: solid 1px #777;
   cursor: pointer;
+  font-family: "datm7";
 }
 /* line 681, ../sass/print.scss */
 .rules-section .rules-nav li:hover {
@@ -984,6 +990,8 @@ a:hover {
   padding: 5px 20px;
   margin: 0 15px 15px;
   font-size: 12px;
+  border: solid 2px #a67c52;
+  border-radius: 0px;
 }
 /* line 990, ../sass/print.scss */
 .reservation-section .btn-negative {
@@ -1199,7 +1207,27 @@ a:hover {
   color: #999;
   font-size: 14px;
 }
-
+@media (max-width: 776px){
+         .people-section .people-nav ul {
+             padding-left: 0px;
+             max-width: 270px;
+             text-align: left;
+             margin: 0 auto;
+         }
+         .people-section .people-nav {
+             padding-top: 80px;
+             padding-bottom: 55px;
+         }
+         .people-section .people-nav .after-arrow {
+             padding-right: 0px;
+             padding-bottom: 90px;    
+         }
+         .people-section .people-nav .after-arrow:after {
+         left: 13px;
+         top: 65px;
+         transform: rotate(90deg);
+         }
+ }
 /* line 1199, ../sass/print.scss */
 .event-section a > .event-box {
   margin: 45px auto;
