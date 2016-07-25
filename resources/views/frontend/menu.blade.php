@@ -97,7 +97,7 @@
                             </ul>
                         </li>
                     </a>
-                    <a href="events.html"><li>Events</li></a>
+                    <a href="event.html"><li>Events</li></a>
                     <a href="contact.html"><li>Contact</li></a>
                 </ul>
             </div>
