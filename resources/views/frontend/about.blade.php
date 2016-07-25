@@ -18,6 +18,14 @@
                 <img class="bgs bg-spoon" src="/images/cut3_about/cut2-spoon.png" alt="">
                 
             </div>
+            <div class="main-container hidden-sm-up">
+                <h1 class="datm7">{{ trans('front.about.section1title') }}</h1>
+                <p style="text-align: left;padding: 10px 37px;">{!! trans('front.about.section1notes') !!}</p>
+            </div>
+            <div class="main-container main-even-container hidden-sm-up">
+                <h1 class="datm7">{{ trans('front.about.section2title') }}</h1>
+                <p style="text-align: left;padding: 10px 37px;">{!! trans('front.about.section2notes') !!}</p>
+            </div>
             <div class="main-container">
                 <h1 class="datm7" style="margin-bottom:45px;">{{ trans('front.about.steptitle') }}</h1>
                 <div class="about-step-box">
