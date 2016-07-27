@@ -4,7 +4,7 @@
 @section('content')
         <div class="section-02">
             <div class="main-container hidden-xs">
-                <h1 class="datm7">{{ trans('front.about.section1title') }}</h1>
+                <h1>{{ trans('front.about.section1title') }}</h1>
                 <p>{!! trans('front.about.section1notes') !!}</p>
                 <!-- bg1 & 2 -->
                 <img class="bgs bg-knife2" src="/images/cut3_about/cut2-knife2.png" alt="">
@@ -18,11 +18,11 @@
                 <img class="bgs bg-spoon" src="/images/cut3_about/cut2-spoon.png" alt="">
                 
             </div>
-            <div class="main-container hidden-sm-up">
-                <h1 class="datm7">{{ trans('front.about.section1title') }}</h1>
+            <div class="main-container visible-xs">
+                <h1>{{ trans('front.about.section1title') }}</h1>
                 <p style="text-align: left;padding: 10px 37px;">{!! trans('front.about.section1notes') !!}</p>
             </div>
-            <div class="main-container main-even-container hidden-sm-up">
+            <div class="main-container main-even-container visible-xs">
                 <h1 class="datm7">{{ trans('front.about.section2title') }}</h1>
                 <p style="text-align: left;padding: 10px 37px;">{!! trans('front.about.section2notes') !!}</p>
             </div>
