@@ -137,14 +137,14 @@
                             </div>
                         </td>
                     </tr>
-                    <!--tr>
+                    <tr>
                         <td>
                         <span class="alert-wrap alert-show" style="color:#fff">
                         <i class="fa fa-exclamation-triangle"></i>
                             <span style="color:#81a7fd">藍色</span>為單人場次，<span style="color:#fa4b4b">紅色</span>為特別場次
                         </span>
                         </td>
-                    </tr-->
+                    </tr>
                     <tr style="display: none;" id="OneAlert">
                         <td>
                             <span class="alert-wrap alert-show">
