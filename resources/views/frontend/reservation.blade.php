@@ -103,6 +103,14 @@
             <div style="max-width:300px;display: none;" class="main-container" id="second-section">
                 <table>
                     <tr>
+                        <td>
+                            <span class="alert-wrap alert-show" style="color:#fff">
+                                <i class="fa fa-exclamation-triangle"></i>
+                                日期顯示&nbsp;<span style="color:#81a7fd">藍色</span>為單人場次，<span style="color:#fa4b4b">紅色</span>為特別場次
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
                         <td>{{ trans('front.reservation.s2party') }}</td>
                     </tr>
                     <tr>
@@ -135,14 +143,6 @@
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                                 </div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                        <span class="alert-wrap alert-show" style="color:#fff">
-                        <i class="fa fa-exclamation-triangle"></i>
-                            <span style="color:#81a7fd">藍色</span>為單人場次，<span style="color:#fa4b4b">紅色</span>為特別場次
-                        </span>
                         </td>
                     </tr>
                     <tr style="display: none;" id="OneAlert">
