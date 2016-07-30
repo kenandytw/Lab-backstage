@@ -1367,13 +1367,18 @@ a:hover {
     text-align: left;
     color: #a67c52;
 }
-
+/* line 1242, ../sass/print.scss */
+.event-section .event-text-box {
+    text-align: left;
+    max-width: 851px;
+    margin: 60px auto 0;
+}
 @media (max-width: 776px) {
     /* line 1254, ../sass/print.scss */
     .event-section .event-box2 {
         width: 100%;
         height: 450px;
-        background: url("../images/event-2-w.jpg");
+        background: url("../images/event-2-mob.jpg");
         background-position: center;
         background-size: 100%;
         background-repeat: no-repeat;
@@ -1403,6 +1408,10 @@ a:hover {
     .event-section .event-box2 > div p {
         text-align: left;
         color: #a67c52;
+    }
+    /* line 1287, ../sass/print.scss */
+    .event-section .event-text-box {
+        margin-top: 25px;
     }
 }
 /*情人活動*/

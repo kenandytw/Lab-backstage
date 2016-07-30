@@ -5,9 +5,8 @@
 
         <div class="section-02 event-section">
             <div class="main-container">
-                <div class="event-box event-box2">
+                <div class="event-box2">
                     {!! trans('front.events.chinese-valentine-title') !!}
-
                 </div>
                 <div class="event-text-box">
                     {!! trans('front.events.chinese-valentine-content') !!} 
