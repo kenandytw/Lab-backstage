@@ -42,7 +42,7 @@
                         </ul>
                     </li>
                 </a>
-                <a href="event.html"><li>Events</li></a>
+                <a href="event-landing.html"><li>Events</li></a>
                 <a href="contact.html"><li>Contact</li></a>
             </ul>
         </div>      
@@ -89,7 +89,7 @@
                             </ul>
                         </li>
                     </a>
-                    <a href="event.html"><li>Events</li></a>
+                    <a href="event-landing.html"><li>Events</li></a>
                     <a href="contact.html"><li>Contact</li></a>
                 </ul>
             </div>

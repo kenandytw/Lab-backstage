@@ -6,7 +6,7 @@
         <div class="section-02 event-section">
             <div class="main-container">
                 <a href="event_chinese-valentine.html">
-                    <div class="event-box event-box2">
+                    <div class="event-box2">
                         {!! trans('front.events.chinese-valentine-title') !!}
                     </div>
                 </a>
