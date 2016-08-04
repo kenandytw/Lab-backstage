@@ -75,6 +75,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('people.html',function(){ return view('frontend.people'); });
         Route::get('event.html',function(){ return view('frontend.event'); });
         Route::get('event-landing.html',function(){ return view('frontend.event-landing'); });
+        Route::get('press.html',function(){ return view('frontend.press'); });
         Route::get('event_{page}.html',function(Request $request,$page){ return view('frontend.event-'.$page); });
         Route::post('ReOrderData','FrontendController@ReOrderData');
         Route::post('getPayDone','FrontendController@getPayDone');
@@ -88,6 +89,7 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('/',function(){ App::setLocale('en'); return view('frontend.home'); });
             Route::get('reservation.html',function(){ App::setLocale('en'); return view('frontend.reservation'); });
             Route::get('people.html',function(){ App::setLocale('en'); return view('frontend.people'); });
+            Route::get('press.html',function(){ App::setLocale('en'); return view('frontend.press'); });
             Route::get('event.html',function(){ App::setLocale('en'); return view('frontend.event'); });
             Route::get('event-landing.html',function(){ App::setLocale('en'); return view('frontend.event-landing'); });
             Route::get('event_{page}.html',function(Request $request,$page){ return view('frontend.event-'.$page); });

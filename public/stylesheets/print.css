@@ -1415,3 +1415,41 @@ a:hover {
     }
 }
 /*情人活動*/
+
+/* line 1296, ../sass/print.scss */
+.press-section {
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* line 1300, ../sass/print.scss */
+.press-section .press-box {
+  position: relative;
+  margin: 10px 0;
+}
+/* line 1304, ../sass/print.scss */
+.press-section .press-box .press-description {
+  position: absolute;
+  left: 25px;
+  top: 10px;
+  width: 83%;
+}
+/* line 1310, ../sass/print.scss */
+.press-section .press-box .press-description h1 {
+  text-align: left;
+  color: #ccc;
+  font-size: 14px;
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 10px;
+}
+/* line 1318, ../sass/print.scss */
+.press-section .press-box .press-description p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 21px;
+  padding-top: 0px;
+  text-align: left;
+}
+/* line 1327, ../sass/print.scss */
+.press-section .press-box img {
+  width: 100%;
+}

@@ -34,11 +34,11 @@
                                     People
                                 </li>   
                             </a>
-                            <!--a href="press.html">
+                            <a href="press.html">
                             <li>
                             Press
                             </li>    
-                            </a-->
+                            </a>
                         </ul>
                     </li>
                 </a>
