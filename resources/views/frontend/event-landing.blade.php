@@ -5,7 +5,7 @@
 
         <div class="section-02 event-section">
             <div class="main-container" style="padding: 20px 15px;">
-                <a href="https://surpriselab.typeform.com/to/umYJDA?" target="_blank">
+                <a href="https://surpriselab.typeform.com/to/ptbLEa" target="_blank">
                     <div class="event-box3">
                         {!! trans('front.events.chinese-single-title') !!}
                     </div>

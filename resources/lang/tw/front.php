@@ -456,7 +456,7 @@ Step 5. 帶著花，繼續約會囉！
                     </p>',
         'chinese-single-title'   => '<div>
                         <h1 class="datm7">
-                            08/23、08/25、08/30、09/01<br>無光交友場
+                            「九月份每週二、四」<br>無光交友場
                         </h1>   
                         <p class="hidden-xs">
                             沒了初次見面，但多了初次聽見，<br>
