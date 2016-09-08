@@ -60,7 +60,7 @@
                    <img src="/images/cut1-intro/logo.png" alt="">       
                </a>
             </div>
-            <div class="nav-bar hidden-xs">
+            <div class="nav-bar hidden-xs" style="height: 200px;">
                
                 <ul class="language-list">
                     <a href="/dininginthedark/"><li class="first-child">中文</li></a>
@@ -81,12 +81,12 @@
                                         People
                                     </li>   
                                 </a>
-                                <!--a href="press.html">
+                                <a href="press.html">
                                     <li>
                                         Press
                                     </li>    
-                                </a-->
-                            </ul>
+                                </a>
+                            </ul>    
                         </li>
                     </a>
                     <a href="event-landing.html"><li>Events</li></a>
