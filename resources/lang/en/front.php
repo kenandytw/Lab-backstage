@@ -275,7 +275,7 @@ return [
         'name'    => '-Guest Creative Chef',
         'name2'   => '-Guest Creative Chef',
         'exp'     => '<p>Professional Experience:</p><p class="hidden-xs">Former Creative Chef and Director <br>at Bo London</p><p class="visible-xs">Former Creative Chef and Director <br>at Bo London</p>',
-        'menu'   => '<img class="hidden-xs" src="/images/menu_edit_en.png" alt=""><img style="width: 100%;" class="visible-xs" src="/images/menu_edit_en.png" alt="">',
+        'menu'   => '<img class="hidden-xs" src="/images/menu_web.png" alt=""><img style="width: 100%;" class="visible-xs" src="/images/menu_phone.png" alt="">',
         'standard'   => '<a href="reservation.html"><div class="btn btn-standard">Reserve a table</div></a>',
     ],
     'rules' => [

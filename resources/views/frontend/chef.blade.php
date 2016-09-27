@@ -10,14 +10,14 @@
                 </div>
             </div>
             <div class="main-container">
-                <div class="main-box hidden-xs">
+                <!--<div class="main-box hidden-xs">
                     <p>{!! trans('front.chef.section') !!}</p>
                     <h2 class="mg-top-45" style="color: #a67c52;">
                         {{ trans('front.chef.name') }}
                     </h2>
-                </div>
+                </div>-->
 
-                <div style="margin-top:75px;" class="flex-row-box chef-flex">
+                <!--<div style="margin-top:75px;" class="flex-row-box chef-flex">
                     <div class="chef-photo">
                         <img src="/images/chef-bnw.jpg" alt="" height="240">
                     </div>
@@ -27,7 +27,7 @@
                         </h2>
                     </div>
                     <div class="chef-info">{!! trans('front.chef.exp') !!}</div>
-                </div>
+                </div>-->
             </div>
             <!--<div class="main-container main-even-container">
                 <div class="main-box">
