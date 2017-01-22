@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-		<div class="section-02 reservation-section">
+		<!--div class="section-02 reservation-section">
            
             <div class="reservation-nav">
                 <ul>
@@ -333,7 +333,7 @@
         	<div style="padding: 60px 15px 140px;display: none;" class="main-container" id="done-section">
                 {!! trans('front.reservation.Done') !!}
             </div>
-        </div>
+        </div-->
 <form name='Pay2go' method='post' id='Pay2Go' action='https://api.pay2go.com/MPG/mpg_gateway' data-backup='https://capi.pay2go.com/MPG/mpg_gateway'>
 <input type="hidden" name="MerchantID" id="MerchantID" value="35699182">
 <input type="hidden" name="RespondType" id="RespondType" value="JSON">
